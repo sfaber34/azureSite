@@ -1099,6 +1099,11 @@ h1.logoFont{
 }
 
 
+#about.section{
+  padding: 80px 0px 40px 0px;
+}
+
+
 
 /* ---------------------------------------------- /*
  * Margin Overrides
@@ -1143,6 +1148,43 @@ h1.logoFont{
 .mt100{
   margin-top: 100px !important;
 }
+
+
+/* ---------------------------------------------- /*
+ * Clear Divs
+/* ---------------------------------------------- */
+
+.clear10{
+  clear: both;
+  height: 10px;
+}
+
+.clear20{
+  clear: both;
+  height: 20px;
+}
+
+.clear40{
+  clear: both;
+  height: 40px;
+}
+
+.clear60{
+  clear: both;
+  height: 60px;
+}
+
+.clear80{
+  clear: both;
+  height: 80px;
+}
+
+.clear100{
+  clear: both;
+  height: 100px;
+}
+
+
 
 
 

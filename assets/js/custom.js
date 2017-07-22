@@ -41,11 +41,7 @@
 		 * Background image
 		/* ---------------------------------------------- */
 
-		$('#intro').backstretch([
-			'assets/images/bg1.jpg',
-			'assets/images/bg2.jpg',
-			'assets/images/bg3.jpg'
-		], {duration: 3000, fade: 750});
+		/*$('#intro').backstretch(['assets/images/mountainImg.jpg']);*/
 
 		/* ---------------------------------------------- /*
 		 * Navbar
@@ -108,7 +104,7 @@
 					progress: function() {
 						$(this).val(Math.ceil(this.value)).trigger('change');
 					}
-				})
+				});
 			});
 		}, { offset: '70%', triggerOnce: true });
 
@@ -239,39 +235,6 @@
 
 		});
 
-		/* ---------------------------------------------- /*
-		 * Google Map
-		/* ---------------------------------------------- */
-
-		map = new GMaps({
-			el: '#map',
-			lat: 27.998653,
-			lng: -80.638855,
-			zoom: 16,
-			scrollwheel: false,
-			zoomControl : false,
-			panControl : false,
-			streetViewControl : false,
-			mapTypeControl: false,
-			overviewMapControl: false,
-			styles: [{"featureType":"all","stylers":[{"saturation":-100},{"gamma":0.5}]}]
-		});
-
-		var image = new google.maps.MarkerImage('assets/images/map-icon.png',
-			new google.maps.Size(60, 60),
-			new google.maps.Point(0, 0),
-			new google.maps.Point(26, 30)
-		);
-
-		map.addMarker({
-			lat: 27.998653,
-			lng: -80.638855,
-			icon: image,
-			title: 'Elegant',
-			infoWindow: {
-				content: '<p><strong>Elegant</strong><br/> We are here</p>'
-			}
-		});
 
 	});
 

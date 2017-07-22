@@ -28,7 +28,7 @@ img {
 }
 
 a {
-	color: #90C695;
+	color: #33a3c7;
 }
 
 a:hover {
@@ -351,7 +351,7 @@ a,
 .nav-pills > li.active > a,
 .nav-pills>li.active>a:hover,
 .nav-pills>li.active>a:focus {
-	background: #90C695;
+	background: #33a3c7;
 }
 
 /* ---------------------------------------------- /*
@@ -661,7 +661,7 @@ a,
 .navbar-custom .nav li.active {
 	background: none;
 	outline: 0;
-	color: #90C695;
+	color: #8ad4ec;
 }
 
 .navbar-custom .navbar-brand {
@@ -691,7 +691,7 @@ a,
 .navbar-color .nav li a:focus,
 .navbar-color .nav li.active,
 .navbar-color .navbar-nav > li.active a {
-	color: #90C695;
+	color: #8ad4ec;
 }
 
 .navbar-color .navbar-nav > li > a,
@@ -711,7 +711,7 @@ a,
 
 .navbar-color .navbar-toggle .icon-bar,
 .custom-collapse .navbar-toggle .icon-bar {
-	background: #90C695;
+	background: #32a3c7;
 }
 
 /* ---------------------------------------------- /*
@@ -760,7 +760,7 @@ a,
 
 .service .icon {
 	font-size: 32px;
-	color: #90C695;
+	color: #32a3c7;
 }
 
 .service h4 {
@@ -1027,11 +1027,15 @@ a,
 }
 
 /* ---------------------------------------------- /*
- * Custom
+ * My Code
 /* ---------------------------------------------- */
 
+#navbarBrandSmall{
+  font-size: 20px !important;
+}
+
+
 h1.logoFont{
-	font-family: "MuseoSans_500";
 	font-size: 150px;
 	margin-bottom: 0px;
 	height: 180px;
@@ -1041,9 +1045,8 @@ h1.logoFont{
 }
 
 .uas{
-  font-size: 108px;
+  font-size: 117px;
   color: rgb(237, 245, 255) !important;
-  letter-spacing: 14px;
 }
 
 .mainLogo{
@@ -1082,6 +1085,19 @@ h1.logoFont{
 	padding-top: 80px;
   padding-bottom: 40px;
 }
+
+
+
+.letterSpace7{
+  letter-spacing: 7px !important;
+}
+
+
+
+.nav-pills>li{
+  text-align: center;
+}
+
 
 
 /* ---------------------------------------------- /*

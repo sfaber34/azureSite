@@ -1150,6 +1150,10 @@ h1.logoFont{
   color: white;
 }
 
+.servicesNav .serviceLi a{
+  height: 100%;
+}
+
 .servicesLink{
   width: 200px;
 }
@@ -1192,6 +1196,18 @@ h1.logoFont{
   margin-bottom: 40px;
 }
 
+.priceDiv{
+  margin-bottom: 20px;
+}
+
+.price p.mt30{
+  text-shadow: rgba(0,0,0,.15) 1px 1px 2px;
+}
+
+.price p.hourlyPrice{
+  font-size: 15px;
+  line-height: 1.4;
+}
 
 .btn-primary.azureBlue{
   background: #33a3c7;
@@ -1205,6 +1221,9 @@ h1.logoFont{
   background: #28819e;
 }
 
+#servicesSection{
+  padding-top: 60px;
+}
 
 
 .fs20{
@@ -1355,7 +1374,13 @@ h1.logoFont{
  * Media screen queries
 /* ---------------------------------------------- */
 
+@media only screen and (max-width : 787px) {
 
+  .servicesNav .service{
+    width:129px;
+  }
+
+}
 
 @media only screen and (max-width : 480px) {
   h1.logoFont{

@@ -451,7 +451,7 @@
 							</p>
 							<hr/>
 							<div class="row">
-									<button type="button" href="#orderPhotosPopup" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
+									<button type="button" data-target="#orderPhotosPopup" id="orderPhotos" data-toggle="modal" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
@@ -860,11 +860,6 @@
 				</div><!-- .row -->
 
 			</div><!-- .container -->
-			<div id="orderPhotosPopup" class="mfp-hide white-popup">
-				<div class="form-group">
-					<input class="form-control" type="text" placeholder="Default input">
-				</div>
-			</div>
 
 		</section>
 
@@ -922,6 +917,118 @@
 	<script src="assets/js/gmaps.js"></script>
 	<!-- Custom scripts -->
 	<script src="assets/js/custom.js"></script>
+
+	<div class="modal fade" id="orderPhotosPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form id="orderPhotosForm" method="post" role="form">
+
+						<div class="ajax-hidden">
+
+							<div class="form-group">
+								<label class="sr-only" for="c_name">Name</label>
+								<input type="text" id="c_name" class="form-control" name="c_name" placeholder="Name">
+							</div>
+
+							<div class="form-group">
+								<label class="sr-only" for="c_company">Company</label>
+								<input type="text" id="c_company" class="form-control" name="c_company" placeholder="Company">
+							</div>
+
+							<div class="form-group">
+								<label class="sr-only" for="c_email">Email address</label>
+								<input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail">
+							</div>
+
+							<div class="form-group">
+								<label class="sr-only" for="c_phone">Phone</label>
+								<input type="phone" id="c_phone" class="form-control" name="c_phone" placeholder="Phone">
+							</div>
+
+							<div class="form-group">
+								<label class="sr-only" for="c_streetAddress">Street Address of Property/Subject</label>
+								<input type="address" id="c_streetAddress" class="form-control" name="c_streetAddress" placeholder="Street Address of Property/Subject">
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label class="sr-only" for="c_cityAddress">City of Property/Subject</label>
+										<input type="address" id="c_cityAddress" class="form-control" name="c_cityAddress" placeholder="City for Property/Subject">
+									</div>
+								</div>
+
+								<div class="col-sm-6">
+									<div class="form-group">
+										<label class="sr-only" for="c_zipCode">Zip Code</label>
+										<input type="address" id="c_zipCode" class="form-control" name="c_zipCode" placeholder="Zip Code">
+									</div>
+								</div>
+							</div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="dropdown">
+										<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+											Add Photos
+										</button>
+										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+											<a class="dropdown-item" href="#">Action</a>
+											<a class="dropdown-item" href="#">Another action</a>
+											<a class="dropdown-item" href="#">Something else here</a>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="form-group">
+								<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Your message"></textarea>
+							</div>
+
+							<button type="submit" class="btn btn-custom-1-inverse azureBlue">
+								<i class="fa fa-bullhorn icon-before"></i> Send it
+							</button>
+
+							<div class="form-group">
+								<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Your message"></textarea>
+							</div>
+
+							<button type="submit" class="btn btn-custom-1-inverse azureBlue">
+								<i class="fa fa-bullhorn icon-before"></i> Send it
+							</button>
+
+							<div class="form-group">
+								<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Your message"></textarea>
+							</div>
+
+							<button type="submit" class="btn btn-custom-1-inverse azureBlue">
+								<i class="fa fa-bullhorn icon-before"></i> Send it
+							</button>
+
+							<div class="form-group">
+								<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Your message"></textarea>
+							</div>
+
+							<button type="submit" class="btn btn-custom-1-inverse azureBlue">
+								<i class="fa fa-bullhorn icon-before"></i> Send it
+							</button>
+
+						</div>
+
+						<div class="ajax-response"></div><!-- Displays status when submitting form -->
+
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 
 </body>
 </html>

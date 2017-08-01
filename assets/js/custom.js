@@ -171,6 +171,11 @@
 			type: 'iframe',
 		});
 
+		$('#orderPhotos').magnificPopup({
+      type: 'inline',
+			closeBtnInside: true,
+		});
+
 		/* ---------------------------------------------- /*
 		 * A jQuery plugin for fluid width video embeds
 		/* ---------------------------------------------- */
@@ -234,7 +239,7 @@
 			return false;
 
 		});
-		
+
 
 	});
 

@@ -881,7 +881,9 @@ a,
  * Contact
 /* ---------------------------------------------- */
 
-#contact-header {
+#contact-header,
+#services-header,
+#orderServices-header{
 	background: url(../images/mountainImg.jpg) no-repeat center fixed;
 	-webkit-background-size: cover;
 			background-size: cover;
@@ -1162,7 +1164,7 @@ h1.logoFont{
   border: solid 2px rgb(218, 218, 218);
   border-radius: 6px;
   background-color: rgb(247, 247, 247);
-  padding:8px 10px;
+  padding:20px 30px;
 }
 
 .orderServiceDiv h3{
@@ -1173,7 +1175,22 @@ h1.logoFont{
   color:rgb(100,100,100);
 }
 
+.orderServiceDiv hr{
+  border-color: rgb(153,153,153);
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
 
+.orderServiceDiv p.option{
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.price{
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 40px;
+}
 
 
 .btn-primary.azureBlue{
@@ -1188,6 +1205,28 @@ h1.logoFont{
   background: #28819e;
 }
 
+
+
+.fs20{
+  font-size: 20px;
+}
+
+.fcDarkGrey{
+  color: rgb(100,100,100);
+}
+
+.bold{
+  font-weight: bold;
+}
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 20px;
+  width:auto;
+  max-width: 500px;
+  margin: 20px auto;
+}
 
 /* ---------------------------------------------- /*
  * Margin Overrides
@@ -1231,6 +1270,46 @@ h1.logoFont{
 
 .mt100{
   margin-top: 100px !important;
+}
+
+.mb10{
+  margin-bottom: 10px !important;
+}
+
+.mb20{
+  margin-bottom: 20px !important;
+}
+
+.mb30{
+  margin-bottom: 30px !important;
+}
+
+.mb40{
+  margin-bottom: 40px !important;
+}
+
+.mb50{
+  margin-bottom: 50px !important;
+}
+
+.mb60{
+  margin-bottom: 60px !important;
+}
+
+.mb70{
+  margin-bottom: 70px !important;
+}
+
+.mb80{
+  margin-bottom: 80px !important;
+}
+
+.mb90{
+  margin-bottom: 90px !important;
+}
+
+.mb100{
+  margin-bottom: 100px !important;
 }
 
 

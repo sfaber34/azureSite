@@ -240,6 +240,79 @@
 
 		});
 
+
+		/* ---------------------------------------------- /*
+		 * Order Photos Form JS
+		/* ---------------------------------------------- */
+
+
+		$("#orderPhotos_addPhotos").change(function(e) {
+			$("#orderPhotosTotal").text('hi');
+		});
+
+
+		$("#orderPhotosForm").submit(function(e) {
+
+			e.preventDefault();
+
+			var orderPhotos_name = $("#orderPhotos_name").val();
+			var orderPhotos_company = $("#orderPhotos_company").val();
+			var orderPhotos_email = $("#orderPhotos_email").val();
+			var orderPhotos_phone = $("#orderPhotos_phone").val();
+			var orderPhotos_streetAddress = $("#orderPhotos_streetAddress").val();
+			var orderPhotos_cityAddress = $("#orderPhotos_cityAddress").val();
+			var orderPhotos_zipCode = $("#orderPhotos_zipCode").val();
+			var orderPhotos_addPhotos = $("#orderPhotos_addPhotos").val();
+			var orderPhotos_message = $("#orderPhotos_message ").val();
+			var responseMessage = $('#orderPhotosForm .ajax-response');
+
+			if (( orderPhotos_name== "" || orderPhotos_email == "" || orderPhotos_message == "") || (!isValidEmailAddress(orderPhotos_email) )) {
+				responseMessage.fadeIn(500);
+				responseMessage.html('<i class="fa fa-warning"></i> Check all fields.');
+			}
+
+			else {
+				$.ajax({
+					type: "POST",
+					url: "assets/php/orderPhotosForm.php",
+					dataType: 'json',
+					data: {
+						orderPhotos_email: orderPhotos_email,
+						orderPhotos_name: orderPhotos_name,
+						orderPhotos_company: orderPhotos_company,
+						orderPhotos_phone: orderPhotos_phone,
+						orderPhotos_streetAddress: orderPhotos_streetAddress,
+						orderPhotos_cityAddress: orderPhotos_cityAddress,
+						orderPhotos_zipCode: orderPhotos_zipCode,
+						orderPhotos_addPhotos: orderPhotos_addPhotos,
+						orderPhotos_message: orderPhotos_message,
+					},
+					beforeSend: function(result) {
+						$('#orderPhotosForm button').empty();
+						$('#orderPhotosForm button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
+					},
+					success: function(result) {
+						if(result.sendstatus == 1) {
+							$('#orderPhotosForm .ajax-hidden').fadeOut(500);
+							responseMessage.html(result.message).fadeIn(500);
+						} else {
+							$('#orderPhotosForm button').empty();
+							$('#orderPhotosForm button').append('<i class="fa fa-retweet"></i> Try again.');
+							responseMessage.html(result.message).fadeIn(1000);
+						}
+					}
+				});
+			}
+
+			return false;
+
+		});
+
+
+
+
+
+
 equalheight = function(container){
 
 var currentTallest = 0,

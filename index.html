@@ -6,6 +6,11 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 
+	<!----------- DELETE THESE BEFORE DEPLOYING!!!!!!!! ------------>
+	<meta name="robots" content="noindex">
+	<meta name="googlebot" content="noindex">
+
+
 	<title>Azure UAS: Drone solutions for the Colorado Front Range</title>
 
 	<!-- CSS -->
@@ -97,7 +102,7 @@
 
 					<div class="col-md-12">
 
-						<div class="hello wow fadeInDown iconDiv">
+						<div class="hello wow fadeInUp iconDiv" data-wow-duration="3s">
 							<img class="mainLogo" src="assets/images/icon.png"/>
 						</div>
 
@@ -109,7 +114,7 @@
 
 					<div class="col-md-12">
 
-						<div class="hello wow fadeInDown">
+						<div class="hello wow fadeInDown" data-wow-duration="2s">
 							<h1 class="logoFont">Azure <span class="uas">U<span class="letterSpace7">A</span>S</span></h1>
 						</div>
 
@@ -217,7 +222,7 @@
 				<div class="">
 					<!-- Nav tabs -->
 					<ul class="nav nav-pills servicesNav">
-						<li class="serviceLi active">
+						<li class="serviceLi active wow fadeInDown"  data-wow-duration="2s">
 							<a href="#tab1" data-toggle="tab">
 								<div class="service">
 									<div class="icon">
@@ -232,7 +237,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="serviceLi">
+						<li class="serviceLi wow fadeInDown" data-wow-delay=".5s" data-wow-duration="2s">
 							<a href="#tab2" data-toggle="tab">
 								<div class="service">
 									<div class="icon">
@@ -247,7 +252,7 @@
 								</div>
 							</a>
 						</li>
-						<li class="serviceLi">
+						<li class="serviceLi wow fadeInDown" data-wow-delay="1s" data-wow-duration="2s">
 							<a href="#tab3" data-toggle="tab">
 								<div class="service">
 									<div class="icon">
@@ -429,7 +434,7 @@
 							</p>
 							<hr/>
 							<div class="row">
-									<button type="button" href="#orderPhotosPopup" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
+									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block" data-toggle="modal" data-target="#orderPhotosPopup">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
@@ -451,7 +456,7 @@
 							</p>
 							<hr/>
 							<div class="row">
-									<button type="button" data-target="#orderPhotosPopup" id="orderPhotos" data-toggle="modal" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
+									<button type="button" data-target="" id="orderPhotos" data-toggle="modal" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
@@ -468,7 +473,7 @@
 							</div>
 
 							<div class="row">
-									<button type="button" href="#orderPhotosPopup" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
+									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
@@ -500,7 +505,7 @@
 							</p>
 							<hr/>
 							<div class="row">
-									<button type="button" href="#orderPhotosPopup" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
+									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
@@ -523,7 +528,7 @@
 							</p>
 							<hr/>
 							<div class="row">
-									<button type="button" href="#orderPhotosPopup" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
+									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
@@ -540,7 +545,7 @@
 								<p class="hourlyPrice">+$75 for each hour on site past the first</p>
 							</div>
 							<div class="row">
-									<button type="button" href="#orderPhotosPopup" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
+									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
@@ -563,7 +568,7 @@
 								<p class="hourlyPrice">+$75 for each hour on site past the first</p>
 							</div>
 							<div class="row">
-									<button type="button" href="#orderPhotosPopup" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
+									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
@@ -933,92 +938,92 @@
 						<div class="ajax-hidden">
 
 							<div class="form-group">
-								<label class="sr-only" for="c_name">Name</label>
-								<input type="text" id="c_name" class="form-control" name="c_name" placeholder="Name">
+								<label class="sr-only" for="orderPhotos_name">Name</label>
+								<input type="text" id="orderPhotos_name" class="form-control" name="orderPhotos_name" placeholder="Name">
 							</div>
 
 							<div class="form-group">
-								<label class="sr-only" for="c_company">Company</label>
-								<input type="text" id="c_company" class="form-control" name="c_company" placeholder="Company">
+								<label class="sr-only" for="orderPhotos_company">Company</label>
+								<input type="text" id="orderPhotos_company" class="form-control" name="orderPhotos_company" placeholder="Company">
 							</div>
 
 							<div class="form-group">
-								<label class="sr-only" for="c_email">Email address</label>
-								<input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail">
+								<label class="sr-only" for="orderPhotos_email">Email address</label>
+								<input type="email" id="orderPhotos_email" class="form-control" name="orderPhotos_email" placeholder="E-mail">
 							</div>
 
 							<div class="form-group">
-								<label class="sr-only" for="c_phone">Phone</label>
-								<input type="phone" id="c_phone" class="form-control" name="c_phone" placeholder="Phone">
+								<label class="sr-only" for="orderPhotos_phone">Phone</label>
+								<input type="phone" id="orderPhotos_phone" class="form-control" name="orderPhotos_phone" placeholder="Phone">
 							</div>
 
 							<div class="form-group">
-								<label class="sr-only" for="c_streetAddress">Street Address of Property/Subject</label>
-								<input type="address" id="c_streetAddress" class="form-control" name="c_streetAddress" placeholder="Street Address of Property/Subject">
+								<label class="sr-only" for="orderPhotos_streetAddress">Street Address of Property/Subject</label>
+								<input type="address" id="orderPhotos_streetAddress" class="form-control" name="orderPhotos_streetAddress" placeholder="Street Address of Property/Subject">
 							</div>
 
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
-										<label class="sr-only" for="c_cityAddress">City of Property/Subject</label>
-										<input type="address" id="c_cityAddress" class="form-control" name="c_cityAddress" placeholder="City for Property/Subject">
+										<label class="sr-only" for="orderPhotos_cityAddress">City of Property/Subject</label>
+										<input type="address" id="orderPhotos_cityAddress" class="form-control" name="orderPhotos_cityAddress" placeholder="City for Property/Subject">
 									</div>
 								</div>
 
 								<div class="col-sm-6">
 									<div class="form-group">
-										<label class="sr-only" for="c_zipCode">Zip Code</label>
-										<input type="address" id="c_zipCode" class="form-control" name="c_zipCode" placeholder="Zip Code">
+										<label class="sr-only" for="orderPhotos_zipCode">Zip Code</label>
+										<input type="address" id="orderPhotos_zipCode" class="form-control" name="orderPhotos_zipCode" placeholder="Zip Code">
 									</div>
 								</div>
 							</div>
 
+							<div class="row mb20">
+								<div class="col-sm-6">
+									<p class="myLabel">
+										Additional Photos (+$10 /photo)
+									</p>
+									<div class="clearFix"></div>
+									<select class="selectpicker mySelect" id="orderPhotos_addPhotos">
+									  <option>None</option>
+									  <option>1</option>
+									  <option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+									</select>
+								</div>
+								<div class="col-sm-6">
+									<p class="myLabel">
+										Add a 3D Pano (+$60)
+									</p>
+									<div class="clearFix"></div>
+									<select class="selectpicker mySelect" id="orderPhotos_addPano">
+									  <option>No</option>
+									  <option>Yes</option>
+									</select>
+								</div>
+							</div>
+							</div>
+
+							<div class="form-group">
+								<textarea class="form-control" id="orderPhotos_message" name="orderPhotos_message" rows="7" placeholder="Your message"></textarea>
+							</div>
 							<div class="row">
 								<div class="col-sm-6">
-									<div class="dropdown">
-										<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-											Add Photos
-										</button>
-										<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-											<a class="dropdown-item" href="#">Action</a>
-											<a class="dropdown-item" href="#">Another action</a>
-											<a class="dropdown-item" href="#">Something else here</a>
-										</div>
-									</div>
+									<button type="submit" class="btn btn-primary azureBlue">
+									  Submit Order
+									</button>
+								</div>
+								<div class="col-sm-6">
+									<h4>$<span id="orderPhotosTotal">150</span></h4>
 								</div>
 							</div>
-
-							<div class="form-group">
-								<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Your message"></textarea>
-							</div>
-
-							<button type="submit" class="btn btn-custom-1-inverse azureBlue">
-								<i class="fa fa-bullhorn icon-before"></i> Send it
-							</button>
-
-							<div class="form-group">
-								<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Your message"></textarea>
-							</div>
-
-							<button type="submit" class="btn btn-custom-1-inverse azureBlue">
-								<i class="fa fa-bullhorn icon-before"></i> Send it
-							</button>
-
-							<div class="form-group">
-								<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Your message"></textarea>
-							</div>
-
-							<button type="submit" class="btn btn-custom-1-inverse azureBlue">
-								<i class="fa fa-bullhorn icon-before"></i> Send it
-							</button>
-
-							<div class="form-group">
-								<textarea class="form-control" id="c_message" name="c_message" rows="7" placeholder="Your message"></textarea>
-							</div>
-
-							<button type="submit" class="btn btn-custom-1-inverse azureBlue">
-								<i class="fa fa-bullhorn icon-before"></i> Send it
-							</button>
 
 						</div>
 

@@ -1221,6 +1221,19 @@ h1.logoFont{
   background: #28819e;
 }
 
+p.myLabel{
+  margin-bottom: 0px;
+  margin-left: 5px;
+}
+
+select.mySelect{
+  height: 46px;
+  width: 100%;
+  border-width: 2px;
+  border-color: rgb(216, 225, 228);
+  background-color: rgb(255,255,255);
+}
+
 #servicesSection{
   padding-top: 60px;
 }

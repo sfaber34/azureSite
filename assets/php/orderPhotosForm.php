@@ -13,7 +13,9 @@
 			$orderPhotos_cityAddress      = $_POST['orderPhotos_cityAddress'];
 			$orderPhotos_zipCode          = $_POST['orderPhotos_zipCode'];
 			$orderPhotos_addPhotos        = $_POST['orderPhotos_addPhotos'];
+			$orderPhotos_addPano        = $_POST['orderPhotos_addPano'];
 			$orderPhotos_message          = $_POST['orderPhotos_message'];
+			$orderPhotos_total          = $_POST['orderPhotos_total'];
 
 			$commentsText='Name: '.$orderPhotos_name.'
 			Company: '.$orderPhotos_company.'
@@ -23,7 +25,9 @@
 			City: '.$orderPhotos_cityAddress.'
 			Zip: '.$orderPhotos_zipCode.'
 			Add Photos: '.$orderPhotos_addPhotos.'
-			Message: '.$orderPhotos_message;
+			Add Pano: '.$orderPhotos_addPano.'
+			Message: '.$orderPhotos_message.'
+			Total:'.$orderPhotos_total;
 
 		if (mail($to, $subject, $commentsText)) {
 			$result = array(

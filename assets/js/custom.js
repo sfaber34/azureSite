@@ -177,6 +177,49 @@
 		// });
 
 		/* ---------------------------------------------- /*
+		 * Service Nav
+		/* ---------------------------------------------- */
+
+		$('.serviceLi').click(function() {
+			$('.serviceLi').removeClass("active");
+			$(this).addClass("active");
+			var id = $(this).attr("id");
+			$(".servicePane .tab-pane").removeClass("active");
+			$(".servicePane .tab-pane#"+id).addClass("active").css("visibility","visible");
+		});
+
+
+
+
+
+		/* ---------------------------------------------- /*
+		 * Price Calculators
+		/* ---------------------------------------------- */
+
+		$('.orderPhotos_modPrice').change(function() {
+			var base = 150;
+			var addPhotos = $("#orderPhotos_addPhotos").val();
+			var addPano = $("#orderPhotos_addPano").val();
+
+			if(addPhotos == "None"){
+				var addPhotos = 0;
+			}
+
+			if (addPano == "Yes"){
+				addPano = 60;
+			} else{
+				addPano = 0;
+			}
+
+			var price = parseInt(base) + parseInt(addPhotos) * 10 + parseInt(addPano);
+
+			$("#orderPhotos_total").text(price);
+		});
+
+
+
+
+		/* ---------------------------------------------- /*
 		 * A jQuery plugin for fluid width video embeds
 		/* ---------------------------------------------- */
 
@@ -246,10 +289,6 @@
 		/* ---------------------------------------------- */
 
 
-		$("#orderPhotos_addPhotos").change(function(e) {
-			$("#orderPhotosTotal").text('hi');
-		});
-
 
 		$("#orderPhotosForm").submit(function(e) {
 
@@ -263,15 +302,11 @@
 			var orderPhotos_cityAddress = $("#orderPhotos_cityAddress").val();
 			var orderPhotos_zipCode = $("#orderPhotos_zipCode").val();
 			var orderPhotos_addPhotos = $("#orderPhotos_addPhotos").val();
+			var orderPhotos_addPano = $("#orderPhotos_addPano").val();
 			var orderPhotos_message = $("#orderPhotos_message ").val();
+			var orderPhotos_total = $("#orderPhotos_total").html();
 			var responseMessage = $('#orderPhotosForm .ajax-response');
 
-			if (( orderPhotos_name== "" || orderPhotos_email == "" || orderPhotos_message == "") || (!isValidEmailAddress(orderPhotos_email) )) {
-				responseMessage.fadeIn(500);
-				responseMessage.html('<i class="fa fa-warning"></i> Check all fields.');
-			}
-
-			else {
 				$.ajax({
 					type: "POST",
 					url: "assets/php/orderPhotosForm.php",
@@ -285,6 +320,8 @@
 						orderPhotos_cityAddress: orderPhotos_cityAddress,
 						orderPhotos_zipCode: orderPhotos_zipCode,
 						orderPhotos_addPhotos: orderPhotos_addPhotos,
+						orderPhotos_addPano: orderPhotos_addPano,
+						orderPhotos_total: orderPhotos_total,
 						orderPhotos_message: orderPhotos_message,
 					},
 					beforeSend: function(result) {
@@ -294,7 +331,7 @@
 					success: function(result) {
 						if(result.sendstatus == 1) {
 							$('#orderPhotosForm .ajax-hidden').fadeOut(500);
-							responseMessage.html(result.message).fadeIn(500);
+							$('#orderPhotosPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
 						} else {
 							$('#orderPhotosForm button').empty();
 							$('#orderPhotosForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -302,7 +339,7 @@
 						}
 					}
 				});
-			}
+
 
 			return false;
 
@@ -346,11 +383,13 @@ var currentTallest = 0,
 
 $(window).load(function() {
   equalheight('.priceDiv');
+	equalheight('.serviceLi');
 });
 
 
 $(window).resize(function(){
   equalheight('.priceDiv');
+	equalheight('.serviceLi');
 });
 	});
 

@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 
 	<!----------- DELETE THESE BEFORE DEPLOYING!!!!!!!! ------------>
 	<meta name="robots" content="noindex">
@@ -219,11 +220,11 @@
 
 			<div class="container">
 
-				<div class="">
-					<!-- Nav tabs -->
-					<ul class="nav nav-pills servicesNav">
-						<li class="serviceLi active wow fadeInDown"  data-wow-duration="2s">
-							<a href="#tab1" data-toggle="tab">
+				<div>
+
+					<div class="row">
+						<div class="col-sm-4">
+							<div class="serviceLi active wow bounceIn"  data-wow-duration=".8s" id="tab1">
 								<div class="service">
 									<div class="icon">
 										<i class="fa fa-home"></i>
@@ -235,47 +236,53 @@
 										</p>
 									</div>
 								</div>
-							</a>
-						</li>
-						<li class="serviceLi wow fadeInDown" data-wow-delay=".5s" data-wow-duration="2s">
-							<a href="#tab2" data-toggle="tab">
-								<div class="service">
-									<div class="icon">
-										<i class="fa fa-ambulance"></i>
-									</div>
-									<h4>Insurance</h4>
-									<div class="text">
-										<p>
-											Rapid claims adjustment inspections
-										</p>
-									</div>
+							</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="serviceLi wow bounceIn" data-wow-delay=".25s" data-wow-duration=".8s" id="tab2">
+							<div class="service">
+								<div class="icon">
+									<i class="fa fa-ambulance"></i>
 								</div>
-							</a>
-						</li>
-						<li class="serviceLi wow fadeInDown" data-wow-delay="1s" data-wow-duration="2s">
-							<a href="#tab3" data-toggle="tab">
-								<div class="service">
-									<div class="icon">
-										<i class="fa fa-road"></i>
-									</div>
-									<h4>Construction & Energy</h4>
-									<div class="text">
-										<p>
-											Detailed site maps, 3D models & cut and fill estimates
-										</p>
-									</div>
+								<h4>Insurance</h4>
+								<div class="text">
+									<p>
+										Rapid claims adjustment inspections
+									</p>
 								</div>
-							</a>
-						</li>
-					</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="serviceLi wow bounceIn" data-wow-delay=".4s" data-wow-duration=".8s" id="tab3">
+							<div class="service">
+								<div class="icon">
+									<i class="fa fa-road"></i>
+								</div>
+								<h4>Construction & Energy</h4>
+								<div class="text">
+									<p>
+										Detailed site maps, 3D models & cut and fill estimates
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
 					<!-- Tab panes -->
-					<div class="tab-content long mt80">
+					<div class="tab-content long mt80 servicePane">
 
 						<div class="tab-pane active" id="tab1">
-							<p class="fs20 fcDarkGrey">
-								Drones are shaking up the way properties are marketed and sold. We’re experts at providing gorgeous eye-catching photos, breathtaking videos, and immersive 3D panos; all from a bird’s eye view. We'll deliver the aerial media you need to sell your next property.
-							</p>
+							<div class="row">
+								<div class="col-sm-2"></div>
+								<div class="col-sm-8">
+									<p class="fs20 fcDarkGrey">
+										Drones are shaking up the way properties are marketed and sold. We’re experts at providing gorgeous eye-catching photos, breathtaking videos, and immersive 3D panos; all from a bird’s eye view. We'll deliver the aerial media you need to sell your next property.
+									</p>
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
 							<div class="row mt60">
 										<div class="col-md-4 col-sm-6">
 											<a href="assets/images/p1.jpg" class="pop-up" title="Caption 1">
@@ -323,9 +330,16 @@
 						</div>
 
 						<div class="tab-pane" id="tab2">
-							<p class="fs20 fcDarkGrey">
-								Compared to traditional methods, drones can conduct structural and roof inspections at a fraction of the time, cost, and risk. We provide fast photo, video, and photomosaic assessments to streamline your claims adjustment workflow.
-							</p>
+
+							<div class="row">
+								<div class="col-sm-2"></div>
+								<div class="col-sm-8">
+									<p class="fs20 fcDarkGrey">
+										Compared to traditional methods, drones can conduct structural and roof inspections at a fraction of the time, cost, and risk. We provide fast photo, video, and photomosaic assessments to streamline your claims adjustment workflow.
+									</p>
+								</div>
+								<div class="col-sm-2"></div>
+							</div>
 							<div class="row mt60">
 										<div class="col-md-4 col-sm-6">
 											<a href="assets/images/p1.jpg" class="pop-up" title="Caption 1">
@@ -372,10 +386,16 @@
 									</div><!-- .row -->
 						</div>
 
-						<div class="tab-pane" id="tab3">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth.
+						<div class="tab-pane" id="tab3">
+							<div class="row">
+								<div class="col-sm-2"></div>
+								<div class="col-sm-8">
+									<p class="fs20 fcDarkGrey">
+										Compared to traditional methods, drones can conduct structural and roof inspections at a fraction of the time, cost, and risk. We provide fast photo, video, and photomosaic assessments to streamline your claims adjustment workflow.
+									</p>
+								</div>
+								<div class="col-sm-2"></div>
 						</div>
-
-						<div class="tab-pane" id="tab4">Hi
 						</div>
 				</div>
 			</div>
@@ -414,8 +434,9 @@
 
 				<div class="row">
 
-					<div class="col-sm-4 wow fadeInLeft priceDiv">
+					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
 						<div class="orderServiceDiv">
+							<i class="fa fa-camera"></i>
 							<h3 class="mb20">Photos</h3>
 							<p class="orderServiceDescription">10 professionally shot and edited photos</p>
 							<div class="price">
@@ -433,17 +454,18 @@
 								Add 3D pano + $60
 							</p>
 							<hr/>
-							<div class="row">
+							<div class="row orderButtonRow">
 									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block" data-toggle="modal" data-target="#orderPhotosPopup">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
 					</div>
 
-					<div class="col-sm-4 wow fadeInLeft priceDiv">
+					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
 						<div class="orderServiceDiv">
+							<i class="fa fa-video-camera"></i>
 							<h3 class="mb20">Video</h3>
-							<p class="orderServiceDescription">30 second reel, perfect for highlighting luxury properties</p>
+							<p class="orderServiceDescription">30 second reel, perfect for showing off luxury properties and golf courses</p>
 							<div class="price">
 								<p class="mt30">
 									$300
@@ -455,15 +477,16 @@
 								Add 10 additional seconds + $50
 							</p>
 							<hr/>
-							<div class="row">
+							<div class="row orderButtonRow">
 									<button type="button" data-target="" id="orderPhotos" data-toggle="modal" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
 					</div>
 
-					<div class="col-sm-4 wow fadeInLeft priceDiv">
+					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
 						<div class="orderServiceDiv">
+							<i class="fa fa-rotate-right"></i>
 							<h3 class="mb20">3D Pano</h3>
 							<p class="orderServiceDescription">Interactive 3D pano, perfect for showing off neighborhoods and surrounding scenery</p>
 							<div class="price">
@@ -472,7 +495,7 @@
 								</p>
 							</div>
 
-							<div class="row">
+							<div class="row orderButtonRow">
 									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
@@ -480,12 +503,9 @@
 					</div>
 
 
-				</div><!-- .row -->
-
-				<div class="row">
-
-					<div class="col-sm-4 wow fadeInLeft priceDiv">
+					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
 						<div class="orderServiceDiv">
+							<i class="fa fa-map-marker"></i>
 							<h3 class="mb20">Site Map</h3>
 							<p class="orderServiceDescription">2D/3D site map, accurate to within ±1%</p>
 							<div class="price">
@@ -504,15 +524,16 @@
 								Add 3D pano + $60
 							</p>
 							<hr/>
-							<div class="row">
+							<div class="row orderButtonRow">
 									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
 					</div>
 
-					<div class="col-sm-4 wow fadeInLeft priceDiv">
+					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
 						<div class="orderServiceDiv">
+							<i class="fa fa-search"></i>
 							<h3 class="mb20">Building Inspection</h3>
 							<p class="orderServiceDescription">Detailed structure and roof inspection, available in image or photo formats</p>
 							<div class="price">
@@ -527,38 +548,34 @@
 								Add a 3D model + $100
 							</p>
 							<hr/>
-							<div class="row">
+							<div class="row orderButtonRow">
 									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
 					</div>
 
-					<div class="col-sm-4 wow fadeInLeft priceDiv">
+					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
 						<div class="orderServiceDiv">
+							<i class="fa fa-building"></i>
 							<h3 class="mb20">3D model</h3>
-							<p class="orderServiceDescription">Precise 3D model of building or terrain feature. Availible in GeoTiff, Point cloud, and JPG formats</p>
+							<p class="orderServiceDescription">Precise 3D building model availible in GeoTiff, Point cloud, and JPG formats</p>
 							<div class="price">
 								<p class="mt30">
 									$250
 								</p>
 								<p class="hourlyPrice">+$75 for each hour on site past the first</p>
 							</div>
-							<div class="row">
+							<div class="row orderButtonRow">
 									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
 					</div>
 
-
-				</div><!-- .row -->
-
-
-				<div class="row">
-
-					<div class="col-sm-4 wow fadeInLeft priceDiv">
+					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
 						<div class="orderServiceDiv">
+							<i class="fa fa-bar-chart"></i>
 							<h3 class="mb20">Cut/Fill Estimate</h3>
 							<p class="orderServiceDescription">Speedy cut & fill estimate, accurate to within ±1%</p>
 							<div class="price">
@@ -567,7 +584,7 @@
 								</p>
 								<p class="hourlyPrice">+$75 for each hour on site past the first</p>
 							</div>
-							<div class="row">
+							<div class="row orderButtonRow">
 									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
@@ -927,7 +944,7 @@
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
 				<div class="modal-header">
-					<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+					<h3 class="modal-title" id="exampleModalLongTitle">Order Photos</h3>
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
@@ -984,7 +1001,7 @@
 										Additional Photos (+$10 /photo)
 									</p>
 									<div class="clearFix"></div>
-									<select class="selectpicker mySelect" id="orderPhotos_addPhotos">
+									<select class="selectpicker mySelect orderPhotos_modPrice" id="orderPhotos_addPhotos">
 									  <option>None</option>
 									  <option>1</option>
 									  <option>2</option>
@@ -1003,16 +1020,15 @@
 										Add a 3D Pano (+$60)
 									</p>
 									<div class="clearFix"></div>
-									<select class="selectpicker mySelect" id="orderPhotos_addPano">
+									<select class="selectpicker mySelect orderPhotos_modPrice" id="orderPhotos_addPano">
 									  <option>No</option>
 									  <option>Yes</option>
 									</select>
 								</div>
 							</div>
-							</div>
 
 							<div class="form-group">
-								<textarea class="form-control" id="orderPhotos_message" name="orderPhotos_message" rows="7" placeholder="Your message"></textarea>
+								<textarea class="form-control orderServerDivTextArea" id="orderPhotos_message" name="orderPhotos_message" rows="7" placeholder="Your message"></textarea>
 							</div>
 							<div class="row">
 								<div class="col-sm-6">
@@ -1021,18 +1037,24 @@
 									</button>
 								</div>
 								<div class="col-sm-6">
-									<h4>$<span id="orderPhotosTotal">150</span></h4>
+									<h3 class="orderServicePrice">$<span id="orderPhotos_total">150</span></h3>
 								</div>
 							</div>
+							</div>
+						</form>
 
 						</div>
 
 						<div class="ajax-response"></div><!-- Displays status when submitting form -->
 
-					</form>
+
 				</div>
 			</div>
 		</div>
+
+
+
+
 	</div>
 
 </body>

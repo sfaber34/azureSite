@@ -41,7 +41,7 @@
 		 * Background image
 		/* ---------------------------------------------- */
 
-		/*$('#intro').backstretch(['assets/images/mountainImg.jpg']);*/
+		$('#intro').backstretch(['assets/images/mountainImg.jpg']);
 
 		/* ---------------------------------------------- /*
 		 * Navbar
@@ -171,10 +171,10 @@
 			type: 'iframe',
 		});
 
-		$('#intro').YTPlayer({
-    	fitToBackground: true,
-    	videoId: 'LSmgKRx5pBo'
-		});
+		// $('#intro').YTPlayer({
+    // 	fitToBackground: true,
+    // 	videoId: 'qA0jkcw_9ag'
+		// });
 
 		// $('#orderPhotos').magnificPopup({
     //   type: 'inline',
@@ -414,6 +414,7 @@
 			var orderVideo_cityAddress = $("#orderVideo_cityAddress").val();
 			var orderVideo_zipCode = $("#orderVideo_zipCode").val();
 			var orderVideo_addVideo = $("#orderVideo_addVideo").val();
+			var orderVideo_resolution = $("#orderVideo_resolution").val();
 			var orderVideo_message = $("#orderVideo_message ").val();
 			var orderVideo_total = $("#orderVideo_total").html();
 			var responseMessage = $('#orderVideoForm .ajax-response');
@@ -445,6 +446,7 @@
 						orderVideo_cityAddress: orderVideo_cityAddress,
 						orderVideo_zipCode: orderVideo_zipCode,
 						orderVideo_addVideo: orderVideo_addVideo,
+						orderVideo_resolution: orderVideo_resolution,
 						orderVideo_total: orderVideo_total,
 						orderVideo_message: orderVideo_message,
 					},
@@ -470,6 +472,448 @@
 		});
 
 
+
+
+
+		/* ---------------------------------------------- /*
+		 * Order Pano Form JS
+		/* ---------------------------------------------- */
+
+
+		$("#orderPanoForm").submit(function(e) {
+			$("#orderPanoForm .required").removeClass("problem");
+			e.preventDefault();
+
+			var orderPano_name = $("#orderPano_name").val();
+			var orderPano_company = $("#orderPano_company").val();
+			var orderPano_email = $("#orderPano_email").val();
+			var orderPano_phone = $("#orderPano_phone").val();
+			var orderPano_streetAddress = $("#orderPano_streetAddress").val();
+			var orderPano_cityAddress = $("#orderPano_cityAddress").val();
+			var orderPano_zipCode = $("#orderPano_zipCode").val();
+			var orderPano_message = $("#orderPano_message ").val();
+			var orderPano_total = $("#orderPano_total").html();
+			var responseMessage = $('#orderPanoForm .ajax-response');
+
+
+			if(!isValidEmailAddress(orderPano_email)){
+				$("#orderPano_email").addClass("problem");
+			}else if($("#orderPanoForm #orderPano_name").val() == ''){
+				$('#orderPanoForm #orderPano_name').addClass('problem');
+			}else if($("#orderPanoForm #orderPano_phone").val() == ''){
+				$('#orderPanoForm #orderPano_phone').addClass('problem');
+			}else if($("#orderPanoForm #orderPano_streetAddress").val() == ''){
+				$('#orderPanoForm #orderPano_streetAddress').addClass('problem');
+			}else if($("#orderPanoForm #orderPano_cityAddress").val() == ''){
+				$('#orderPanoForm #orderPano_cityAddress').addClass('problem');
+			}else if($("#orderPanoForm #orderPano_zipCode").val() == ''){
+				$('#orderPanoForm #orderPano_zipCode').addClass('problem');
+			} else {
+				$.ajax({
+					type: "POST",
+					url: "assets/php/orderPanoForm.php",
+					dataType: 'json',
+					data: {
+						orderPano_email: orderPano_email,
+						orderPano_name: orderPano_name,
+						orderPano_company: orderPano_company,
+						orderPano_phone: orderPano_phone,
+						orderPano_streetAddress: orderPano_streetAddress,
+						orderPano_cityAddress: orderPano_cityAddress,
+						orderPano_zipCode: orderPano_zipCode,
+						orderPano_total: orderPano_total,
+						orderPano_message: orderPano_message,
+					},
+					beforeSend: function(result) {
+						$('#orderPanoForm button').empty();
+						$('#orderPanoForm button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
+					},
+					success: function(result) {
+						if(result.sendstatus == 1) {
+							$('#orderPanoForm .ajax-hidden').fadeOut(500);
+							$('#orderPanoPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
+						} else {
+							$('#orderPanoForm button').empty();
+							$('#orderPanoForm button').append('<i class="fa fa-retweet"></i> Try again.');
+							responseMessage.html(result.message).fadeIn(1000);
+						}
+					}
+				});
+
+			}
+			return false;
+
+		});
+
+
+
+
+
+
+		/* ---------------------------------------------- /*
+		 * Order Sitemap Form JS
+		/* ---------------------------------------------- */
+
+
+
+		$("#orderSitemapForm").submit(function(e) {
+			$("#orderSitemapForm .required").removeClass("problem");
+			e.preventDefault();
+
+			var orderSitemap_name = $("#orderSitemap_name").val();
+			var orderSitemap_company = $("#orderSitemap_company").val();
+			var orderSitemap_email = $("#orderSitemap_email").val();
+			var orderSitemap_phone = $("#orderSitemap_phone").val();
+			var orderSitemap_streetAddress = $("#orderSitemap_streetAddress").val();
+			var orderSitemap_cityAddress = $("#orderSitemap_cityAddress").val();
+			var orderSitemap_zipCode = $("#orderSitemap_zipCode").val();
+			var orderSitemap_format = $("#orderSitemap_format").val();
+			var orderSitemap_message = $("#orderSitemap_message ").val();
+			var orderSitemap_total = $("#orderSitemap_total").html();
+			var responseMessage = $('#orderSitemapForm .ajax-response');
+
+
+			if(!isValidEmailAddress(orderSitemap_email)){
+				$("#orderSitemap_email").addClass("problem");
+			}else if($("#orderSitemapForm #orderSitemap_name").val() == ''){
+				$('#orderSitemapForm #orderSitemap_name').addClass('problem');
+			}else if($("#orderSitemapForm #orderSitemap_phone").val() == ''){
+				$('#orderSitemapForm #orderSitemap_phone').addClass('problem');
+			}else if($("#orderSitemapForm #orderSitemap_streetAddress").val() == ''){
+				$('#orderSitemapForm #orderSitemap_streetAddress').addClass('problem');
+			}else if($("#orderSitemapForm #orderSitemap_cityAddress").val() == ''){
+				$('#orderSitemapForm #orderSitemap_cityAddress').addClass('problem');
+			}else if($("#orderSitemapForm #orderSitemap_zipCode").val() == ''){
+				$('#orderSitemapForm #orderSitemap_zipCode').addClass('problem');
+			} else {
+				$.ajax({
+					type: "POST",
+					url: "assets/php/orderSitemapForm.php",
+					dataType: 'json',
+					data: {
+						orderSitemap_email: orderSitemap_email,
+						orderSitemap_name: orderSitemap_name,
+						orderSitemap_company: orderSitemap_company,
+						orderSitemap_phone: orderSitemap_phone,
+						orderSitemap_streetAddress: orderSitemap_streetAddress,
+						orderSitemap_cityAddress: orderSitemap_cityAddress,
+						orderSitemap_zipCode: orderSitemap_zipCode,
+						orderSitemap_format: orderSitemap_format,
+						orderSitemap_total: orderSitemap_total,
+						orderSitemap_message: orderSitemap_message,
+					},
+					beforeSend: function(result) {
+						$('#orderSitemapForm button').empty();
+						$('#orderSitemapForm button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
+					},
+					success: function(result) {
+						if(result.sendstatus == 1) {
+							$('#orderSitemapForm .ajax-hidden').fadeOut(500);
+							$('#orderSitemapPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
+						} else {
+							$('#orderSitemapForm button').empty();
+							$('#orderSitemapForm button').append('<i class="fa fa-retweet"></i> Try again.');
+							responseMessage.html(result.message).fadeIn(1000);
+						}
+					}
+				});
+
+			}
+			return false;
+
+		});
+
+
+
+
+
+		/* ---------------------------------------------- /*
+		 * Order 3D Model Form JS
+		/* ---------------------------------------------- */
+
+
+
+		$("#orderModelForm").submit(function(e) {
+			$("#orderModelForm .required").removeClass("problem");
+			e.preventDefault();
+
+			var orderModel_name = $("#orderModel_name").val();
+			var orderModel_company = $("#orderModel_company").val();
+			var orderModel_email = $("#orderModel_email").val();
+			var orderModel_phone = $("#orderModel_phone").val();
+			var orderModel_streetAddress = $("#orderModel_streetAddress").val();
+			var orderModel_cityAddress = $("#orderModel_cityAddress").val();
+			var orderModel_zipCode = $("#orderModel_zipCode").val();
+			var orderModel_format = $("#orderModel_format").val();
+			var orderModel_message = $("#orderModel_message ").val();
+			var orderModel_total = $("#orderModel_total").html();
+			var responseMessage = $('#orderModelForm .ajax-response');
+
+
+			if(!isValidEmailAddress(orderModel_email)){
+				$("#orderModel_email").addClass("problem");
+			}else if($("#orderModelForm #orderModel_name").val() == ''){
+				$('#orderModelForm #orderModel_name').addClass('problem');
+			}else if($("#orderModelForm #orderModel_phone").val() == ''){
+				$('#orderModelForm #orderModel_phone').addClass('problem');
+			}else if($("#orderModelForm #orderModel_streetAddress").val() == ''){
+				$('#orderModelForm #orderModel_streetAddress').addClass('problem');
+			}else if($("#orderModelForm #orderModel_cityAddress").val() == ''){
+				$('#orderModelForm #orderModel_cityAddress').addClass('problem');
+			}else if($("#orderModelForm #orderModel_zipCode").val() == ''){
+				$('#orderModelForm #orderModel_zipCode').addClass('problem');
+			} else {
+				$.ajax({
+					type: "POST",
+					url: "assets/php/orderModelForm.php",
+					dataType: 'json',
+					data: {
+						orderModel_email: orderModel_email,
+						orderModel_name: orderModel_name,
+						orderModel_company: orderModel_company,
+						orderModel_phone: orderModel_phone,
+						orderModel_streetAddress: orderModel_streetAddress,
+						orderModel_cityAddress: orderModel_cityAddress,
+						orderModel_zipCode: orderModel_zipCode,
+						orderModel_format: orderModel_format,
+						orderModel_total: orderModel_total,
+						orderModel_message: orderModel_message,
+					},
+					beforeSend: function(result) {
+						$('#orderModelForm button').empty();
+						$('#orderModelForm button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
+					},
+					success: function(result) {
+						if(result.sendstatus == 1) {
+							$('#orderModelForm .ajax-hidden').fadeOut(500);
+							$('#orderModelPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
+						} else {
+							$('#orderModelForm button').empty();
+							$('#orderModelForm button').append('<i class="fa fa-retweet"></i> Try again.');
+							responseMessage.html(result.message).fadeIn(1000);
+						}
+					}
+				});
+
+			}
+			return false;
+
+		});
+
+
+
+
+
+		/* ---------------------------------------------- /*
+		 * Order Inspection Form JS
+		/* ---------------------------------------------- */
+
+
+
+		$("#orderInspectionForm").submit(function(e) {
+			$("#orderInspectionForm .required").removeClass("problem");
+			e.preventDefault();
+
+			var orderInspection_name = $("#orderInspection_name").val();
+			var orderInspection_company = $("#orderInspection_company").val();
+			var orderInspection_email = $("#orderInspection_email").val();
+			var orderInspection_phone = $("#orderInspection_phone").val();
+			var orderInspection_streetAddress = $("#orderInspection_streetAddress").val();
+			var orderInspection_cityAddress = $("#orderInspection_cityAddress").val();
+			var orderInspection_zipCode = $("#orderInspection_zipCode").val();
+			var orderInspection_format = $("#orderInspection_format").val();
+			var orderInspection_message = $("#orderInspection_message ").val();
+			var orderInspection_total = $("#orderInspection_total").html();
+			var responseMessage = $('#orderInspectionForm .ajax-response');
+
+
+			if(!isValidEmailAddress(orderInspection_email)){
+				$("#orderInspection_email").addClass("problem");
+			}else if($("#orderInspectionForm #orderInspection_name").val() == ''){
+				$('#orderInspectionForm #orderInspection_name').addClass('problem');
+			}else if($("#orderInspectionForm #orderInspection_phone").val() == ''){
+				$('#orderInspectionForm #orderInspection_phone').addClass('problem');
+			}else if($("#orderInspectionForm #orderInspection_streetAddress").val() == ''){
+				$('#orderInspectionForm #orderInspection_streetAddress').addClass('problem');
+			}else if($("#orderInspectionForm #orderInspection_cityAddress").val() == ''){
+				$('#orderInspectionForm #orderInspection_cityAddress').addClass('problem');
+			}else if($("#orderInspectionForm #orderInspection_zipCode").val() == ''){
+				$('#orderInspectionForm #orderInspection_zipCode').addClass('problem');
+			} else {
+				$.ajax({
+					type: "POST",
+					url: "assets/php/orderInspectionForm.php",
+					dataType: 'json',
+					data: {
+						orderInspection_email: orderInspection_email,
+						orderInspection_name: orderInspection_name,
+						orderInspection_company: orderInspection_company,
+						orderInspection_phone: orderInspection_phone,
+						orderInspection_streetAddress: orderInspection_streetAddress,
+						orderInspection_cityAddress: orderInspection_cityAddress,
+						orderInspection_zipCode: orderInspection_zipCode,
+						orderInspection_format: orderInspection_format,
+						orderInspection_total: orderInspection_total,
+						orderInspection_message: orderInspection_message,
+					},
+					beforeSend: function(result) {
+						$('#orderInspectionForm button').empty();
+						$('#orderInspectionForm button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
+					},
+					success: function(result) {
+						if(result.sendstatus == 1) {
+							$('#orderInspectionForm .ajax-hidden').fadeOut(500);
+							$('#orderInspectionPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
+						} else {
+							$('#orderInspectionForm button').empty();
+							$('#orderInspectionForm button').append('<i class="fa fa-retweet"></i> Try again.');
+							responseMessage.html(result.message).fadeIn(1000);
+						}
+					}
+				});
+
+			}
+			return false;
+
+		});
+
+
+
+		/* ---------------------------------------------- /*
+		 * Order Cut/Fill Form JS
+		/* ---------------------------------------------- */
+
+
+
+		$("#orderCutfillForm").submit(function(e) {
+			$("#orderCutfillForm .required").removeClass("problem");
+			e.preventDefault();
+
+			var orderCutfill_name = $("#orderCutfill_name").val();
+			var orderCutfill_company = $("#orderCutfill_company").val();
+			var orderCutfill_email = $("#orderCutfill_email").val();
+			var orderCutfill_phone = $("#orderCutfill_phone").val();
+			var orderCutfill_streetAddress = $("#orderCutfill_streetAddress").val();
+			var orderCutfill_cityAddress = $("#orderCutfill_cityAddress").val();
+			var orderCutfill_zipCode = $("#orderCutfill_zipCode").val();
+			var orderCutfill_format = $("#orderCutfill_format").val();
+			var orderCutfill_message = $("#orderCutfill_message ").val();
+			var orderCutfill_total = $("#orderCutfill_total").html();
+			var responseMessage = $('#orderCutfillForm .ajax-response');
+
+
+			if(!isValidEmailAddress(orderCutfill_email)){
+				$("#orderCutfill_email").addClass("problem");
+			}else if($("#orderCutfillForm #orderCutfill_name").val() == ''){
+				$('#orderCutfillForm #orderCutfill_name').addClass('problem');
+			}else if($("#orderCutfillForm #orderCutfill_phone").val() == ''){
+				$('#orderCutfillForm #orderCutfill_phone').addClass('problem');
+			}else if($("#orderCutfillForm #orderCutfill_streetAddress").val() == ''){
+				$('#orderCutfillForm #orderCutfill_streetAddress').addClass('problem');
+			}else if($("#orderCutfillForm #orderCutfill_cityAddress").val() == ''){
+				$('#orderCutfillForm #orderCutfill_cityAddress').addClass('problem');
+			}else if($("#orderCutfillForm #orderCutfill_zipCode").val() == ''){
+				$('#orderCutfillForm #orderCutfill_zipCode').addClass('problem');
+			} else {
+				$.ajax({
+					type: "POST",
+					url: "assets/php/orderCutfillForm.php",
+					dataType: 'json',
+					data: {
+						orderCutfill_email: orderCutfill_email,
+						orderCutfill_name: orderCutfill_name,
+						orderCutfill_company: orderCutfill_company,
+						orderCutfill_phone: orderCutfill_phone,
+						orderCutfill_streetAddress: orderCutfill_streetAddress,
+						orderCutfill_cityAddress: orderCutfill_cityAddress,
+						orderCutfill_zipCode: orderCutfill_zipCode,
+						orderCutfill_format: orderCutfill_format,
+						orderCutfill_total: orderCutfill_total,
+						orderCutfill_message: orderCutfill_message,
+					},
+					beforeSend: function(result) {
+						$('#orderCutfillForm button').empty();
+						$('#orderCutfillForm button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
+					},
+					success: function(result) {
+						if(result.sendstatus == 1) {
+							$('#orderCutfillForm .ajax-hidden').fadeOut(500);
+							$('#orderCutfillPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
+						} else {
+							$('#orderCutfillForm button').empty();
+							$('#orderCutfillForm button').append('<i class="fa fa-retweet"></i> Try again.');
+							responseMessage.html(result.message).fadeIn(1000);
+						}
+					}
+				});
+
+			}
+			return false;
+
+		});
+
+
+
+
+
+		/* ---------------------------------------------- /*
+		 * Order Other Form JS
+		/* ---------------------------------------------- */
+
+
+
+		$("#orderOtherForm").submit(function(e) {
+			$("#orderOtherForm .required").removeClass("problem");
+			e.preventDefault();
+
+			var orderOther_name = $("#orderOther_name").val();
+			var orderOther_company = $("#orderOther_company").val();
+			var orderOther_email = $("#orderOther_email").val();
+			var orderOther_phone = $("#orderOther_phone").val();
+			var orderOther_message = $("#orderOther_message ").val();
+			var responseMessage = $('#orderOtherForm .ajax-response');
+
+
+			if(!isValidEmailAddress(orderOther_email)){
+				$("#orderOther_email").addClass("problem");
+			}else if($("#orderOtherForm #orderOther_name").val() == ''){
+				$('#orderOtherForm #orderOther_name').addClass('problem');
+			}else if($("#orderOtherForm #orderOther_phone").val() == ''){
+				$('#orderOtherForm #orderOther_phone').addClass('problem');
+			}else if($("#orderOtherForm #orderOther_message").val() == ''){
+				$('#orderOtherForm #orderOther_message').addClass('problem');
+			} else {
+				$.ajax({
+					type: "POST",
+					url: "assets/php/orderOtherForm.php",
+					dataType: 'json',
+					data: {
+						orderOther_email: orderOther_email,
+						orderOther_name: orderOther_name,
+						orderOther_company: orderOther_company,
+						orderOther_phone: orderOther_phone,
+						orderOther_message: orderOther_message,
+					},
+					beforeSend: function(result) {
+						$('#orderOtherForm button').empty();
+						$('#orderOtherForm button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
+					},
+					success: function(result) {
+						if(result.sendstatus == 1) {
+							$('#orderOtherForm .ajax-hidden').fadeOut(500);
+							$('#orderOtherPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
+						} else {
+							$('#orderOtherForm button').empty();
+							$('#orderOtherForm button').append('<i class="fa fa-retweet"></i> Try again.');
+							responseMessage.html(result.message).fadeIn(1000);
+						}
+					}
+				});
+
+			}
+			return false;
+
+		});
 
 
 

@@ -1045,7 +1045,6 @@ h1.logoFont{
 	height: 180px;
 	color: rgb(107, 180, 222) !important;
 	margin-top: 60px;
-	text-shadow: 0px 0px 11px rgba(100,100,100,.5);
 }
 
 .uas{
@@ -1313,7 +1312,7 @@ select.mySelect{
   color: #24aedb;
 }
 
-#intro.section{
+/*#intro.section{
  position: relative;
  background: transparent;
  overflow: hidden;
@@ -1323,7 +1322,7 @@ select.mySelect{
  position: absolute;
  top: 0;
  z-index: -1;
-}
+}*/
 
 
 /* ---------------------------------------------- /*

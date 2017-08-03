@@ -13,6 +13,7 @@
 			$orderVideo_cityAddress      = $_POST['orderVideo_cityAddress'];
 			$orderVideo_zipCode          = $_POST['orderVideo_zipCode'];
 			$orderVideo_addVideo        = $_POST['orderVideo_addVideo'];
+      $orderVideo_resolution          = $_POST['orderVideo_resolution'];
 			$orderVideo_message          = $_POST['orderVideo_message'];
 			$orderVideo_total          = $_POST['orderVideo_total'];
 
@@ -24,6 +25,7 @@
 			City: '.$orderVideo_cityAddress.'
 			Zip: '.$orderVideo_zipCode.'
 			Add Video: '.$orderVideo_addVideo.'
+      Resolution: '.$orderVideo_resolution.'
 			Message: '.$orderVideo_message.'
 			Total:'.$orderVideo_total;
 

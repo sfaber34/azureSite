@@ -95,7 +95,7 @@
 
 		<!-- Intro section start -->
 
-		<section id="intro" class="section wow fadeInDown" data-wow-duration="2s" data-wow-delay="2s">
+		<section id="intro" class="section">
 
 			<div class="container">
 
@@ -496,7 +496,7 @@
 							</div>
 
 							<div class="row orderButtonRow">
-									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
+									<button type="button" data-target="#orderPanoPopup" id="orderPhotos" data-toggle="modal" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
@@ -525,7 +525,7 @@
 							</p>
 							<hr/>
 							<div class="row orderButtonRow">
-									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
+									<button type="button" data-toggle="modal" data-target="#orderSitemapPopup" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
@@ -549,7 +549,7 @@
 							</p>
 							<hr/>
 							<div class="row orderButtonRow">
-									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
+									<button type="button" data-target="#orderInspectionPopup" id="orderInspection" data-toggle="modal" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
@@ -567,7 +567,7 @@
 								<p class="hourlyPrice">+$75 for each hour on site past the first</p>
 							</div>
 							<div class="row orderButtonRow">
-									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
+									<button type="button" data-toggle="modal" data-target="#orderModelPopup" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
@@ -585,7 +585,24 @@
 								<p class="hourlyPrice">+$75 for each hour on site past the first</p>
 							</div>
 							<div class="row orderButtonRow">
-									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
+									<button type="button" data-toggle="modal" data-target="#orderCutfillPopup" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
+							</div>
+							<div class="clearFix"></div>
+						</div>
+					</div>
+
+					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
+						<div class="orderServiceDiv">
+							<i class="fa fa-bar-chart"></i>
+							<h3 class="mb20">Anything you need</h3>
+							<p class="orderServiceDescription">Anything</p>
+							<div class="price">
+								<p class="mt30">
+
+								</p>
+							</div>
+							<div class="row orderButtonRow">
+									<button type="button" data-toggle="modal" data-target="#orderOtherPopup" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
@@ -1033,7 +1050,7 @@
 							</div>
 
 							<div class="form-group">
-								<textarea class="form-control orderServerDivTextArea" id="orderPhotos_message" name="orderPhotos_message" rows="7" placeholder="Your message"></textarea>
+								<textarea class="form-control orderServerDivTextArea" id="orderPhotos_message" name="orderPhotos_message" rows="7" placeholder="Additional information"></textarea>
 							</div>
 							<div class="row">
 								<div class="col-sm-6">
@@ -1120,7 +1137,7 @@
 								<div class="row mb20">
 									<div class="col-sm-6">
 										<p class="myLabel">
-											Additional video (+$100 / 30 seconds)
+											Add video (+$100 / 30 sec)
 										</p>
 										<div class="clearFix"></div>
 										<select class="selectpicker mySelect orderVideo_modPrice" id="orderVideo_addVideo">
@@ -1136,12 +1153,19 @@
 										</select>
 									</div>
 									<div class="col-sm-6">
-
+										<p class="myLabel">
+											Resolution
+										</p>
+										<div class="clearFix"></div>
+										<select class="selectpicker mySelect" id="orderVideo_resolution">
+										  <option>1080p</option>
+										  <option>4K</option>
+										</select>
 									</div>
 								</div>
 
 								<div class="form-group">
-									<textarea class="form-control orderServerDivTextArea" id="orderVideo_message" name="orderVideo_message" rows="7" placeholder="Your message"></textarea>
+									<textarea class="form-control orderServerDivTextArea" id="orderVideo_message" name="orderVideo_message" rows="7" placeholder="Additional information"></textarea>
 								</div>
 								<div class="row">
 									<div class="col-sm-6">
@@ -1164,6 +1188,566 @@
 					</div>
 				</div>
 			</div>
+
+
+
+
+			<!---------------------- ORDER Pano MODAL ---------------------->
+
+			<div class="modal fade" id="orderPanoPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h3 class="modal-title" id="exampleModalLongTitle">Order 3D Pano</h3>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<form id="orderPanoForm" method="post" role="form">
+
+								<div class="ajax-hidden">
+
+									<div class="form-group">
+										<label class="sr-only" for="orderPano_name">Name</label>
+										<input type="text" id="orderPano_name" class="form-control autoFill nameValue required" name="orderPano_name" placeholder="Name" data-autofillType="name">
+									</div>
+
+									<div class="form-group">
+										<label class="sr-only" for="orderPano_company">Company</label>
+										<input type="text" id="orderPano_company" class="form-control autoFill companyValue" name="orderPano_company" placeholder="Company">
+									</div>
+
+									<div class="form-group">
+										<label class="sr-only" for="orderPano_email">Email address</label>
+										<input type="email" id="orderPano_email" class="form-control autoFill emailValue required" name="orderPano_email" placeholder="E-mail">
+									</div>
+
+									<div class="form-group">
+										<label class="sr-only" for="orderPano_phone">Phone</label>
+										<input type="phone" id="orderPano_phone" class="form-control autoFill phoneValue required" name="orderPano_phone" placeholder="Phone">
+									</div>
+
+									<div class="form-group">
+										<label class="sr-only" for="orderPano_streetAddress">Street Address of Property/Subject</label>
+										<input type="address" id="orderPano_streetAddress" class="form-control autoFill streetAddressValue required" name="orderPano_streetAddress" placeholder="Street Address of Property/Subject">
+									</div>
+
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label class="sr-only" for="orderPano_cityAddress">City of Property/Subject</label>
+												<input type="address" id="orderPano_cityAddress required" class="form-control autoFill cityAddressValue required" name="orderPano_cityAddress" placeholder="City for Property/Subject">
+											</div>
+										</div>
+
+										<div class="col-sm-6">
+											<div class="form-group">
+												<label class="sr-only" for="orderPano_zipCode">Zip Code</label>
+												<input type="address" id="orderPano_zipCode" class="form-control autoFill zipCodeValue required" name="orderPano_zipCode" placeholder="Zip Code">
+											</div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<textarea class="form-control orderServerDivTextArea" id="orderPano_message" name="orderPano_message" rows="7" placeholder="Additional information"></textarea>
+									</div>
+									<div class="row">
+										<div class="col-sm-6">
+											<button type="submit" class="btn btn-primary azureBlue">
+											  Submit Order
+											</button>
+										</div>
+										<div class="col-sm-6">
+											<h3 class="orderServicePrice">$<span id="orderPano_total">100</span></h3>
+										</div>
+									</div>
+									</div>
+								</form>
+
+								</div>
+
+								<div class="ajax-response"></div><!-- Displays status when submitting form -->
+
+
+						</div>
+					</div>
+				</div>
+
+
+
+
+				<!---------------------- ORDER Sitemap MODAL ---------------------->
+
+				<div class="modal fade" id="orderSitemapPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3 class="modal-title" id="exampleModalLongTitle">Order Site Map</h3>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form id="orderSitemapForm" method="post" role="form">
+
+									<div class="ajax-hidden">
+
+										<div class="form-group">
+											<label class="sr-only" for="orderSitemap_name">Name</label>
+											<input type="text" id="orderSitemap_name" class="form-control autoFill nameValue required" name="orderSitemap_name" placeholder="Name" data-autofillType="name">
+										</div>
+
+										<div class="form-group">
+											<label class="sr-only" for="orderSitemap_company">Company</label>
+											<input type="text" id="orderSitemap_company" class="form-control autoFill companyValue" name="orderSitemap_company" placeholder="Company">
+										</div>
+
+										<div class="form-group">
+											<label class="sr-only" for="orderSitemap_email">Email address</label>
+											<input type="email" id="orderSitemap_email" class="form-control autoFill emailValue required" name="orderSitemap_email" placeholder="E-mail">
+										</div>
+
+										<div class="form-group">
+											<label class="sr-only" for="orderSitemap_phone">Phone</label>
+											<input type="phone" id="orderSitemap_phone" class="form-control autoFill phoneValue required" name="orderSitemap_phone" placeholder="Phone">
+										</div>
+
+										<div class="form-group">
+											<label class="sr-only" for="orderSitemap_streetAddress">Street Address of Building</label>
+											<input type="address" id="orderSitemap_streetAddress" class="form-control autoFill streetAddressValue required" name="orderSitemap_streetAddress" placeholder="Street Address of Property/Subject">
+										</div>
+
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-group">
+													<label class="sr-only" for="orderSitemap_cityAddress">City of Building</label>
+													<input type="address" id="orderSitemap_cityAddress" class="form-control autoFill cityAddressValue required" name="orderSitemap_cityAddress" placeholder="City for Property/Subject">
+												</div>
+											</div>
+
+											<div class="col-sm-6">
+												<div class="form-group">
+													<label class="sr-only" for="orderSitemap_zipCode">Building Zip Code</label>
+													<input type="address" id="orderSitemap_zipCode" class="form-control autoFill zipCodeValue required" name="orderSitemap_zipCode" placeholder="Zip Code">
+												</div>
+											</div>
+										</div>
+
+										<div class="row mb20">
+											<div class="col-sm-6">
+												<p class="myLabel">
+													Media Format
+												</p>
+												<div class="clearFix"></div>
+												<select class="selectpicker mySelect orderSitemap_modPrice" id="orderSitemap_format">
+													<option>Images</option>
+													<option>Video</option>
+													<option>Images & Video</option>
+												</select>
+											</div>
+											<div class="col-sm-6">
+
+											</div>
+										</div>
+
+										<div class="form-group">
+											<textarea class="form-control orderServerDivTextArea" id="orderSitemap_message" name="orderSitemap_message" rows="7" placeholder="Additional information"></textarea>
+										</div>
+										<div class="row">
+											<div class="col-sm-6">
+												<button type="submit" class="btn btn-primary azureBlue">
+													Submit Order
+												</button>
+											</div>
+											<div class="col-sm-6">
+												<h3 class="orderServicePrice">$<span id="orderSitemap_total">200</span></h3>
+											</div>
+										</div>
+										</div>
+									</form>
+
+									</div>
+
+									<div class="ajax-response"></div><!-- Displays status when submitting form -->
+
+
+							</div>
+						</div>
+					</div>
+
+
+
+
+				<!---------------------- ORDER INSPECTION MODAL ---------------------->
+
+				<div class="modal fade" id="orderInspectionPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+					<div class="modal-dialog" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h3 class="modal-title" id="exampleModalLongTitle">Order Building Inspection</h3>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form id="orderInspectionForm" method="post" role="form">
+
+									<div class="ajax-hidden">
+
+										<div class="form-group">
+											<label class="sr-only" for="orderInspection_name">Name</label>
+											<input type="text" id="orderInspection_name" class="form-control autoFill nameValue required" name="orderInspection_name" placeholder="Name" data-autofillType="name">
+										</div>
+
+										<div class="form-group">
+											<label class="sr-only" for="orderInspection_company">Company</label>
+											<input type="text" id="orderInspection_company" class="form-control autoFill companyValue" name="orderInspection_company" placeholder="Company">
+										</div>
+
+										<div class="form-group">
+											<label class="sr-only" for="orderInspection_email">Email address</label>
+											<input type="email" id="orderInspection_email" class="form-control autoFill emailValue required" name="orderInspection_email" placeholder="E-mail">
+										</div>
+
+										<div class="form-group">
+											<label class="sr-only" for="orderInspection_phone">Phone</label>
+											<input type="phone" id="orderInspection_phone" class="form-control autoFill phoneValue required" name="orderInspection_phone" placeholder="Phone">
+										</div>
+
+										<div class="form-group">
+											<label class="sr-only" for="orderInspection_streetAddress">Street Address of Building</label>
+											<input type="address" id="orderInspection_streetAddress" class="form-control autoFill streetAddressValue required" name="orderInspection_streetAddress" placeholder="Street Address of Property/Subject">
+										</div>
+
+										<div class="row">
+											<div class="col-sm-6">
+												<div class="form-group">
+													<label class="sr-only" for="orderInspection_cityAddress">City of Building</label>
+													<input type="address" id="orderInspection_cityAddress required" class="form-control autoFill cityAddressValue required" name="orderInspection_cityAddress" placeholder="City for Property/Subject">
+												</div>
+											</div>
+
+											<div class="col-sm-6">
+												<div class="form-group">
+													<label class="sr-only" for="orderInspection_zipCode">Building Zip Code</label>
+													<input type="address" id="orderInspection_zipCode" class="form-control autoFill zipCodeValue required" name="orderInspection_zipCode" placeholder="Zip Code">
+												</div>
+											</div>
+										</div>
+
+										<div class="row mb20">
+											<div class="col-sm-6">
+												<p class="myLabel">
+													Media Format
+												</p>
+												<div class="clearFix"></div>
+												<select class="selectpicker mySelect orderInspection_modPrice" id="orderInspection_format">
+													<option>Images</option>
+													<option>Video</option>
+													<option>Images & Video</option>
+												</select>
+											</div>
+											<div class="col-sm-6">
+
+											</div>
+										</div>
+
+										<div class="form-group">
+											<textarea class="form-control orderServerDivTextArea" id="orderInspection_message" name="orderInspection_message" rows="7" placeholder="Additional information"></textarea>
+										</div>
+										<div class="row">
+											<div class="col-sm-6">
+												<button type="submit" class="btn btn-primary azureBlue">
+													Submit Order
+												</button>
+											</div>
+											<div class="col-sm-6">
+												<h3 class="orderServicePrice">$<span id="orderInspection_total">200</span></h3>
+											</div>
+										</div>
+										</div>
+									</form>
+
+									</div>
+
+									<div class="ajax-response"></div><!-- Displays status when submitting form -->
+
+
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+
+					<!---------------------- ORDER Model MODAL ---------------------->
+
+					<div class="modal fade" id="orderModelPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+						<div class="modal-dialog" role="document">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h3 class="modal-title" id="exampleModalLongTitle">Order 3D Model</h3>
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+										<span aria-hidden="true">&times;</span>
+									</button>
+								</div>
+								<div class="modal-body">
+									<form id="orderModelForm" method="post" role="form">
+
+										<div class="ajax-hidden">
+
+											<div class="form-group">
+												<label class="sr-only" for="orderModel_name">Name</label>
+												<input type="text" id="orderModel_name" class="form-control autoFill nameValue required" name="orderModel_name" placeholder="Name" data-autofillType="name">
+											</div>
+
+											<div class="form-group">
+												<label class="sr-only" for="orderModel_company">Company</label>
+												<input type="text" id="orderModel_company" class="form-control autoFill companyValue" name="orderModel_company" placeholder="Company">
+											</div>
+
+											<div class="form-group">
+												<label class="sr-only" for="orderModel_email">Email address</label>
+												<input type="email" id="orderModel_email" class="form-control autoFill emailValue required" name="orderModel_email" placeholder="E-mail">
+											</div>
+
+											<div class="form-group">
+												<label class="sr-only" for="orderModel_phone">Phone</label>
+												<input type="phone" id="orderModel_phone" class="form-control autoFill phoneValue required" name="orderModel_phone" placeholder="Phone">
+											</div>
+
+											<div class="form-group">
+												<label class="sr-only" for="orderModel_streetAddress">Street Address of Building</label>
+												<input type="address" id="orderModel_streetAddress" class="form-control autoFill streetAddressValue required" name="orderModel_streetAddress" placeholder="Street Address of Property/Subject">
+											</div>
+
+											<div class="row">
+												<div class="col-sm-6">
+													<div class="form-group">
+														<label class="sr-only" for="orderModel_cityAddress">City of Building</label>
+														<input type="address" id="orderModel_cityAddress" class="form-control autoFill cityAddressValue required" name="orderModel_cityAddress" placeholder="City for Property/Subject">
+													</div>
+												</div>
+
+												<div class="col-sm-6">
+													<div class="form-group">
+														<label class="sr-only" for="orderModel_zipCode">Building Zip Code</label>
+														<input type="address" id="orderModel_zipCode" class="form-control autoFill zipCodeValue required" name="orderModel_zipCode" placeholder="Zip Code">
+													</div>
+												</div>
+											</div>
+
+											<div class="row mb20">
+												<div class="col-sm-6">
+													<p class="myLabel">
+														Media Format
+													</p>
+													<div class="clearFix"></div>
+													<select class="selectpicker mySelect orderModel_modPrice" id="orderModel_format">
+														<option>Images</option>
+														<option>Video</option>
+														<option>Images & Video</option>
+													</select>
+												</div>
+												<div class="col-sm-6">
+
+												</div>
+											</div>
+
+											<div class="form-group">
+												<textarea class="form-control orderServerDivTextArea" id="orderModel_message" name="orderModel_message" rows="7" placeholder="Additional information"></textarea>
+											</div>
+											<div class="row">
+												<div class="col-sm-6">
+													<button type="submit" class="btn btn-primary azureBlue">
+														Submit Order
+													</button>
+												</div>
+												<div class="col-sm-6">
+													<h3 class="orderServicePrice">$<span id="orderModel_total">200</span></h3>
+												</div>
+											</div>
+											</div>
+										</form>
+
+										</div>
+
+										<div class="ajax-response"></div><!-- Displays status when submitting form -->
+
+
+								</div>
+							</div>
+						</div>
+
+
+
+
+						<!--------------------- ORDER Cut/Fill MODAL ---------------------->
+
+						<div class="modal fade" id="orderCutfillPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h3 class="modal-title" id="exampleModalLongTitle">Order Site Map</h3>
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+											<span aria-hidden="true">&times;</span>
+										</button>
+									</div>
+									<div class="modal-body">
+										<form id="orderCutfillForm" method="post" role="form">
+
+											<div class="ajax-hidden">
+
+												<div class="form-group">
+													<label class="sr-only" for="orderCutfill_name">Name</label>
+													<input type="text" id="orderCutfill_name" class="form-control autoFill nameValue required" name="orderCutfill_name" placeholder="Name" data-autofillType="name">
+												</div>
+
+												<div class="form-group">
+													<label class="sr-only" for="orderCutfill_company">Company</label>
+													<input type="text" id="orderCutfill_company" class="form-control autoFill companyValue" name="orderCutfill_company" placeholder="Company">
+												</div>
+
+												<div class="form-group">
+													<label class="sr-only" for="orderCutfill_email">Email address</label>
+													<input type="email" id="orderCutfill_email" class="form-control autoFill emailValue required" name="orderCutfill_email" placeholder="E-mail">
+												</div>
+
+												<div class="form-group">
+													<label class="sr-only" for="orderCutfill_phone">Phone</label>
+													<input type="phone" id="orderCutfill_phone" class="form-control autoFill phoneValue required" name="orderCutfill_phone" placeholder="Phone">
+												</div>
+
+												<div class="form-group">
+													<label class="sr-only" for="orderCutfill_streetAddress">Street Address of Building</label>
+													<input type="address" id="orderCutfill_streetAddress" class="form-control autoFill streetAddressValue required" name="orderCutfill_streetAddress" placeholder="Street Address of Property/Subject">
+												</div>
+
+												<div class="row">
+													<div class="col-sm-6">
+														<div class="form-group">
+															<label class="sr-only" for="orderCutfill_cityAddress">City of Building</label>
+															<input type="address" id="orderCutfill_cityAddress" class="form-control autoFill cityAddressValue required" name="orderCutfill_cityAddress" placeholder="City for Property/Subject">
+														</div>
+													</div>
+
+													<div class="col-sm-6">
+														<div class="form-group">
+															<label class="sr-only" for="orderCutfill_zipCode">Building Zip Code</label>
+															<input type="address" id="orderCutfill_zipCode" class="form-control autoFill zipCodeValue required" name="orderCutfill_zipCode" placeholder="Zip Code">
+														</div>
+													</div>
+												</div>
+
+												<div class="row mb20">
+													<div class="col-sm-6">
+														<p class="myLabel">
+															Media Format
+														</p>
+														<div class="clearFix"></div>
+														<select class="selectpicker mySelect orderCutfill_modPrice" id="orderCutfill_format">
+															<option>Images</option>
+															<option>Video</option>
+															<option>Images & Video</option>
+														</select>
+													</div>
+													<div class="col-sm-6">
+
+													</div>
+												</div>
+
+												<div class="form-group">
+													<textarea class="form-control orderServerDivTextArea" id="orderCutfill_message" name="orderCutfill_message" rows="7" placeholder="Additional information"></textarea>
+												</div>
+												<div class="row">
+													<div class="col-sm-6">
+														<button type="submit" class="btn btn-primary azureBlue">
+															Submit Order
+														</button>
+													</div>
+													<div class="col-sm-6">
+														<h3 class="orderServicePrice">$<span id="orderCutfill_total">200</span></h3>
+													</div>
+												</div>
+												</div>
+											</form>
+
+											</div>
+
+											<div class="ajax-response"></div><!-- Displays status when submitting form -->
+
+
+									</div>
+								</div>
+							</div>
+
+
+
+
+
+
+							<!--------------------- ORDER Other MODAL ---------------------->
+
+							<div class="modal fade" id="orderOtherPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h3 class="modal-title" id="exampleModalLongTitle">Order Anything</h3>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<form id="orderOtherForm" method="post" role="form">
+
+												<div class="ajax-hidden">
+
+													<div class="form-group">
+														<label class="sr-only" for="orderOther_name">Name</label>
+														<input type="text" id="orderOther_name" class="form-control autoFill nameValue required" name="orderOther_name" placeholder="Name" data-autofillType="name">
+													</div>
+
+													<div class="form-group">
+														<label class="sr-only" for="orderOther_company">Company</label>
+														<input type="text" id="orderOther_company" class="form-control autoFill companyValue" name="orderOther_company" placeholder="Company">
+													</div>
+
+													<div class="form-group">
+														<label class="sr-only" for="orderOther_email">Email address</label>
+														<input type="email" id="orderOther_email" class="form-control autoFill emailValue required" name="orderOther_email" placeholder="E-mail">
+													</div>
+
+													<div class="form-group">
+														<label class="sr-only" for="orderOther_phone">Phone</label>
+														<input type="phone" id="orderOther_phone" class="form-control autoFill phoneValue required" name="orderOther_phone" placeholder="Phone">
+													</div>
+
+													<div class="form-group">
+														<textarea class="form-control orderServerDivTextArea" id="orderOther_message" name="orderOther_message" rows="7" placeholder="Additional information"></textarea>
+													</div>
+													<div class="row">
+														<div class="col-sm-6">
+															<button type="submit" class="btn btn-primary azureBlue">
+																Submit Order
+															</button>
+														</div>
+													</div>
+													</div>
+												</form>
+
+												</div>
+
+												<div class="ajax-response"></div><!-- Displays status when submitting form -->
+
+
+										</div>
+									</div>
+								</div>
+
+
 
 
 

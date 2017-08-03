@@ -1045,7 +1045,7 @@ h1.logoFont{
 	height: 180px;
 	color: rgb(107, 180, 222) !important;
 	margin-top: 60px;
-	/* text-shadow: 2px 3px 10px rgba(146, 146, 146, 0.9); */
+	text-shadow: 0px 0px 11px rgba(100,100,100,.5);
 }
 
 .uas{
@@ -1055,12 +1055,16 @@ h1.logoFont{
 
 .mainLogo{
   max-width: 340px;
+  display: block !important;
 }
 
 .iconDiv{
   margin-top: 100px;
 }
 
+#intro .hello{
+  margin-bottom: 20px;
+}
 
 .subLogoFont{
 	font-family: "MuseoSans_500";
@@ -1299,6 +1303,28 @@ select.mySelect{
   max-width: 500px;
   margin: 20px auto;
 }
+
+
+.problem{
+  border-color: red;
+}
+
+.navbar-color .navbar-nav > li.active a{
+  color: #24aedb;
+}
+
+#intro.section{
+ position: relative;
+ background: transparent;
+ overflow: hidden;
+}
+
+.ytplayer-container{
+ position: absolute;
+ top: 0;
+ z-index: -1;
+}
+
 
 /* ---------------------------------------------- /*
  * Margin Overrides

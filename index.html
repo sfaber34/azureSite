@@ -95,7 +95,7 @@
 
 		<!-- Intro section start -->
 
-		<section id="intro" class="section">
+		<section id="intro" class="section wow fadeInDown" data-wow-duration="2s" data-wow-delay="2s">
 
 			<div class="container">
 
@@ -103,8 +103,8 @@
 
 					<div class="col-md-12">
 
-						<div class="hello wow fadeInUp iconDiv" data-wow-duration="3s">
-							<img class="mainLogo" src="assets/images/icon.png"/>
+						<div class="hello iconDiv" data-wow-duration="3s">
+							<img class="mainLogo center-block" src="assets/images/icon.png"/>
 						</div>
 
 
@@ -136,7 +136,7 @@
 
 				<div class="row">
 
-					<div class="col-md-12 wow fadeInLeft">
+					<div class="col-md-12">
 
 						<p>I am alone, and feel the charm of existence in this spot, which was created for the bliss of souls like mine. I am so happy, my dear friend.I am alone which was created for the bliss of souls like mine. I am so happy, my dear friend.</p>
 
@@ -278,7 +278,7 @@
 								<div class="col-sm-2"></div>
 								<div class="col-sm-8">
 									<p class="fs20 fcDarkGrey">
-										Drones are shaking up the way properties are marketed and sold. We’re experts at providing gorgeous eye-catching photos, breathtaking videos, and immersive 3D panos; all from a bird’s eye view. We'll deliver the aerial media you need to sell your next property.
+										Drones are shaking up the way properties are marketed and sold. We’re experts at providing gorgeous eye-catching Video, breathtaking videos, and immersive 3D panos; all from a bird’s eye view. We'll deliver the aerial media you need to sell your next property.
 									</p>
 								</div>
 								<div class="col-sm-2"></div>
@@ -478,7 +478,7 @@
 							</p>
 							<hr/>
 							<div class="row orderButtonRow">
-									<button type="button" data-target="" id="orderPhotos" data-toggle="modal" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
+									<button type="button" data-target="#orderVideoPopup" id="orderPhotos" data-toggle="modal" class="btn btn-primary btn-lg azureBlue mt40 center-block">Order</button>
 							</div>
 							<div class="clearFix"></div>
 						</div>
@@ -940,6 +940,11 @@
 	<!-- Custom scripts -->
 	<script src="assets/js/custom.js"></script>
 
+	<script src="assets/js/jquery.youtubebackground.js"></script>
+
+
+	<!---------------------- ORDER PHOTOS MODAL ---------------------->
+
 	<div class="modal fade" id="orderPhotosPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
 		<div class="modal-dialog" role="document">
 			<div class="modal-content">
@@ -956,41 +961,41 @@
 
 							<div class="form-group">
 								<label class="sr-only" for="orderPhotos_name">Name</label>
-								<input type="text" id="orderPhotos_name" class="form-control" name="orderPhotos_name" placeholder="Name">
+								<input type="text" id="orderPhotos_name" class="form-control autoFill nameValue required" name="orderPhotos_name" placeholder="Name" data-autofillType="name">
 							</div>
 
 							<div class="form-group">
 								<label class="sr-only" for="orderPhotos_company">Company</label>
-								<input type="text" id="orderPhotos_company" class="form-control" name="orderPhotos_company" placeholder="Company">
+								<input type="text" id="orderPhotos_company" class="form-control autoFill companyValue" name="orderPhotos_company" placeholder="Company">
 							</div>
 
 							<div class="form-group">
 								<label class="sr-only" for="orderPhotos_email">Email address</label>
-								<input type="email" id="orderPhotos_email" class="form-control" name="orderPhotos_email" placeholder="E-mail">
+								<input type="email" id="orderPhotos_email" class="form-control autoFill emailValue required" name="orderPhotos_email" placeholder="E-mail">
 							</div>
 
 							<div class="form-group">
 								<label class="sr-only" for="orderPhotos_phone">Phone</label>
-								<input type="phone" id="orderPhotos_phone" class="form-control" name="orderPhotos_phone" placeholder="Phone">
+								<input type="phone" id="orderPhotos_phone" class="form-control autoFill phoneValue required" name="orderPhotos_phone" placeholder="Phone">
 							</div>
 
 							<div class="form-group">
 								<label class="sr-only" for="orderPhotos_streetAddress">Street Address of Property/Subject</label>
-								<input type="address" id="orderPhotos_streetAddress" class="form-control" name="orderPhotos_streetAddress" placeholder="Street Address of Property/Subject">
+								<input type="address" id="orderPhotos_streetAddress" class="form-control autoFill streetAddressValue required" name="orderPhotos_streetAddress" placeholder="Street Address of Property/Subject">
 							</div>
 
 							<div class="row">
 								<div class="col-sm-6">
 									<div class="form-group">
 										<label class="sr-only" for="orderPhotos_cityAddress">City of Property/Subject</label>
-										<input type="address" id="orderPhotos_cityAddress" class="form-control" name="orderPhotos_cityAddress" placeholder="City for Property/Subject">
+										<input type="address" id="orderPhotos_cityAddress required" class="form-control autoFill cityAddressValue required" name="orderPhotos_cityAddress" placeholder="City for Property/Subject">
 									</div>
 								</div>
 
 								<div class="col-sm-6">
 									<div class="form-group">
 										<label class="sr-only" for="orderPhotos_zipCode">Zip Code</label>
-										<input type="address" id="orderPhotos_zipCode" class="form-control" name="orderPhotos_zipCode" placeholder="Zip Code">
+										<input type="address" id="orderPhotos_zipCode" class="form-control autoFill zipCodeValue required" name="orderPhotos_zipCode" placeholder="Zip Code">
 									</div>
 								</div>
 							</div>
@@ -1052,6 +1057,113 @@
 			</div>
 		</div>
 
+
+
+
+		<!---------------------- ORDER VIDEO MODAL ---------------------->
+
+		<div class="modal fade" id="orderVideoPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title" id="exampleModalLongTitle">Order Videos</h3>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form id="orderVideoForm" method="post" role="form">
+
+							<div class="ajax-hidden">
+
+								<div class="form-group">
+									<label class="sr-only" for="orderVideo_name">Name</label>
+									<input type="text" id="orderVideo_name" class="form-control autoFill nameValue" name="orderVideo_name" placeholder="Name" data-autofillType="name">
+								</div>
+
+								<div class="form-group">
+									<label class="sr-only" for="orderVideo_company">Company</label>
+									<input type="text" id="orderVideo_company" class="form-control autoFill companyValue" name="orderVideo_company" placeholder="Company">
+								</div>
+
+								<div class="form-group">
+									<label class="sr-only" for="orderVideo_email">Email address</label>
+									<input type="email" id="orderVideo_email" class="form-control autoFill emailValue" name="orderVideo_email" placeholder="E-mail">
+								</div>
+
+								<div class="form-group">
+									<label class="sr-only" for="orderVideo_phone">Phone</label>
+									<input type="phone" id="orderVideo_phone" class="form-control autoFill phoneValue" name="orderVideo_phone" placeholder="Phone">
+								</div>
+
+								<div class="form-group">
+									<label class="sr-only" for="orderVideo_streetAddress">Street Address of Property/Subject</label>
+									<input type="address" id="orderVideo_streetAddress" class="form-control autoFill streetAddressValue" name="orderVideo_streetAddress" placeholder="Street Address of Property/Subject">
+								</div>
+
+								<div class="row">
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="sr-only" for="orderVideo_cityAddress">City of Property/Subject</label>
+											<input type="address" id="orderVideo_cityAddress" class="form-control autoFill cityAddressValue" name="orderVideo_cityAddress" placeholder="City for Property/Subject">
+										</div>
+									</div>
+
+									<div class="col-sm-6">
+										<div class="form-group">
+											<label class="sr-only" for="orderVideo_zipCode">Zip Code</label>
+											<input type="address" id="orderVideo_zipCode" class="form-control autoFill zipCodeValue" name="orderVideo_zipCode" placeholder="Zip Code">
+										</div>
+									</div>
+								</div>
+
+								<div class="row mb20">
+									<div class="col-sm-6">
+										<p class="myLabel">
+											Additional video (+$100 / 30 seconds)
+										</p>
+										<div class="clearFix"></div>
+										<select class="selectpicker mySelect orderVideo_modPrice" id="orderVideo_addVideo">
+										  <option>None</option>
+											<option>30 seconds</option>
+											<option>60 seconds</option>
+											<option>90 seconds</option>
+											<option>120 seconds</option>
+											<option>150 seconds</option>
+											<option>180 seconds</option>
+											<option>210 seconds</option>
+											<option>240 seconds</option>
+										</select>
+									</div>
+									<div class="col-sm-6">
+
+									</div>
+								</div>
+
+								<div class="form-group">
+									<textarea class="form-control orderServerDivTextArea" id="orderVideo_message" name="orderVideo_message" rows="7" placeholder="Your message"></textarea>
+								</div>
+								<div class="row">
+									<div class="col-sm-6">
+										<button type="submit" class="btn btn-primary azureBlue">
+										  Submit Order
+										</button>
+									</div>
+									<div class="col-sm-6">
+										<h3 class="orderServicePrice">$<span id="orderVideo_total">300</span></h3>
+									</div>
+								</div>
+								</div>
+							</form>
+
+							</div>
+
+							<div class="ajax-response"></div><!-- Displays status when submitting form -->
+
+
+					</div>
+				</div>
+			</div>
 
 
 

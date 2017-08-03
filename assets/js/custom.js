@@ -171,6 +171,11 @@
 			type: 'iframe',
 		});
 
+		$('#intro').YTPlayer({
+    	fitToBackground: true,
+    	videoId: 'LSmgKRx5pBo'
+		});
+
 		// $('#orderPhotos').magnificPopup({
     //   type: 'inline',
 		// 	closeBtnInside: true,
@@ -190,6 +195,16 @@
 
 
 
+
+		/* ---------------------------------------------- /*
+		 * Autofill code
+		/* ---------------------------------------------- */
+		$('.autoFill').change(function() {
+			var type = $(this).attr("data-autofillType");
+			var value = $(this).val();
+
+			$('.autoFill[data-autofillType=type]').val(value);
+		});
 
 
 		/* ---------------------------------------------- /*
@@ -214,6 +229,26 @@
 			var price = parseInt(base) + parseInt(addPhotos) * 10 + parseInt(addPano);
 
 			$("#orderPhotos_total").text(price);
+		});
+
+
+
+		$('.orderVideo_modPrice').change(function() {
+			var base = 300;
+
+			var addVideoB = $("#orderVideo_addVideo").val();
+
+			if(addVideoB == "None"){
+				var addVideo = 0;
+			} else{
+
+				var addVideoC = parseInt(addVideoB.split(" ")[0]);
+				var addVideo = addVideoC / 30 * 100
+			}
+
+			var price = parseInt(base) + addVideo
+
+			$("#orderVideo_total").text(price);
 		});
 
 
@@ -291,7 +326,7 @@
 
 
 		$("#orderPhotosForm").submit(function(e) {
-
+			$("#orderPhotosForm .required").removeClass("problem");
 			e.preventDefault();
 
 			var orderPhotos_name = $("#orderPhotos_name").val();
@@ -307,6 +342,20 @@
 			var orderPhotos_total = $("#orderPhotos_total").html();
 			var responseMessage = $('#orderPhotosForm .ajax-response');
 
+
+			if(!isValidEmailAddress(orderPhotos_email)){
+				$("#orderPhotos_email").addClass("problem");
+			}else if($("#orderPhotosForm #orderPhotos_name").val() == ''){
+				$('#orderPhotosForm #orderPhotos_name').addClass('problem');
+			}else if($("#orderPhotosForm #orderPhotos_phone").val() == ''){
+				$('#orderPhotosForm #orderPhotos_phone').addClass('problem');
+			}else if($("#orderPhotosForm #orderPhotos_streetAddress").val() == ''){
+				$('#orderPhotosForm #orderPhotos_streetAddress').addClass('problem');
+			}else if($("#orderPhotosForm #orderPhotos_cityAddress").val() == ''){
+				$('#orderPhotosForm #orderPhotos_cityAddress').addClass('problem');
+			}else if($("#orderPhotosForm #orderPhotos_zipCode").val() == ''){
+				$('#orderPhotosForm #orderPhotos_zipCode').addClass('problem');
+			} else {
 				$.ajax({
 					type: "POST",
 					url: "assets/php/orderPhotosForm.php",
@@ -340,11 +389,85 @@
 					}
 				});
 
-
+			}
 			return false;
 
 		});
 
+
+
+
+		/* ---------------------------------------------- /*
+		 * Order Video Form JS
+		/* ---------------------------------------------- */
+
+
+		$("#orderVideoForm").submit(function(e) {
+			$("#orderVideoForm .required").removeClass("problem");
+			e.preventDefault();
+
+			var orderVideo_name = $("#orderVideo_name").val();
+			var orderVideo_company = $("#orderVideo_company").val();
+			var orderVideo_email = $("#orderVideo_email").val();
+			var orderVideo_phone = $("#orderVideo_phone").val();
+			var orderVideo_streetAddress = $("#orderVideo_streetAddress").val();
+			var orderVideo_cityAddress = $("#orderVideo_cityAddress").val();
+			var orderVideo_zipCode = $("#orderVideo_zipCode").val();
+			var orderVideo_addVideo = $("#orderVideo_addVideo").val();
+			var orderVideo_message = $("#orderVideo_message ").val();
+			var orderVideo_total = $("#orderVideo_total").html();
+			var responseMessage = $('#orderVideoForm .ajax-response');
+
+
+			if(!isValidEmailAddress(orderVideo_email)){
+				$("#orderVideo_email").addClass("problem");
+			}else if($("#orderVideoForm #orderVideo_name").val() == ''){
+				$('#orderVideoForm #orderVideo_name').addClass('problem');
+			}else if($("#orderVideoForm #orderVideo_phone").val() == ''){
+				$('#orderVideoForm #orderVideo_phone').addClass('problem');
+			}else if($("#orderVideoForm #orderVideo_streetAddress").val() == ''){
+				$('#orderVideoForm #orderVideo_streetAddress').addClass('problem');
+			}else if($("#orderVideoForm #orderVideo_cityAddress").val() == ''){
+				$('#orderVideoForm #orderVideo_cityAddress').addClass('problem');
+			}else if($("#orderVideoForm #orderVideo_zipCode").val() == ''){
+				$('#orderVideoForm #orderVideo_zipCode').addClass('problem');
+			} else {
+				$.ajax({
+					type: "POST",
+					url: "assets/php/orderVideoForm.php",
+					dataType: 'json',
+					data: {
+						orderVideo_email: orderVideo_email,
+						orderVideo_name: orderVideo_name,
+						orderVideo_company: orderVideo_company,
+						orderVideo_phone: orderVideo_phone,
+						orderVideo_streetAddress: orderVideo_streetAddress,
+						orderVideo_cityAddress: orderVideo_cityAddress,
+						orderVideo_zipCode: orderVideo_zipCode,
+						orderVideo_addVideo: orderVideo_addVideo,
+						orderVideo_total: orderVideo_total,
+						orderVideo_message: orderVideo_message,
+					},
+					beforeSend: function(result) {
+						$('#orderVideoForm button').empty();
+						$('#orderVideoForm button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
+					},
+					success: function(result) {
+						if(result.sendstatus == 1) {
+							$('#orderVideoForm .ajax-hidden').fadeOut(500);
+							$('#orderVideoPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
+						} else {
+							$('#orderVideoForm button').empty();
+							$('#orderVideoForm button').append('<i class="fa fa-retweet"></i> Try again.');
+							responseMessage.html(result.message).fadeIn(1000);
+						}
+					}
+				});
+
+			}
+			return false;
+
+		});
 
 
 

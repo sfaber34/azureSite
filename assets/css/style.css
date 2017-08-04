@@ -1186,12 +1186,25 @@ li.active h4,
   overflow: hidden;
 }
 
+.orderServiceDiv.row1{
+  min-height: 423px;
+}
+
+.orderServiceDiv.row2{
+  min-height: 482px;
+}
+
+.orderServiceDiv.row3{
+  min-height: 344px;
+}
+
 .orderServiceDiv .orderButtonRow{
     position: absolute;
     width: 100%;
     margin-left: -30px;
     clear: both;
     bottom: 0px;
+    margin-bottom: 10px;
 }
 
 .orderServiceDiv h3{
@@ -1310,6 +1323,15 @@ select.mySelect{
 
 .navbar-color .navbar-nav > li.active a{
   color: #24aedb;
+}
+
+#contact-data{
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.inspireIcon{
+  width:40px;
 }
 
 /*#intro.section{
@@ -1446,11 +1468,22 @@ select.mySelect{
 
 
 
-
-
 /* ---------------------------------------------- /*
  * Media screen queries
 /* ---------------------------------------------- */
+
+
+
+@media only screen and (max-width : 1000px) {
+
+  span.uas{
+    position: relative;
+    top: -40px;
+  }
+
+}
+
+
 
 @media only screen and (max-width : 787px) {
 
@@ -1469,8 +1502,9 @@ select.mySelect{
     line-height: 80px;
   }
 
-  .uas{
+  span.uas{
     font-size: 70px;
+    top: 0px;
   }
 
   .iconDiv{
@@ -1479,6 +1513,13 @@ select.mySelect{
 
   .mainLogo{
     max-width: 240px;
+  }
+}
+
+
+@media only screen and (max-width : 580px) {
+  .serviceLi .text{
+    display: none;
   }
 }
 

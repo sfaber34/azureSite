@@ -1474,7 +1474,7 @@ select.mySelect{
 
 
 
-@media only screen and (max-width : 1000px) {
+@media only screen and (max-width : 697px) {
 
   span.uas{
     position: relative;
@@ -1483,8 +1483,31 @@ select.mySelect{
 
 }
 
+@media only screen and (max-width : 767px) {
 
+  .serviceLi{
+    margin-bottom: 0px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 
+  .serviceLi#tab1{
+    border-bottom-left-radius:0px;
+    border-bottom-right-radius:0px;
+  }
+
+  .serviceLi#tab2{
+    border-radius: 0px;
+  }
+
+  .serviceLi#tab3{
+    border-top-left-radius:0px;
+    border-top-right-radius:0px;
+  }
+
+}
+
+/*
 @media only screen and (max-width : 787px) {
 
   .serviceLi{
@@ -1493,7 +1516,7 @@ select.mySelect{
     margin-right: 50px;
   }
 
-}
+}*/
 
 @media only screen and (max-width : 480px) {
   h1.logoFont{
@@ -1514,6 +1537,12 @@ select.mySelect{
   .mainLogo{
     max-width: 240px;
   }
+
+  .serviceLi{
+    margin-bottom:0px;
+  }
+
+
 }
 
 

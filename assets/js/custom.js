@@ -171,6 +171,21 @@
 			type: 'iframe',
 		});
 
+		$(document).ready(function() {
+			$('.pop-up#realEstateImage1').magnificPopup({type:'image'});
+
+			$('.pop-up#insuranceImage1').magnificPopup({type:'image'});
+			$('.pop-up#insuranceImage2').magnificPopup({type:'image'});
+
+
+			$('.pop-up#constructionImage1').magnificPopup({type:'image'});
+			$('.pop-up#constructionImage2').magnificPopup({type:'image'});
+			$('.pop-up#constructionImage3').magnificPopup({type:'image'});
+			$('.pop-up#constructionImage4').magnificPopup({type:'image'});
+			$('.pop-up#constructionImage5').magnificPopup({type:'image'});
+			$('.pop-up#constructionImage6').magnificPopup({type:'image'});
+		});
+
 		// $('#intro').YTPlayer({
     // 	fitToBackground: true,
     // 	videoId: 'qA0jkcw_9ag'

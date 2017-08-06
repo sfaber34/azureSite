@@ -395,7 +395,7 @@
 					success: function(result) {
 						if(result.sendstatus == 1) {
 							$('#orderPhotosForm .ajax-hidden').fadeOut(500);
-							$('#orderPhotosPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
+							$('#orderPhotosPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
 						} else {
 							$('#orderPhotosForm button').empty();
 							$('#orderPhotosForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -472,7 +472,7 @@
 					success: function(result) {
 						if(result.sendstatus == 1) {
 							$('#orderVideoForm .ajax-hidden').fadeOut(500);
-							$('#orderVideoPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
+							$('#orderVideoPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
 						} else {
 							$('#orderVideoForm button').empty();
 							$('#orderVideoForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -546,7 +546,7 @@
 					success: function(result) {
 						if(result.sendstatus == 1) {
 							$('#orderPanoForm .ajax-hidden').fadeOut(500);
-							$('#orderPanoPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
+							$('#orderPanoPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
 						} else {
 							$('#orderPanoForm button').empty();
 							$('#orderPanoForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -624,7 +624,7 @@
 					success: function(result) {
 						if(result.sendstatus == 1) {
 							$('#orderSitemapForm .ajax-hidden').fadeOut(500);
-							$('#orderSitemapPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
+							$('#orderSitemapPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
 						} else {
 							$('#orderSitemapForm button').empty();
 							$('#orderSitemapForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -701,7 +701,7 @@
 					success: function(result) {
 						if(result.sendstatus == 1) {
 							$('#orderModelForm .ajax-hidden').fadeOut(500);
-							$('#orderModelPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
+							$('#orderModelPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
 						} else {
 							$('#orderModelForm button').empty();
 							$('#orderModelForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -778,7 +778,7 @@
 					success: function(result) {
 						if(result.sendstatus == 1) {
 							$('#orderInspectionForm .ajax-hidden').fadeOut(500);
-							$('#orderInspectionPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
+							$('#orderInspectionPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
 						} else {
 							$('#orderInspectionForm button').empty();
 							$('#orderInspectionForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -853,7 +853,7 @@
 					success: function(result) {
 						if(result.sendstatus == 1) {
 							$('#orderCutfillForm .ajax-hidden').fadeOut(500);
-							$('#orderCutfillPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
+							$('#orderCutfillPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
 						} else {
 							$('#orderCutfillForm button').empty();
 							$('#orderCutfillForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -916,7 +916,7 @@
 					success: function(result) {
 						if(result.sendstatus == 1) {
 							$('#orderOtherForm .ajax-hidden').fadeOut(500);
-							$('#orderOtherPopup .ajax-response').html("We'll be in touch shortly").fadeIn(500);
+							$('#orderOtherPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
 						} else {
 							$('#orderOtherForm button').empty();
 							$('#orderOtherForm button').append('<i class="fa fa-retweet"></i> Try again.');

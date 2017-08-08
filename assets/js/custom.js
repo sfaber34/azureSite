@@ -396,8 +396,11 @@
 					},
 					success: function(result) {
 						if(result.sendstatus == 1) {
-							$('#orderPhotosForm .ajax-hidden').fadeOut(500);
-							$('#orderPhotosPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
+							$("#thankYouPopup").modal("show");
+							$("#orderPhotosPopup").modal("hide");
+
+							$('#orderPhotosForm button').empty();
+							$('#orderPhotosForm button').append('Order');
 						} else {
 							$('#orderPhotosForm button').empty();
 							$('#orderPhotosForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -473,8 +476,11 @@
 					},
 					success: function(result) {
 						if(result.sendstatus == 1) {
-							$('#orderVideoForm .ajax-hidden').fadeOut(500);
-							$('#orderVideoPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
+							$("#thankYouPopup").modal("show");
+							$("#orderVideoPopup").modal("hide");
+
+							$('#orderVideoForm button').empty();
+							$('#orderVideoForm button').append('Order');
 						} else {
 							$('#orderVideoForm button').empty();
 							$('#orderVideoForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -547,8 +553,11 @@
 					},
 					success: function(result) {
 						if(result.sendstatus == 1) {
-							$('#orderPanoForm .ajax-hidden').fadeOut(500);
-							$('#orderPanoPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
+							$("#thankYouPopup").modal("show");
+							$("#orderPanoPopup").modal("hide");
+
+							$('#orderPanoForm button').empty();
+							$('#orderPanoForm button').append('Order');
 						} else {
 							$('#orderPanoForm button').empty();
 							$('#orderPanoForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -625,8 +634,11 @@
 					},
 					success: function(result) {
 						if(result.sendstatus == 1) {
-							$('#orderSitemapForm .ajax-hidden').fadeOut(500);
-							$('#orderSitemapPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
+							$("#thankYouPopup").modal("show");
+							$("#orderSitemapPopup").modal("hide");
+
+							$('#orderSitemapForm button').empty();
+							$('#orderSitemapForm button').append('Order');
 						} else {
 							$('#orderSitemapForm button').empty();
 							$('#orderSitemapForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -702,8 +714,11 @@
 					},
 					success: function(result) {
 						if(result.sendstatus == 1) {
-							$('#orderModelForm .ajax-hidden').fadeOut(500);
-							$('#orderModelPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
+							$("#thankYouPopup").modal("show");
+							$("#orderOtherPopup").modal("hide");
+
+							$('#orderModelForm button').empty();
+							$('#orderModelForm button').append('Order');
 						} else {
 							$('#orderModelForm button').empty();
 							$('#orderModelForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -779,8 +794,11 @@
 					},
 					success: function(result) {
 						if(result.sendstatus == 1) {
-							$('#orderInspectionForm .ajax-hidden').fadeOut(500);
-							$('#orderInspectionPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
+							$("#thankYouPopup").modal("show");
+							$("#orderInspectionPopup").modal("hide");
+
+							$('#orderInspectionForm button').empty();
+							$('#orderInspectionForm button').append('Order');
 						} else {
 							$('#orderInspectionForm button').empty();
 							$('#orderInspectionForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -852,8 +870,11 @@
 					},
 					success: function(result) {
 						if(result.sendstatus == 1) {
-							$('#orderCutfillForm .ajax-hidden').fadeOut(500);
-							$('#orderCutfillPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
+							$("#thankYouPopup").modal("show");
+							$("#orderCutfillPopup").modal("hide");
+
+							$('#orderCutfillForm button').empty();
+							$('#orderCutfillForm button').append('Order');
 						} else {
 							$('#orderCutfillForm button').empty();
 							$('#orderCutfillForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -924,8 +945,11 @@
 					},
 					success: function(result) {
 						if(result.sendstatus == 1) {
-							$('#orderUtilityInspectionForm .ajax-hidden').fadeOut(500);
-							$('#orderUtilityInspectionPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
+							$("#thankYouPopup").modal("show");
+							$("#orderUtilityInspectionPopup").modal("hide");
+
+							$('#orderUtilityInspectionForm button').empty();
+							$('#orderUtilityInspectionForm button').append('Order');
 						} else {
 							$('#orderUtilityInspectionForm button').empty();
 							$('#orderUtilityInspectionForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -987,8 +1011,11 @@
 					},
 					success: function(result) {
 						if(result.sendstatus == 1) {
-							$('#orderOtherForm .ajax-hidden').fadeOut(500);
-							$('#orderOtherPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
+							$("#thankYouPopup").modal("show");
+							$("#orderOtherPopup").modal("hide");
+
+							$('#orderOtherForm button').empty();
+							$('#orderOtherForm button').append('Order');
 						} else {
 							$('#orderOtherForm button').empty();
 							$('#orderOtherForm button').append('<i class="fa fa-retweet"></i> Try again.');
@@ -1047,7 +1074,15 @@ $(window).resize(function(){
   equalheight('.priceDiv');
 	equalheight('.serviceLi');
 });
+$(document).ready(function() {
 
+});
+$(".autoFill").keyup(function(){
+	val=$(this).val();
+	type=$(this).attr("data-autoFillType");
+
+	$("[data-autofillType="+type+"]").val(val);
+});
 
 	});
 

@@ -1168,13 +1168,24 @@ li.active h4,
   height: 100%;
 }
 
+.sectionHeader h1{
+  font-size: 46px;
+  font-weight: 700;
+}
+
 /*.servicesLink{
   width: 200px;
 }*/
 
+.modal{
+  overflow: scroll !important;
+}
+
 .modal.in {
     -webkit-transform: translateZ(0);
-            transform: translateZ(0);
+    transform: translateZ(0);
+
+
 }
 
 .textLightGrey{

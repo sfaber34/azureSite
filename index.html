@@ -95,7 +95,7 @@ ga('send', 'pageview');
 					<ul class="nav navbar-nav navbar-right">
 						<li><a href="#intro">Home</a></li>
 						<li><a href="#about" data-googleEventType="click" data-googleEventName="About">About</a></li>
-						<li><a href="#services-header">Services</a></li>
+						<li><a href="#services-header" data-googleEventType="click" data-googleEventName="Services">Services</a></li>
 						<li><a href="#orderServices-header">Order Services</a></li>
 						<!-- <li><a href="#portfolio-header">Portfolio</a></li>
 						<li><a href="#team-header">Team</a></li> -->
@@ -154,7 +154,7 @@ ga('send', 'pageview');
 
 					<div class="col-md-12">
 
-						<p class="fs20">Azure UAS provides outstanding drone-based solutions for the Real Estate, Insurance, Construction, and Energy sectors across the Colorado Front Range. We’re experts at leveraging the latest drone technologies to provide actionable airborne data and media products. As a Colorado-based operation, we work with our clients one on one to provide quality deliverables in a fraction of the time and cost compared to larger, out of state corporations.
+						<p class="fs20">Azure UAS provides outstanding drone-based solutions for the Real Estate, Insurance, Construction, and Energy sectors across the Colorado Front Range. We’re experts at leveraging the latest drone technologies to provide actionable airborne data and media products. As a Colorado-based operation, we work with our clients one on one to provide quality deliverables in a fraction of the time and cost compared to out of state providers.
 						</p>
 
 					</div><!-- .com-md-6 -->
@@ -234,7 +234,7 @@ ga('send', 'pageview');
 					<div class="row">
 
 						<div class="col-sm-12 wow fadeInDown">
-							<h2>Services</h2>
+							<h1>Services</h1>
 						</div>
 
 					</div>
@@ -245,7 +245,7 @@ ga('send', 'pageview');
 
 		</section>
 
-		<section class="section" id="servicesSection">
+		<section class="section" id="servicesSection" data-googleEventType="scroll">
 
 			<div class="container">
 
@@ -428,7 +428,7 @@ ga('send', 'pageview');
 								<div class="col-sm-2"></div>
 								<div class="col-sm-8">
 									<p class="fs20 fcDarkGrey">
-										Compared to traditional methods, drones can conduct structural and roof inspections at a fraction of the time, cost, and risk. We provide fast photo, video, and photomosaic assessments to streamline your claims adjustment workflow.
+
 									</p>
 								</div>
 								<div class="col-sm-2"></div>
@@ -593,8 +593,8 @@ ga('send', 'pageview');
 
 					<div class="row">
 
-						<div class="col-sm-12 wow fadeInDown">
-							<h2>Order Services</h2>
+						<div class="col-sm-12 wow fadeInDown sectionHeader">
+							<h1>Order Services</h1>
 						</div>
 
 					</div>
@@ -605,7 +605,7 @@ ga('send', 'pageview');
 
 		</section>
 
-		<section id="portfolio" class="section">
+		<section id="portfolio" class="section" data-googleEventType="scroll" data-googleEventName="Order Services">
 
 			<div class="container">
 
@@ -914,7 +914,7 @@ ga('send', 'pageview');
 
 		<!-- Contact-data section start -->
 
-		<section id="contact-data" class="callout-light">
+		<section id="contact-data" class="callout-light" data-googleEventType="scroll">
 
 			<div class="container">
 
@@ -993,7 +993,7 @@ ga('send', 'pageview');
 
 								<div class="form-group">
 									<label class="sr-only" for="c_email">Email address</label>
-									<input type="email" id="c_email" class="form-control" name="c_email" placeholder="E-mail">
+									<input type="email" id="c_email" class="form-control" name="c_email" placeholder="Email" data-autofillType="email">
 								</div>
 
 								<div class="form-group">
@@ -1045,7 +1045,7 @@ ga('send', 'pageview');
 
 		<!-- Footer start -->
 
-		<footer id="footer">
+		<footer id="footer" data-googleEventType="scroll">
 
 			<div class="container">
 
@@ -1083,13 +1083,16 @@ ga('send', 'pageview');
 	<!-- Text rotator -->
 	<script src="assets/js/jquery.simple-text-rotator.min.js"></script>
 	<!-- Waypoints -->
-	<script src="assets/js/jquery.waypoints.js"></script>
+	<script src="assets/js/jquery.waypoints.min.js"></script>
 	<!-- WOW - Reveal Animations When You Scroll -->
 	<script src="assets/js/wow.min.js"></script>
 	<!-- Smooth scroll -->
 	<script src="assets/js/smoothscroll.js"></script>
 	<!-- Resp. video -->
 	<script src="assets/js/jquery.fitvids.js"></script>
+
+	<script src="assets/js/angular.js"></script>
+	<script src="assets/js/app.js"></script>
 	<!-- Google Maps -->
 	<!-- <script src="http://maps.google.com/maps/api/js?sensor=true"></script> -->
 	<script src="assets/js/gmaps.js"></script>
@@ -1122,19 +1125,19 @@ ga('send', 'pageview');
 
 							<div class="form-group col-md-6 col-sm-12">
 								<label class="sr-only" for="orderPhotos_company">Company</label>
-								<input type="text" id="orderPhotos_company" class="form-control autoFill companyValue" name="orderPhotos_company" placeholder="Company">
+								<input type="text" id="orderPhotos_company" class="form-control autoFill companyValue" name="orderPhotos_company" placeholder="Company" data-autofillType="company">
 							</div>
 						</div>
 
 						<div class="row">
 							<div class="form-group col-md-6 col-sm-12">
 								<label class="sr-only" for="orderPhotos_email">Email address</label>
-								<input type="email" id="orderPhotos_email" class="form-control autoFill emailValue required" name="orderPhotos_email" placeholder="E-mail">
+								<input type="email" id="orderPhotos_email" class="form-control autoFill emailValue required" name="orderPhotos_email" placeholder="Email" data-autofillType="email">
 							</div>
 
 							<div class="form-group col-md-6 col-sm-12">
 								<label class="sr-only" for="orderPhotos_phone">Phone</label>
-								<input type="phone" id="orderPhotos_phone" class="form-control autoFill phoneValue required" name="orderPhotos_phone" placeholder="Phone">
+								<input type="phone" id="orderPhotos_phone" class="form-control autoFill phoneValue required" name="orderPhotos_phone" placeholder="Phone" data-autoFillType="phone">
 							</div>
 						</div>
 
@@ -1192,7 +1195,7 @@ ga('send', 'pageview');
 							</div>
 
 							<div class="form-group">
-								<textarea class="form-control orderServerDivTextArea" id="orderPhotos_message" name="orderPhotos_message" rows="7" placeholder="Additional information"></textarea>
+								<textarea class="form-control orderServerDivTextArea" id="orderPhotos_message" name="orderPhotos_message" rows="4" placeholder="Additional information"></textarea>
 							</div>
 							<div class="row">
 								<div class="col-sm-12 col-md-6 col-lg-6">
@@ -1235,25 +1238,29 @@ ga('send', 'pageview');
 
 							<div class="ajax-hidden">
 
-								<div class="form-group">
-									<label class="sr-only" for="orderVideo_name">Name</label>
-									<input type="text" id="orderVideo_name" class="form-control autoFill nameValue" name="orderVideo_name" placeholder="Name" data-autofillType="name">
-								</div>
+								<div class="row">
+									<div class="form-group col-md-6 col-sm-12">
+										<label class="sr-only" for="orderVideo_name">Name</label>
+										<input type="text" id="orderVideo_name" class="form-control autoFill nameValue" name="orderVideo_name" placeholder="Name" data-autofillType="name">
+									</div>
 
-								<div class="form-group">
-									<label class="sr-only" for="orderVideo_company">Company</label>
-									<input type="text" id="orderVideo_company" class="form-control autoFill companyValue" name="orderVideo_company" placeholder="Company">
-								</div>
+									<div class="form-group col-md-6 col-sm-12">
+										<label class="sr-only" for="orderVideo_company">Company</label>
+										<input type="text" id="orderVideo_company" class="form-control autoFill companyValue" name="orderVideo_company" placeholder="Company" data-autofillType="company">
+									</div>
+							</div>
 
-								<div class="form-group">
-									<label class="sr-only" for="orderVideo_email">Email address</label>
-									<input type="email" id="orderVideo_email" class="form-control autoFill emailValue" name="orderVideo_email" placeholder="E-mail">
-								</div>
+								<div class="row">
+									<div class="form-group col-md-6 col-sm-12">
+										<label class="sr-only" for="orderVideo_email">Email address</label>
+										<input type="email" id="orderVideo_email" class="form-control autoFill emailValue" name="orderVideo_email" placeholder="Email" data-autofillType="email">
+									</div>
 
-								<div class="form-group">
-									<label class="sr-only" for="orderVideo_phone">Phone</label>
-									<input type="phone" id="orderVideo_phone" class="form-control autoFill phoneValue" name="orderVideo_phone" placeholder="Phone">
+									<div class="form-group col-md-6 col-sm-12">
+										<label class="sr-only" for="orderVideo_phone">Phone</label>
+										<input type="phone" id="orderVideo_phone" class="form-control autoFill phoneValue" name="orderVideo_phone" placeholder="Phone" data-autofillType="phone">
 								</div>
+							</div>
 
 								<div class="form-group">
 									<label class="sr-only" for="orderVideo_streetAddress">Street Address of Property/Subject</label>
@@ -1307,7 +1314,7 @@ ga('send', 'pageview');
 								</div>
 
 								<div class="form-group">
-									<textarea class="form-control orderServerDivTextArea" id="orderVideo_message" name="orderVideo_message" rows="7" placeholder="Additional information"></textarea>
+									<textarea class="form-control orderServerDivTextArea" id="orderVideo_message" name="orderVideo_message" rows="4" placeholder="Additional information"></textarea>
 								</div>
 								<div class="row">
 									<div class="col-sm-12 col-md-6 col-lg-6">
@@ -1350,24 +1357,28 @@ ga('send', 'pageview');
 
 								<div class="ajax-hidden">
 
-									<div class="form-group">
-										<label class="sr-only" for="orderPano_name">Name</label>
-										<input type="text" id="orderPano_name" class="form-control autoFill nameValue required" name="orderPano_name" placeholder="Name" data-autofillType="name">
+									<div class="row">
+										<div class="form-group col-md-6 col-sm-12">
+											<label class="sr-only" for="orderPano_name">Name</label>
+											<input type="text" id="orderPano_name" class="form-control autoFill nameValue required" name="orderPano_name" placeholder="Name" data-autofillType="name">
+										</div>
+
+										<div class="form-group col-md-6 col-sm-12">
+											<label class="sr-only" for="orderPano_company">Company</label>
+											<input type="text" id="orderPano_company" class="form-control autoFill companyValue" name="orderPano_company" placeholder="Company" data-autofillType="company">
+										</div>
 									</div>
 
-									<div class="form-group">
-										<label class="sr-only" for="orderPano_company">Company</label>
-										<input type="text" id="orderPano_company" class="form-control autoFill companyValue" name="orderPano_company" placeholder="Company">
-									</div>
+									<div class="row">
+										<div class="form-group col-md-6 col-sm-12">
+											<label class="sr-only" for="orderPano_email">Email address</label>
+											<input type="email" id="orderPano_email" class="form-control autoFill emailValue required" name="orderPano_email" placeholder="Email" data-autofillType="email">
+										</div>
 
-									<div class="form-group">
-										<label class="sr-only" for="orderPano_email">Email address</label>
-										<input type="email" id="orderPano_email" class="form-control autoFill emailValue required" name="orderPano_email" placeholder="E-mail">
-									</div>
-
-									<div class="form-group">
-										<label class="sr-only" for="orderPano_phone">Phone</label>
-										<input type="phone" id="orderPano_phone" class="form-control autoFill phoneValue required" name="orderPano_phone" placeholder="Phone">
+										<div class="form-group col-md-6 col-sm-12">
+											<label class="sr-only" for="orderPano_phone">Phone</label>
+											<input type="phone" id="orderPano_phone" class="form-control autoFill phoneValue required" name="orderPano_phone" placeholder="Phone" data-autofillType="phone">
+										</div>
 									</div>
 
 									<div class="form-group">
@@ -1392,7 +1403,7 @@ ga('send', 'pageview');
 									</div>
 
 									<div class="form-group">
-										<textarea class="form-control orderServerDivTextArea" id="orderPano_message" name="orderPano_message" rows="7" placeholder="Additional information"></textarea>
+										<textarea class="form-control orderServerDivTextArea" id="orderPano_message" name="orderPano_message" rows="4" placeholder="Additional information"></textarea>
 									</div>
 									<div class="row">
 										<div class="col-sm-12 col-md-6 col-lg-6">
@@ -1435,24 +1446,29 @@ ga('send', 'pageview');
 
 									<div class="ajax-hidden">
 
-										<div class="form-group">
-											<label class="sr-only" for="orderSitemap_name">Name</label>
-											<input type="text" id="orderSitemap_name" class="form-control autoFill nameValue required" name="orderSitemap_name" placeholder="Name" data-autofillType="name">
+										<div class="row">
+											<div class="form-group col-md-6 col-sm-12">
+												<label class="sr-only" for="orderSitemap_name">Name</label>
+												<input type="text" id="orderSitemap_name" class="form-control autoFill nameValue required" name="orderSitemap_name" placeholder="Name" data-autofillType="name">
+											</div>
+
+											<div class="form-group col-md-6 col-sm-12">
+												<label class="sr-only" for="orderSitemap_company">Company</label>
+												<input type="text" id="orderSitemap_company" class="form-control autoFill companyValue" name="orderSitemap_company" placeholder="Company" data-autofillType="company">
+											</div>
 										</div>
 
-										<div class="form-group">
-											<label class="sr-only" for="orderSitemap_company">Company</label>
-											<input type="text" id="orderSitemap_company" class="form-control autoFill companyValue" name="orderSitemap_company" placeholder="Company">
-										</div>
+										<div class="row">
+											<div class="form-group col-md-6 col-sm-12">
+												<label class="sr-only" for="orderSitemap_email">Email address</label>
+												<input type="email" id="orderSitemap_email" class="form-control autoFill emailValue required" name="orderSitemap_email" placeholder="Email" data-autofillType="email">
+											</div>
 
-										<div class="form-group">
-											<label class="sr-only" for="orderSitemap_email">Email address</label>
-											<input type="email" id="orderSitemap_email" class="form-control autoFill emailValue required" name="orderSitemap_email" placeholder="E-mail">
-										</div>
 
-										<div class="form-group">
-											<label class="sr-only" for="orderSitemap_phone">Phone</label>
-											<input type="phone" id="orderSitemap_phone" class="form-control autoFill phoneValue required" name="orderSitemap_phone" placeholder="Phone">
+											<div class="form-group col-md-6 col-sm-12">
+												<label class="sr-only" for="orderSitemap_phone">Phone</label>
+												<input type="phone" id="orderSitemap_phone" class="form-control autoFill phoneValue required" name="orderSitemap_phone" placeholder="Phone" data-autofillType="phone">
+											</div>
 										</div>
 
 										<div class="form-group">
@@ -1494,7 +1510,7 @@ ga('send', 'pageview');
 										</div>
 
 										<div class="form-group">
-											<textarea class="form-control orderServerDivTextArea" id="orderSitemap_message" name="orderSitemap_message" rows="7" placeholder="Additional information"></textarea>
+											<textarea class="form-control orderServerDivTextArea" id="orderSitemap_message" name="orderSitemap_message" rows="4" placeholder="Additional information"></textarea>
 										</div>
 										<div class="row">
 											<div class="col-sm-12 col-md-6 col-lg-6">
@@ -1536,25 +1552,28 @@ ga('send', 'pageview');
 								<form id="orderInspectionForm" method="post" role="form">
 
 									<div class="ajax-hidden">
+										<div class="row">
+											<div class="form-group col-md-6 col-sm-12">
+												<label class="sr-only" for="orderInspection_name">Name</label>
+												<input type="text" id="orderInspection_name" class="form-control autoFill nameValue required" name="orderInspection_name" placeholder="Name" data-autofillType="name">
+											</div>
 
-										<div class="form-group">
-											<label class="sr-only" for="orderInspection_name">Name</label>
-											<input type="text" id="orderInspection_name" class="form-control autoFill nameValue required" name="orderInspection_name" placeholder="Name" data-autofillType="name">
+											<div class="form-group col-md-6 col-sm-12">
+												<label class="sr-only" for="orderInspection_company">Company</label>
+												<input type="text" id="orderInspection_company" class="form-control autoFill companyValue" name="orderInspection_company" placeholder="Company" data-autofillType="company">
+											</div>
 										</div>
 
-										<div class="form-group">
-											<label class="sr-only" for="orderInspection_company">Company</label>
-											<input type="text" id="orderInspection_company" class="form-control autoFill companyValue" name="orderInspection_company" placeholder="Company">
-										</div>
+										<div class="row">
+											<div class="form-group col-md-6 col-sm-12">
+												<label class="sr-only" for="orderInspection_email">Email address</label>
+												<input type="email" id="orderInspection_email" class="form-control autoFill emailValue required" name="orderInspection_email" placeholder="Email" data-autofillType="email">
+											</div>
 
-										<div class="form-group">
-											<label class="sr-only" for="orderInspection_email">Email address</label>
-											<input type="email" id="orderInspection_email" class="form-control autoFill emailValue required" name="orderInspection_email" placeholder="E-mail">
-										</div>
-
-										<div class="form-group">
-											<label class="sr-only" for="orderInspection_phone">Phone</label>
-											<input type="phone" id="orderInspection_phone" class="form-control autoFill phoneValue required" name="orderInspection_phone" placeholder="Phone">
+											<div class="form-group col-md-6 col-sm-12">
+												<label class="sr-only" for="orderInspection_phone">Phone</label>
+												<input type="phone" id="orderInspection_phone" class="form-control autoFill phoneValue required" name="orderInspection_phone" placeholder="Phone" data-autofillType="phone">
+											</div>
 										</div>
 
 										<div class="form-group">
@@ -1596,7 +1615,7 @@ ga('send', 'pageview');
 										</div>
 
 										<div class="form-group">
-											<textarea class="form-control orderServerDivTextArea" id="orderInspection_message" name="orderInspection_message" rows="7" placeholder="Additional information"></textarea>
+											<textarea class="form-control orderServerDivTextArea" id="orderInspection_message" name="orderInspection_message" rows="4" placeholder="Additional information"></textarea>
 										</div>
 										<div class="row">
 											<div class="col-sm-12 col-md-6 col-lg-6">
@@ -1641,24 +1660,28 @@ ga('send', 'pageview');
 
 										<div class="ajax-hidden">
 
-											<div class="form-group">
-												<label class="sr-only" for="orderModel_name">Name</label>
-												<input type="text" id="orderModel_name" class="form-control autoFill nameValue required" name="orderModel_name" placeholder="Name" data-autofillType="name">
+											<div class="row">
+												<div class="form-group col-md-6 col-sm-12">
+													<label class="sr-only" for="orderModel_name">Name</label>
+													<input type="text" id="orderModel_name" class="form-control autoFill nameValue required" name="orderModel_name" placeholder="Name" data-autofillType="name">
+												</div>
+
+												<div class="form-group col-md-6 col-sm-12">
+													<label class="sr-only" for="orderModel_company">Company</label>
+													<input type="text" id="orderModel_company" class="form-control autoFill companyValue" name="orderModel_company" placeholder="Company" data-autofillType="company">
+												</div>
 											</div>
 
-											<div class="form-group">
-												<label class="sr-only" for="orderModel_company">Company</label>
-												<input type="text" id="orderModel_company" class="form-control autoFill companyValue" name="orderModel_company" placeholder="Company">
-											</div>
+											<div class="row">
+												<div class="form-group col-md-6 col-sm-12">
+													<label class="sr-only" for="orderModel_email">Email address</label>
+													<input type="email" id="orderModel_email" class="form-control autoFill emailValue required" name="orderModel_email" placeholder="Email" data-autofillType="email">
+												</div>
 
-											<div class="form-group">
-												<label class="sr-only" for="orderModel_email">Email address</label>
-												<input type="email" id="orderModel_email" class="form-control autoFill emailValue required" name="orderModel_email" placeholder="E-mail">
-											</div>
-
-											<div class="form-group">
-												<label class="sr-only" for="orderModel_phone">Phone</label>
-												<input type="phone" id="orderModel_phone" class="form-control autoFill phoneValue required" name="orderModel_phone" placeholder="Phone">
+												<div class="form-group col-md-6 col-sm-12">
+													<label class="sr-only" for="orderModel_phone">Phone</label>
+													<input type="phone" id="orderModel_phone" class="form-control autoFill phoneValue required" name="orderModel_phone" placeholder="Phone" data-autofillType="phone">
+												</div>
 											</div>
 
 											<div class="form-group">
@@ -1700,7 +1723,7 @@ ga('send', 'pageview');
 											</div>
 
 											<div class="form-group">
-												<textarea class="form-control orderServerDivTextArea" id="orderModel_message" name="orderModel_message" rows="7" placeholder="Additional information"></textarea>
+												<textarea class="form-control orderServerDivTextArea" id="orderModel_message" name="orderModel_message" rows="4" placeholder="Additional information"></textarea>
 											</div>
 											<div class="row">
 												<div class="col-sm-12 col-md-6 col-lg-6">
@@ -1742,25 +1765,28 @@ ga('send', 'pageview');
 										<form id="orderCutfillForm" method="post" role="form">
 
 											<div class="ajax-hidden">
+												<div class="row">
+													<div class="form-group col-md-6 col-sm-12">
+														<label class="sr-only" for="orderCutfill_name">Name</label>
+														<input type="text" id="orderCutfill_name" class="form-control autoFill nameValue required" name="orderCutfill_name" placeholder="Name" data-autofillType="name">
+													</div>
 
-												<div class="form-group">
-													<label class="sr-only" for="orderCutfill_name">Name</label>
-													<input type="text" id="orderCutfill_name" class="form-control autoFill nameValue required" name="orderCutfill_name" placeholder="Name" data-autofillType="name">
+													<div class="form-group col-md-6 col-sm-12">
+														<label class="sr-only" for="orderCutfill_company">Company</label>
+														<input type="text" id="orderCutfill_company" class="form-control autoFill companyValue" name="orderCutfill_company" placeholder="Company" data-autofillType="company">
+													</div>
 												</div>
 
-												<div class="form-group">
-													<label class="sr-only" for="orderCutfill_company">Company</label>
-													<input type="text" id="orderCutfill_company" class="form-control autoFill companyValue" name="orderCutfill_company" placeholder="Company">
-												</div>
+												<div class="row">
+													<div class="form-group col-md-6 col-sm-12">
+														<label class="sr-only" for="orderCutfill_email">Email address</label>
+														<input type="email" id="orderCutfill_email" class="form-control autoFill emailValue required" name="orderCutfill_email" placeholder="Email" data-autofillType="email">
+													</div>
 
-												<div class="form-group">
-													<label class="sr-only" for="orderCutfill_email">Email address</label>
-													<input type="email" id="orderCutfill_email" class="form-control autoFill emailValue required" name="orderCutfill_email" placeholder="E-mail">
-												</div>
-
-												<div class="form-group">
-													<label class="sr-only" for="orderCutfill_phone">Phone</label>
-													<input type="phone" id="orderCutfill_phone" class="form-control autoFill phoneValue required" name="orderCutfill_phone" placeholder="Phone">
+													<div class="form-group col-md-6 col-sm-12">
+														<label class="sr-only" for="orderCutfill_phone">Phone</label>
+														<input type="phone" id="orderCutfill_phone" class="form-control autoFill phoneValue required" name="orderCutfill_phone" placeholder="Phone" data-autofillType="phone">
+													</div>
 												</div>
 
 												<div class="form-group">
@@ -1785,7 +1811,7 @@ ga('send', 'pageview');
 												</div>
 
 												<div class="form-group">
-													<textarea class="form-control orderServerDivTextArea" id="orderCutfill_message" name="orderCutfill_message" rows="7" placeholder="Additional information"></textarea>
+													<textarea class="form-control orderServerDivTextArea" id="orderCutfill_message" name="orderCutfill_message" rows="4" placeholder="Additional information"></textarea>
 												</div>
 												<div class="row">
 													<div class="col-sm-12 col-md-6 col-lg-6">
@@ -1828,24 +1854,28 @@ ga('send', 'pageview');
 
 												<div class="ajax-hidden">
 
-													<div class="form-group">
-														<label class="sr-only" for="orderUtilityInspection_name">Name</label>
-														<input type="text" id="orderUtilityInspection_name" class="form-control autoFill nameValue required" name="orderUtilityInspection_name" placeholder="Name" data-autofillType="name">
+													<div class="row">
+														<div class="form-group col-md-6 col-sm-12">
+															<label class="sr-only" for="orderUtilityInspection_name">Name</label>
+															<input type="text" id="orderUtilityInspection_name" class="form-control autoFill nameValue required" name="orderUtilityInspection_name" placeholder="Name" data-autofillType="name">
+														</div>
+
+														<div class="form-group col-md-6 col-sm-12">
+															<label class="sr-only" for="orderUtilityInspection_company">Company</label>
+															<input type="text" id="orderUtilityInspection_company" class="form-control autoFill companyValue" name="orderUtilityInspection_company" placeholder="Company" data-autofillType="company">
+														</div>
 													</div>
 
-													<div class="form-group">
-														<label class="sr-only" for="orderUtilityInspection_company">Company</label>
-														<input type="text" id="orderUtilityInspection_company" class="form-control autoFill companyValue" name="orderUtilityInspection_company" placeholder="Company">
-													</div>
+													<div class="row">
+														<div class="form-group col-md-6 col-sm-12">
+															<label class="sr-only" for="orderUtilityInspection_email">Email address</label>
+															<input type="email" id="orderUtilityInspection_email" class="form-control autoFill emailValue required" name="orderUtilityInspection_email" placeholder="Email" data-autofillType="email">
+														</div>
 
-													<div class="form-group">
-														<label class="sr-only" for="orderUtilityInspection_email">Email address</label>
-														<input type="email" id="orderUtilityInspection_email" class="form-control autoFill emailValue required" name="orderUtilityInspection_email" placeholder="E-mail">
-													</div>
-
-													<div class="form-group">
-														<label class="sr-only" for="orderUtilityInspection_phone">Phone</label>
-														<input type="phone" id="orderUtilityInspection_phone" class="form-control autoFill phoneValue required" name="orderUtilityInspection_phone" placeholder="Phone">
+														<div class="form-group col-md-6 col-sm-12">
+															<label class="sr-only" for="orderUtilityInspection_phone">Phone</label>
+															<input type="phone" id="orderUtilityInspection_phone" class="form-control autoFill phoneValue required" name="orderUtilityInspection_phone" placeholder="Phone" data-autofillType="phone">
+														</div>
 													</div>
 
 													<div class="form-group">
@@ -1887,7 +1917,7 @@ ga('send', 'pageview');
 													</div>
 
 													<div class="form-group">
-														<textarea class="form-control orderServerDivTextArea" id="orderUtilityInspection_message" name="orderUtilityInspection_message" rows="7" placeholder="Additional information"></textarea>
+														<textarea class="form-control orderServerDivTextArea" id="orderUtilityInspection_message" name="orderUtilityInspection_message" rows="4" placeholder="Additional information"></textarea>
 													</div>
 													<div class="row">
 														<div class="col-sm-12 col-md-6 col-lg-6">
@@ -1929,7 +1959,7 @@ ga('send', 'pageview');
 										<div class="modal-body">
 											<form id="orderOtherForm" method="post" role="form">
 
-												<div class="ajax-hidden">
+												<!-- <div class="ajax-hidden"> -->
 
 													<div class="form-group">
 														<label class="sr-only" for="orderOther_name">Name</label>
@@ -1938,21 +1968,21 @@ ga('send', 'pageview');
 
 													<div class="form-group">
 														<label class="sr-only" for="orderOther_company">Company</label>
-														<input type="text" id="orderOther_company" class="form-control autoFill companyValue" name="orderOther_company" placeholder="Company">
+														<input type="text" id="orderOther_company" class="form-control autoFill companyValue" name="orderOther_company" placeholder="Company" data-autofillType="company" data-autofillType="company">
 													</div>
 
 													<div class="form-group">
 														<label class="sr-only" for="orderOther_email">Email address</label>
-														<input type="email" id="orderOther_email" class="form-control autoFill emailValue required" name="orderOther_email" placeholder="E-mail">
+														<input type="email" id="orderOther_email" class="form-control autoFill emailValue required" name="orderOther_email" placeholder="Email" data-autofillType="email">
 													</div>
 
 													<div class="form-group">
 														<label class="sr-only" for="orderOther_phone">Phone</label>
-														<input type="phone" id="orderOther_phone" class="form-control autoFill phoneValue required" name="orderOther_phone" placeholder="Phone">
+														<input type="phone" id="orderOther_phone" class="form-control autoFill phoneValue required" name="orderOther_phone" placeholder="Phone" data-autofillType="phone">
 													</div>
 
 													<div class="form-group">
-														<textarea class="form-control orderServerDivTextArea" id="orderOther_message" name="orderOther_message" rows="7" placeholder="Additional information"></textarea>
+														<textarea class="form-control orderServerDivTextArea" id="orderOther_message" name="orderOther_message" rows="4" placeholder="Additional information"></textarea>
 													</div>
 													<div class="row">
 														<div class="col-sm-6">
@@ -1961,7 +1991,7 @@ ga('send', 'pageview');
 															</button>
 														</div>
 													</div>
-													</div>
+													<!-- </div> -->
 												</form>
 
 												</div>
@@ -1974,6 +2004,29 @@ ga('send', 'pageview');
 								</div>
 
 
+								<!--------------------- Thank you MODAL ---------------------->
+
+								<div id="thankYouPopup" class="modal fade" role="dialog" tabindex="2">
+								  <div class="modal-dialog">
+
+								    <!-- Modal content-->
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <button type="button" class="close" data-dismiss="modal">&times;</button>
+								        <h4 class="modal-title"></h4>
+								      </div>
+								      <div class="modal-body">
+								        <p>Thank you for your interest! We'll be in touch shortly to iron out a few last details.</p>
+								      </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								      </div>
+								    </div>
+
+								  </div>
+								</div>
+
+
 
 
 
@@ -1981,11 +2034,20 @@ ga('send', 'pageview');
 	<script>
 		$(document).ready(function() {
 			$("[data-googleEventType='click']").click(function(e) {
-
-				alert($(this).data("googleeventname"));
 				ga('send', 'event', 'Click', $(this).data("googleeventname"));
 			});
 		});
+
+		$('[data-googleEventName="Order Services"]').waypoint(function(e) {
+			ga('send', 'event', 'Scroll To', 'Order Services');
+		});
+
+		// var waypoint = new Waypoint({
+		//   element: document.querySelectorAll('[data-googleEventType="scroll"]'),
+		//   handler: function(direction) {
+		//     console.log(direction)
+		//   }
+		// })
 	</script>
 </body>
 </html>

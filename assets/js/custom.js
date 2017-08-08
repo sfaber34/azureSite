@@ -173,6 +173,8 @@
 
 		$(document).ready(function() {
 			$('.pop-up#realEstateImage1').magnificPopup({type:'image'});
+			$('.pop-up#realEstateImage2').magnificPopup({type:'image'});
+			$('.pop-up#realEstateImage3').magnificPopup({type:'image'});
 
 			$('.pop-up#insuranceImage1').magnificPopup({type:'image'});
 			$('.pop-up#insuranceImage2').magnificPopup({type:'image'});
@@ -299,7 +301,7 @@
 
 			if (( c_name== "" || c_email == "" || c_message == "") || (!isValidEmailAddress(c_email) )) {
 				responseMessage.fadeIn(500);
-				responseMessage.html('<i class="fa fa-warning"></i> Check all fields.');
+				responseMessage.html('<i class="fa fa-warning"></i> Please Check all fields.');
 			}
 
 			else {
@@ -811,7 +813,6 @@
 			var orderCutfill_streetAddress = $("#orderCutfill_streetAddress").val();
 			var orderCutfill_cityAddress = $("#orderCutfill_cityAddress").val();
 			var orderCutfill_zipCode = $("#orderCutfill_zipCode").val();
-			var orderCutfill_format = $("#orderCutfill_format").val();
 			var orderCutfill_message = $("#orderCutfill_message ").val();
 			var orderCutfill_total = $("#orderCutfill_total").html();
 			var responseMessage = $('#orderCutfillForm .ajax-response');
@@ -842,7 +843,6 @@
 						orderCutfill_streetAddress: orderCutfill_streetAddress,
 						orderCutfill_cityAddress: orderCutfill_cityAddress,
 						orderCutfill_zipCode: orderCutfill_zipCode,
-						orderCutfill_format: orderCutfill_format,
 						orderCutfill_total: orderCutfill_total,
 						orderCutfill_message: orderCutfill_message,
 					},

@@ -12,7 +12,6 @@
 			$orderCutfill_streetAddress    = $_POST['orderCutfill_streetAddress'];
 			$orderCutfill_cityAddress      = $_POST['orderCutfill_cityAddress'];
 			$orderCutfill_zipCode          = $_POST['orderCutfill_zipCode'];
-      $orderCutfill_format          = $_POST['orderCutfill_format'];
 			$orderCutfill_message          = $_POST['orderCutfill_message'];
 			$orderCutfill_total          = $_POST['orderCutfill_total'];
 
@@ -23,7 +22,6 @@
 			Street: '.$orderCutfill_streetAddress.'
 			City: '.$orderCutfill_cityAddress.'
 			Zip: '.$orderCutfill_zipCode.'
-      Format: '.$orderCutfill_format.'
 			Message: '.$orderCutfill_message.'
 			Total:'.$orderCutfill_total;
 

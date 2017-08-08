@@ -693,7 +693,8 @@ a,
 .navbar-color .nav li a:focus,
 .navbar-color .nav li.active,
 .navbar-color .navbar-nav > li.active a {
-	color: #8ad4ec;
+	/*color: #8ad4ec;*/
+  color: #afafaf;
 }
 
 .navbar-color .navbar-nav > li > a,
@@ -1192,7 +1193,7 @@ li.active h4,
 }
 
 .orderServiceDiv.row2{
-  min-height: 482px;
+  min-height: 360px;
 }
 
 .orderServiceDiv.row3{
@@ -1250,8 +1251,12 @@ li.active h4,
 }
 
 .price p.hourlyPrice{
-  font-size: 15px;
+  font-size: 12px;
   line-height: 1.4;
+}
+
+.smallModalPrice{
+  font-size: 15px;
 }
 
 .btn-primary.azureBlue{
@@ -1282,7 +1287,7 @@ select.mySelect{
 .orderServicePrice{
   color: rgb(85,85,85);
   /*float: right;*/
-  margin: 10px 28px 0px 0px;
+  margin: 10px 0px 0px 0px;
   font-weight: normal;
   font-size: 29px;
 }
@@ -1497,11 +1502,12 @@ select.mySelect{
     border-bottom-right-radius:0px;
   }
 
-  .serviceLi#tab2{
+  .serviceLi#tab2,
+  .serviceLi#tab3{
     border-radius: 0px;
   }
 
-  .serviceLi#tab3{
+  .serviceLi#tab4{
     border-top-left-radius:0px;
     border-top-right-radius:0px;
   }
@@ -1551,6 +1557,10 @@ select.mySelect{
 @media only screen and (max-width : 580px) {
   .serviceLi .text{
     display: none;
+  }
+
+  .tab-content.servicePane{
+    margin-top: 24px !important;
   }
 }
 

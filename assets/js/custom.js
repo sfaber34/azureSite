@@ -186,6 +186,10 @@
 			$('.pop-up#constructionImage4').magnificPopup({type:'image'});
 			$('.pop-up#constructionImage5').magnificPopup({type:'image'});
 			$('.pop-up#constructionImage6').magnificPopup({type:'image'});
+
+			$('.pop-up#utilityImage1').magnificPopup({type:'image'});
+			$('.pop-up#utilityImage2').magnificPopup({type:'image'});
+			$('.pop-up#utilityImage3').magnificPopup({type:'image'});
 		});
 
 		// $('#intro').YTPlayer({

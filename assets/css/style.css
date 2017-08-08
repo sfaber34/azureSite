@@ -1172,6 +1172,11 @@ li.active h4,
   width: 200px;
 }*/
 
+.modal.in {
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+}
+
 .textLightGrey{
   color: rgb(85,85,85) !important;
 }
@@ -1193,7 +1198,7 @@ li.active h4,
 }
 
 .orderServiceDiv.row2{
-  min-height: 360px;
+  min-height: 365px;
 }
 
 .orderServiceDiv.row3{
@@ -1574,6 +1579,16 @@ select.mySelect{
 
   .uas{
     font-size: 60px;
+  }
+
+
+}
+
+
+@media only screen and (min-width : 480px) and (max-width : 991px) {
+  .uas{
+    position: relative;
+    top: -40px;
   }
 
 

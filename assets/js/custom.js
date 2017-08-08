@@ -871,6 +871,78 @@
 
 
 
+
+		/* ---------------------------------------------- /*
+		 * Order Inspection Form JS
+		/* ---------------------------------------------- */
+
+
+
+		$("#orderUtilityInspectionForm").submit(function(e) {
+			$("#orderUtilityInspectionForm .required").removeClass("problem");
+			e.preventDefault();
+
+			var orderUtilityInspection_name = $("#orderUtilityInspection_name").val();
+			var orderUtilityInspection_company = $("#orderUtilityInspection_company").val();
+			var orderUtilityInspection_email = $("#orderUtilityInspection_email").val();
+			var orderUtilityInspection_phone = $("#orderUtilityInspection_phone").val();
+			var orderUtilityInspection_streetAddress = $("#orderUtilityInspection_streetAddress").val();
+			var orderUtilityInspection_cityAddress = $("#orderUtilityInspection_cityAddress").val();
+			var orderUtilityInspection_zipCode = $("#orderUtilityInspection_zipCode").val();
+			var orderUtilityInspection_format = $("#orderUtilityInspection_format").val();
+			var orderUtilityInspection_message = $("#orderUtilityInspection_message ").val();
+			var orderUtilityInspection_total = $("#orderUtilityInspection_total").html();
+			var responseMessage = $('#orderUtilityInspectionForm .ajax-response');
+
+
+			if(!isValidEmailAddress(orderUtilityInspection_email)){
+				$("#orderUtilityInspection_email").addClass("problem");
+			}else if($("#orderUtilityInspectionForm #orderUtilityInspection_name").val() == ''){
+				$('#orderUtilityInspectionForm #orderUtilityInspection_name').addClass('problem');
+			}else if($("#orderUtilityInspectionForm #orderUtilityInspection_phone").val() == ''){
+				$('#orderUtilityInspectionForm #orderUtilityInspection_phone').addClass('problem');
+			} else {
+				$.ajax({
+					type: "POST",
+					url: "assets/php/orderUtilityInspectionForm.php",
+					dataType: 'json',
+					data: {
+						orderUtilityInspection_email: orderUtilityInspection_email,
+						orderUtilityInspection_name: orderUtilityInspection_name,
+						orderUtilityInspection_company: orderUtilityInspection_company,
+						orderUtilityInspection_phone: orderUtilityInspection_phone,
+						orderUtilityInspection_streetAddress: orderUtilityInspection_streetAddress,
+						orderUtilityInspection_cityAddress: orderUtilityInspection_cityAddress,
+						orderUtilityInspection_zipCode: orderUtilityInspection_zipCode,
+						orderUtilityInspection_format: orderUtilityInspection_format,
+						orderUtilityInspection_total: orderUtilityInspection_total,
+						orderUtilityInspection_message: orderUtilityInspection_message,
+					},
+					beforeSend: function(result) {
+						$('#orderUtilityInspectionForm button').empty();
+						$('#orderUtilityInspectionForm button').append('<i class="fa fa-cog fa-spin"></i> Wait...');
+					},
+					success: function(result) {
+						if(result.sendstatus == 1) {
+							$('#orderUtilityInspectionForm .ajax-hidden').fadeOut(500);
+							$('#orderUtilityInspectionPopup .ajax-response').html("Thank you for your interest in our services! We'll be in touch shortly to iron out a few last details.").fadeIn(500);
+						} else {
+							$('#orderUtilityInspectionForm button').empty();
+							$('#orderUtilityInspectionForm button').append('<i class="fa fa-retweet"></i> Try again.');
+							responseMessage.html(result.message).fadeIn(1000);
+						}
+					}
+				});
+
+			}
+			return false;
+
+		});
+
+
+
+
+
 		/* ---------------------------------------------- /*
 		 * Order Other Form JS
 		/* ---------------------------------------------- */
@@ -963,9 +1035,11 @@ var currentTallest = 0,
  });
 }
 
-$(window).load(function() {
-  equalheight('.priceDiv');
-	equalheight('.serviceLi');
+$(window).ready(function() {
+	setTimeout(function(){
+  	equalheight('.priceDiv');
+		equalheight('.serviceLi');
+	},50);
 });
 
 
@@ -973,6 +1047,8 @@ $(window).resize(function(){
   equalheight('.priceDiv');
 	equalheight('.serviceLi');
 });
+
+
 	});
 
 })(jQuery);

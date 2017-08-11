@@ -190,6 +190,8 @@
 			$('.pop-up#utilityImage1').magnificPopup({type:'image'});
 			$('.pop-up#utilityImage2').magnificPopup({type:'image'});
 			$('.pop-up#utilityImage3').magnificPopup({type:'image'});
+
+			$('#portfolio1').magnificPopup({type:'ajax'});
 		});
 
 		// $('#intro').YTPlayer({

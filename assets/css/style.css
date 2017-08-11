@@ -1377,12 +1377,55 @@ select.mySelect{
  z-index: -1;
 }*/
 
+.price p{
+  color: rgba(153, 153, 153,.4);
+  text-decoration: line-through;
+  margin-bottom: 0px;
+}
+
+.price p.promotionalPrice{
+  color: #999;
+  text-decoration: none !important;
+  font-size: 36px;
+  line-height: 30px;
+}
+
 .orderServicePrice{
   visibility: hidden !important;
 }
 
 .hide{
   visibility: hidden !important;
+}
+
+p.callout{
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+  background: rgb(90, 197, 231);
+  border-radius: 5px;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  color: white;
+  box-shadow: rgba(0,0,0,.15) -2px 4px 11px;
+  margin-bottom: 65px !important;
+  -webkit-transition: all 30ms linear;
+    -ms-transition: all 30ms linear;
+    transition: all 30ms linear;
+  cursor: pointer;
+}
+
+p.callout:hover{
+  background: rgb(29, 173, 219);
+  /*color:rgb(90, 189, 221);*/
+}
+
+a.calloutA{
+  text-decoration: none !important;
+}
+
+section#about.section{
+  padding-top:50px;
 }
 
 

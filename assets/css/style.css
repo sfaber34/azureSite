@@ -1377,6 +1377,14 @@ select.mySelect{
  z-index: -1;
 }*/
 
+.orderServicePrice{
+  visibility: hidden !important;
+}
+
+.hide{
+  visibility: hidden !important;
+}
+
 
 /* ---------------------------------------------- /*
  * Margin Overrides

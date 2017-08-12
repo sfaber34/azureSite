@@ -756,20 +756,6 @@ a,
  * Service
 /* ---------------------------------------------- */
 
-.service {
-	text-align: center;
-  padding:0 18px;
-}
-
-.service .icon {
-	font-size: 32px;
-	color: #32a3c7;
-  /*color: #1e5a83;*/
-}
-
-.service h4 {
-	text-transform: uppercase;
-}
 
 #services{
 	padding: 40px 0;
@@ -1131,25 +1117,10 @@ h1.logoFont{
 }
 
 li.active .icon,
-li.active h4,
-.serviceLi.active .icon,
-.serviceLi.active h4{
+li.active h4{
   color: white !important;
 }
 
-.serviceLi{
-  border: solid 1px rgb(218, 218, 218);
-  border-radius: 4px;
-  background-color: rgb(247, 247, 247);
-  cursor: pointer;
-  -webkit-transition: all 150ms linear;
-    -ms-transition: all 150ms linear;
-    transition: all 150ms linear;
-}
-
-.serviceLi.active{
-    background: #33a3c7 !important;
-  }
 
 .servicesNav .service{
   width:200px;
@@ -1160,17 +1131,6 @@ li.active h4,
   font-size: 48px;
 }
 
-.serviceLi p{
-  color: rgb(97,97,97);
-}
-
-.serviceLi.active p{
-  color: white;
-}
-
-.serviceLi a{
-  height: 100%;
-}
 
 .sectionHeader h1{
   font-size: 46px;
@@ -1565,53 +1525,6 @@ section#about.section{
 
 }
 
-@media only screen and (max-width : 767px) {
-
-  .serviceLi{
-    margin-bottom: 0px;
-    min-height: 54px;
-  }
-
-  .serviceLi h4{
-    text-align: right;
-    padding-top: 10px;
-    font-size: 20px;
-    padding-right: 7px;
-  }
-
-
-  .serviceLi#tab1{
-    border-bottom-left-radius:0px;
-    border-bottom-right-radius:0px;
-  }
-
-  .serviceLi#tab2,
-  .serviceLi#tab3{
-    border-radius: 0px;
-  }
-
-  .serviceLi#tab4{
-    border-top-left-radius:0px;
-    border-top-right-radius:0px;
-  }
-
-  .serviceLi .text p{
-    text-align: right;
-  }
-
-  .serviceLi i.fa{
-    float:left;
-    margin-top: 4px;
-  }
-
-  .serviceLi i.fa-home{
-    margin-left: 3px;
-  }
-
-  .serviceLi i.fa-bolt{
-    margin-left: 8px;
-  }
-
   section.section{
     padding-top: 40px !important;
   }
@@ -1622,17 +1535,6 @@ section#about.section{
 
 }
 
-
-/*
-@media only screen and (max-width : 787px) {
-
-  .serviceLi{
-    margin-bottom: 10px;
-    margin-left: 50px;
-    margin-right: 50px;
-  }
-
-}*/
 
 @media only screen and (max-width : 480px) {
   h1.logoFont{
@@ -1655,18 +1557,12 @@ section#about.section{
     max-width: 240px;
   }
 
-  .serviceLi{
-    margin-bottom:0px;
-  }
 
 
 }
 
 
 @media only screen and (max-width : 580px) {
-  .serviceLi .text{
-    display: none;
-  }
 
   .tab-content.servicePane{
     margin-top: 24px !important;

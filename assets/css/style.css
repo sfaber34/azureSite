@@ -742,6 +742,27 @@ a,
 	margin: 0 0 100px;
 }
 
+.perk {
+	text-align: center;
+  padding:0 18px;
+}
+
+.perk .icon {
+	font-size: 32px;
+	color: #32a3c7;
+  /*color: #1e5a83;*/
+}
+
+.perk h4 {
+	text-transform: uppercase;
+}
+
+#services{
+	padding: 40px 0;
+}
+
+
+
 /* ---------------------------------------------- /*
  * About
 /* ---------------------------------------------- */
@@ -752,13 +773,28 @@ a,
 			background-size: cover;
 }
 
+
+
+
 /* ---------------------------------------------- /*
  * Service
 /* ---------------------------------------------- */
 
+.serviceHeader h3,
+.serviceHeader h4{
+  text-align: center;
+}
 
-#services{
-	padding: 40px 0;
+.serviceHeader h3{
+  font-size:34px;
+}
+
+/*.serviceHeader{
+  margin-bottom: 40px;
+}
+}*/
+.serviceContent{
+    margin-bottom: 20px;
 }
 
 /* ---------------------------------------------- /*
@@ -1051,7 +1087,7 @@ h1.logoFont{
 }
 
 #intro .hello{
-  margin-bottom: 20px;
+  margin-bottom: 20px;©
 }
 
 .subLogoFont{
@@ -1281,8 +1317,25 @@ select.mySelect{
   resize: vertical;
 }
 
-#servicesSection{
-  padding-top: 60px;
+section.section.servicesSection{
+  padding-top: 50px !important;
+  padding-top: 50px !important;
+}
+
+.serviceHeader{
+  margin-bottom: 50px;
+}
+
+.servicesSection#servicesSectionA,
+.servicesSection#servicesSectionC{
+  background-color: rgb(239, 239, 239);
+  box-shadow:rgba(126, 126, 126, 0.1) 0px 4px 4px inset, rgba(126, 126, 126, 0.1) 0px -4px 4px inset;
+}
+
+
+.productImagesBlurb{
+  padding-left: 15px;
+ padding-right: 15px;
 }
 
 
@@ -1386,6 +1439,11 @@ a.calloutA{
 
 section#about.section{
   padding-top:50px;
+}
+
+.icon i.fa{
+  font-size: 38px;
+  color:#32a3c7;
 }
 
 
@@ -1514,6 +1572,18 @@ section#about.section{
  * Media screen queries
 /* ---------------------------------------------- */
 
+
+@media only screen and (max-width : 767px) {
+
+    .mb65Sm{
+      margin-bottom: 65px !important;
+    }
+
+    .mb10Sm{
+      margin-bottom: 10px !important;
+    }
+
+}
 
 
 @media only screen and (max-width : 697px) {

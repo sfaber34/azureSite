@@ -1244,6 +1244,11 @@ li.active h4{
   margin-left: 10px;
 }
 
+.orderServiceDiv p.option i.fa{
+  color: #a8a8a8;
+  font-size: 17px;
+}
+
 .price{
   text-align: center;
   font-size: 26px;
@@ -1324,6 +1329,10 @@ section.section.servicesSection{
 
 .serviceHeader{
   margin-bottom: 50px;
+}
+
+.serviceHeader i.fa{
+  color:#222;
 }
 
 .servicesSection#servicesSectionA,
@@ -1441,9 +1450,14 @@ section#about.section{
   padding-top:50px;
 }
 
-.icon i.fa{
+i.fa{
   font-size: 38px;
   color:#32a3c7;
+}
+
+.dronersioText{
+  text-align: center;
+  color: rgb(42, 56, 68);
 }
 
 
@@ -1657,19 +1671,6 @@ section#about.section{
 }
 
 
-@media only screen and (max-width : 330px) {
-  h1.logoFont{
-  	font-size: 98px;
-    margin-top:40px;
-    line-height: 80px;
-  }
-
-  .uas{
-    font-size: 60px;
-  }
-
-
-}
 
 
 @media only screen and (min-width : 480px) and (max-width : 991px) {
@@ -1678,7 +1679,33 @@ section#about.section{
     top: -40px;
   }
 
+}
 
+
+@media only screen and (max-width : 480px) {
+  h1.logoFont{
+  	font-size: 98px;
+    margin-top:40px;
+    line-height: 80px;
+  }
+
+  span.uas{
+    font-size: 60px;
+    position: relative;
+    top: -10px;
+  }
+
+  .mainLogo{
+    max-width: 280px;
+  }
+
+  h1.logoFont{
+    font-size: 92px;
+  }
+
+  .letterSpace7{
+    letter-spacing: 4px !important;
+  }
 }
 
 

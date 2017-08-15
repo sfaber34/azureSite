@@ -1205,11 +1205,11 @@ li.active h4{
 }
 
 .orderServiceDiv.row1{
-  min-height: 414px;
+  min-height: 390px;
 }
 
 .orderServiceDiv.row2{
-  min-height: 365px;
+  min-height: 344px;
 }
 
 .orderServiceDiv.row3{
@@ -1262,14 +1262,6 @@ li.active h4{
 
 .priceDiv{
   margin-bottom: 20px;
-}
-
-.orderServiceDiv > i{
-  font-size: 25px;
-  left: 9px;
-  color: rgb(57, 57, 57);
-  top: 7px;
-  position: absolute;
 }
 
 .price p.mt30{
@@ -1400,8 +1392,8 @@ section.section.servicesSection{
 }*/
 
 .price p{
-  color: rgba(153, 153, 153,.4);
-  text-decoration: line-through;
+  color: rgb(153, 153, 153);
+  /*text-decoration: line-through;*/
   margin-bottom: 0px;
 }
 
@@ -1447,7 +1439,7 @@ a.calloutA{
 }
 
 section#about.section{
-  padding-top:50px;
+  padding-top:80px !important;
 }
 
 i.fa{
@@ -1455,10 +1447,30 @@ i.fa{
   color:#32a3c7;
 }
 
+.orderServiceDiv > i{
+  font-size: 25px;
+  left: 9px;
+  color: rgb(57, 57, 57);
+  top: 7px;
+  position: absolute;
+}
+
 .dronersioText{
   text-align: center;
   color: rgb(42, 56, 68);
 }
+
+
+
+/* ---------------------------------------------- /*
+ * Promotional Overrides
+/* ---------------------------------------------- */
+
+.hidePromo,
+.promotionalPrice{
+  display: none !important;
+}
+
 
 
 /* ---------------------------------------------- /*

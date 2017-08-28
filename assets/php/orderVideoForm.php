@@ -1,7 +1,7 @@
 <?php
 
 	// Contact
-	$to = 'orders@azureuas.com';
+	$to = 'info@azureuas.com';
   $subject = 'Video Order';
 
 	if(isset($_POST['orderVideo_email'])){

@@ -1,7 +1,7 @@
 <?php
 
 	// Contact
-	$to = 'orders@azureuas.com';
+	$to = 'info@azureuas.com';
   $subject = '3D Model Order';
 
 	if(isset($_POST['orderModel_email'])){

@@ -1,7 +1,7 @@
 <?php
 
 	// Contact
-	$to = 'orders@azureuas.com';
+	$to = 'info@azureuas.com';
   $subject = 'Cut/Fill Order';
 
 	if(isset($_POST['orderCutfill_email'])){

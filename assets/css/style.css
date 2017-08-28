@@ -1464,6 +1464,11 @@ i.fa{
   width:120px !important;
 }
 
+.socials{
+  margin-top: 40px;
+}
+
+
 
 /* ---------------------------------------------- /*
  * Promotional Overrides
@@ -1472,6 +1477,28 @@ i.fa{
 .hidePromo,
 .promotionalPrice{
   display: none !important;
+}
+
+
+
+/* ---------------------------------------------- /*
+ * Featherlight Overrides
+/* ---------------------------------------------- */
+
+.featherlight .featherlight-content {
+    position: relative;
+    text-align: left;
+    vertical-align: middle;
+    display: inline-block;
+    overflow: auto;
+    padding: 0px;
+    border-bottom: 0px solid transparent;
+    margin-left: 5%;
+    margin-right: 5%;
+    max-height: 100%;
+    background: #fff;
+    cursor: auto;
+    white-space: normal;
 }
 
 

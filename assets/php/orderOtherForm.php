@@ -1,7 +1,7 @@
 <?php
 
 	// Contact
-	$to = 'orders@azureuas.com';
+	$to = 'info@azureuas.com';
   $subject = 'Other Order';
 
 	if(isset($_POST['orderOther_email'])){

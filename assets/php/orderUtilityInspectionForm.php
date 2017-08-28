@@ -1,7 +1,7 @@
 <?php
 
 	// Contact
-	$to = 'orders@azureuas.com';
+	$to = 'info@azureuas.com';
   $subject = 'Infrastructure Inspection Order';
 
 	if(isset($_POST['orderUtilityInspection_email'])){

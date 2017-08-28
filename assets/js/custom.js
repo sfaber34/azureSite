@@ -153,47 +153,6 @@
 		 * Portfolio pop up
 		/* ---------------------------------------------- */
 
-		$('#portfolio').magnificPopup({
-			delegate: 'a.pop-up',
-			type: 'image',
-			gallery: {
-				enabled: true,
-				navigateByImgClick: true,
-				preload: [0,1]
-			},
-			image: {
-				titleSrc: 'title',
-				tError: 'The image could not be loaded.',
-			}
-		});
-
-		$('.video-pop-up').magnificPopup({
-			type: 'iframe',
-		});
-
-		$(document).ready(function() {
-			$('.pop-up#realEstateImage1').magnificPopup({type:'image'});
-			$('.pop-up#realEstateImage2').magnificPopup({type:'image'});
-			$('.pop-up#realEstateImage3').magnificPopup({type:'image'});
-
-			$('.pop-up#insuranceImage1').magnificPopup({type:'image'});
-			$('.pop-up#insuranceImage2').magnificPopup({type:'image'});
-
-
-			$('.pop-up#constructionImage1').magnificPopup({type:'image'});
-			$('.pop-up#constructionImage2').magnificPopup({type:'image'});
-			$('.pop-up#constructionImage3').magnificPopup({type:'image'});
-			$('.pop-up#constructionImage4').magnificPopup({type:'image'});
-			$('.pop-up#constructionImage5').magnificPopup({type:'image'});
-			$('.pop-up#constructionImage6').magnificPopup({type:'image'});
-			$('.pop-up#constructionImage7').magnificPopup({type:'image'});
-
-			$('.pop-up#utilityImage1').magnificPopup({type:'image'});
-			$('.pop-up#utilityImage2').magnificPopup({type:'image'});
-			$('.pop-up#utilityImage3').magnificPopup({type:'image'});
-
-			$('#portfolio1').magnificPopup({type:'ajax'});
-		});
 
 		// $('#intro').YTPlayer({
     // 	fitToBackground: true,
@@ -1083,9 +1042,9 @@ $(window).resize(function(){
 	equalheight('.serviceLi');
 	equalheight('.productBlurbEqualHeight');
 });
-$(document).ready(function() {
 
-});
+
+
 $(".autoFill").keyup(function(){
 	val=$(this).val();
 	type=$(this).attr("data-autoFillType");

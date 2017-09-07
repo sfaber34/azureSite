@@ -21,7 +21,34 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-102592789-1', 'auto');
 ga('send', 'pageview');
 </script>
-<!-- End Google Analytics -->
+
+
+<!-- <script>
+var appId = '129249077706988';
+var pageId = "625099104544669";
+var excludedAlbums = ["comma seperated","album ids"];
+var accessToken = '129249077706988|K_euxu1I9PGRNFxC4q8FrI0WWM8';
+
+window.fbAsyncInit = function() {
+		FB.init({
+				appId      : appId,
+				xfbml      : true,
+				version    : 'v2.8'
+		});
+		FB.AppEvents.logPageView();
+		$("#mainContainer").fbGallery({
+				accessToken: accessToken,
+				pageId: pageId
+		});
+};
+(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8";
+		fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script> -->
 
 
 	<!-- <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"> -->
@@ -45,6 +72,8 @@ ga('send', 'pageview');
 
 	<link href="assets/css/combined.css" rel="stylesheet" media="screen">
 
+	<link href="assets/css/fbgallery.css" rel="stylesheet" media="screen">
+
 	<!-- Custom styles CSS -->
 	<link href="assets/css/style.css" rel="stylesheet" media="screen">
 
@@ -53,6 +82,7 @@ ga('send', 'pageview');
 
 </head>
 <body>
+	<div id="fb-root"></div>
 
 	<div class="wrapper">
 
@@ -220,26 +250,26 @@ ga('send', 'pageview');
 
 				</div><!-- .row -->
 
-				<!-- <div class="row socials">
-					<div class="col-sm-2">
-						<a><i class="fa fa-facebook"></i></a>
-					</div>
-					<div class="col-sm-2">
-						<a><i class="fa fa-home"></i></a>
-					</div>
-					<div class="col-sm-2">
-						<a><i class="fa fa-home"></i></a>
-					</div>
-					<div class="col-sm-2">
-						<a><i class="fa fa-home"></i></a>
-					</div>
-					<div class="col-sm-2">
-						<a><i class="fa fa-home"></i></a>
-					</div>
-					<div class="col-sm-2">
-						<a><i class="fa fa-home"></i></a>
-					</div>
-				</div> -->
+				<div class="row socials">
+						<a class="socialLink" href="http://www.facebook.com/azureuas" target="_blank" style="float:left">
+							<i class="fa fa-facebook"></i>
+							<p>
+								facebook.com/azureuas
+							</p>
+						</a>
+						<a class="socialLink" id="instagram" href="http://www.instagram.com/azureuas/" target="_blank">
+							<i class="fa fa-instagram"></i>
+							<p>
+								azureuas
+							</p>
+						</a>
+						<a class="socialLink" href="http://twitter.com/azure_uas" target="_blank" style="float:right">
+							<i class="fa fa-twitter"></i>
+							<p>
+								@Azure_UAS
+							</p>
+						</a>
+				</div>
 
 			</div><!-- .container -->
 
@@ -306,7 +336,7 @@ ga('send', 'pageview');
 						</div>
 
 						<div class="col-md-4 col-sm-6 mb10Sm">
-							<a data-featherlight="assets/images/appartments.jpg" data-googleEventType="view" id="realEstateImage3">
+							<a data-featherlight="assets/images/wildHorseRanchExample.jpg" data-googleEventType="view" id="realEstateImage3">
 								<img class="asyncImage" id="realEstateImage3Img" src="assets/images/spinner.gif">
 							</a>
 						</div>
@@ -536,7 +566,11 @@ ga('send', 'pageview');
 
 				<div class="row">
 
-					<div class="col-md-4 col-sm-6 wow bounceInLeft">
+				<div id="fbFeed">
+
+				</div> -->
+
+					<!-- <div class="col-md-4 col-sm-6 wow bounceInLeft">
 						<a href="assets/images/medbowStorm.jpg" class="pop-up" title="" id="portfolioImage1">
 							<div class="portfolio-item">
 								<div class="portfolio-item-preview">
@@ -604,15 +638,15 @@ ga('send', 'pageview');
 								</div>
 							</div>
 						</a>
-					</div>
+					</div> -->
 
-				</div>
+				<!-- </div>
 
 			</div>
 
 		</section> -->
 
-		<!-- Portfolio section end -->
+		<!-- Portfolio section end
 
 
 		<!-- orderServices section start -->
@@ -2020,7 +2054,7 @@ ga('send', 'pageview');
 			var obj = {
 				"realEstateImage1Img": "assets/images/officeShot.jpg",
 				"realEstateImage2Img": "assets/images/houses.jpg",
-				"realEstateImage3Img": "assets/images/appartments.jpg",
+				"realEstateImage3Img": "assets/images/wildHorseRanchExample.jpg",
 				"insuranceImage1Img": "assets/images/engineeringWaterDamage.jpg",
 				"insuranceImage2Img": "assets/images/roofDamageClose.jpg",
 				"constructionImage1Img": "assets/images/2dConstructionMap.jpg",
@@ -2054,9 +2088,24 @@ ga('send', 'pageview');
 				// });
 				// $downloadingLink.attr("href", value);
 				});
+
+					// $("#fbFeed").fbGallery({
+					// 		accessToken: '129249077706988|K_euxu1I9PGRNFxC4q8FrI0WWM8',
+					// 		pageId: '625099104544669',
+					// 		excludedAlbums: 'Profile Pictures'
+					// });
+
 			});
 
 	</script>
+
+
+
+	<script>
+
+	</script>
+
+
 
 	<script type="application/ld+json">
 	{

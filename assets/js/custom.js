@@ -11,6 +11,19 @@
 
 	$(document).ready(function() {
 
+
+		$('.setIframe').click(function(e) {
+			screenWidth=$(window).width();
+			screenWidth=screenWidth*.98
+			height=2160/4096*screenWidth;
+			setTimeout(function(){
+				$(".featherlight-content").width(screenWidth).height(height);
+			},100);
+
+		});
+
+
+
 		/* ---------------------------------------------- /*
 		 * Animated scrolling / Scroll Up
 		/* ---------------------------------------------- */
@@ -41,7 +54,7 @@
 		 * Background image
 		/* ---------------------------------------------- */
 
-		$('#intro').backstretch(['assets/images/mountainImg.jpg']);
+		$('#intro').backstretch(['assets/images/titleBackground.jpg']);
 
 		/* ---------------------------------------------- /*
 		 * Navbar
@@ -319,8 +332,6 @@
 			var orderPhotos_streetAddress = $("#orderPhotos_streetAddress").val();
 			var orderPhotos_cityAddress = $("#orderPhotos_cityAddress").val();
 			var orderPhotos_zipCode = $("#orderPhotos_zipCode").val();
-			var orderPhotos_addPhotos = $("#orderPhotos_addPhotos").val();
-			var orderPhotos_addPano = $("#orderPhotos_addPano").val();
 			var orderPhotos_message = $("#orderPhotos_message ").val();
 			var orderPhotos_total = $("#orderPhotos_total").html();
 			var responseMessage = $('#orderPhotosForm .ajax-response');
@@ -351,8 +362,6 @@
 						orderPhotos_streetAddress: orderPhotos_streetAddress,
 						orderPhotos_cityAddress: orderPhotos_cityAddress,
 						orderPhotos_zipCode: orderPhotos_zipCode,
-						orderPhotos_addPhotos: orderPhotos_addPhotos,
-						orderPhotos_addPano: orderPhotos_addPano,
 						orderPhotos_total: orderPhotos_total,
 						orderPhotos_message: orderPhotos_message,
 					},

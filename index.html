@@ -167,7 +167,10 @@ window.fbAsyncInit = function() {
 					</div>
 
 			</div><!-- .container -->
+			<div class="video-container">
+			    <div id="player"> </div> <!--<iframe width="960" height="720" src="//www.youtube.com/embed/5YptIh_avrM?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>-->
 
+			</div>
 		</section>
 
 		<!-- Intro section end -->
@@ -341,9 +344,63 @@ window.fbAsyncInit = function() {
 							</a>
 						</div>
 
-
 			    </div><!-- .row -->
-				</div>
+					</div>
+
+					<div class="row servicesRow white first">
+						<div class="col-sm-3">
+
+							<h3><i class="fa fa-camera"></i>Photos</h3>
+						</div>
+						<div class="col-sm-5">
+							<p>10 professionally shot and edited photos</p>
+						</div>
+						<div class="col-sm-2">
+							<p>
+								$150
+							</p>
+						</div>
+						<div class="col-sm-2">
+							<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue center-block" data-toggle="modal" data-target="#orderPhotosPopup" data-googleEventType="click" data-googleEventName="Order Photos">Order<span class="price">- $150</span></button>
+						</div>
+					</div>
+
+					<div class="row servicesRow white">
+						<div class="col-sm-3">
+							<i class="fa fa-video-camera"></i>
+							<h3>Video</h3>
+						</div>
+						<div class="col-sm-5">
+							<p>30 second promotional video,  professionally-edited and ready to market</p>
+						</div>
+						<div class="col-sm-2">
+							<p>
+								$200
+							</p>
+						</div>
+						<div class="col-sm-2">
+							<button type="button" data-target="#orderVideoPopup" id="orderPhotos" data-toggle="modal" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Video">Order<span class="price">- $200</span></button>
+						</div>
+					</div>
+
+					<div class="row servicesRow white last">
+						<div class="col-sm-3">
+							<i class="fa fa-video-camera"></i>
+							<h3>360° Pano</h3>
+						</div>
+						<div class="col-sm-5">
+							<p>Interactive 360° pano, perfect for showing off neighborhoods and surrounding scenery</p>
+						</div>
+						<div class="col-sm-2">
+							<p>
+								$100
+							</p>
+						</div>
+						<div class="col-sm-2">
+							<button type="button" data-target="#orderPanoPopup" id="orderPhotos" data-toggle="modal" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Pano">Order<span class="price">- $100</span></button>
+						</div>
+					</div>
+
 			</section>
 
 			<section class="section servicesSection" id="servicesSectionB" data-googleEventType="scroll" data-googleEventName="Services">
@@ -380,7 +437,23 @@ window.fbAsyncInit = function() {
 						</div>
 
 					</div><!-- .row -->
+					<div class="row servicesRow grey first last">
+						<div class="col-sm-3">
 
+							<h3><i class="fa fa-search"></i>Building Inspection</h3>
+						</div>
+						<div class="col-sm-5">
+							<p>Detailed structure and roof inspection, available in photo or video formats</p>
+						</div>
+						<div class="col-sm-2">
+							<p>
+								$120 / hour
+							</p>
+						</div>
+						<div class="col-sm-2">
+							<button type="button" data-target="#orderInspectionPopup" id="orderInspection" data-toggle="modal" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Building Inspection">Order<span class="price">- $120 / hour</span></button>
+						</div>
+					</div>
 				</div>
 			</section>
 
@@ -479,7 +552,83 @@ window.fbAsyncInit = function() {
         </div>
 
 			</div>
+
+			<div class="row servicesRow white first">
+				<div class="col-sm-3">
+					<h3><i class="fa fa-map-marker"></i>Mapping</h3>
+				</div>
+				<div class="col-sm-5">
+					<p>2D/3D map, accurate to within ±1%</p>
+				</div>
+				<div class="col-sm-2">
+					<p>
+						$100 / hour
+					</p>
+				</div>
+				<div class="col-sm-2">
+					<button type="button" data-toggle="modal" data-target="#orderSitemapPopup" id="orderPhotos" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Site Map">Order<span class="price">- $100 / hour</span></button>
+				</div>
+			</div>
+
+			<div class="row servicesRow white">
+				<div class="col-sm-3">
+					<h3><i class="fa fa-bar-chart"></i>Cut & Fill Estimate</h3>
+				</div>
+				<div class="col-sm-5">
+					<p>Speedy cut & fill estimate, accurate to within ±1%</p>
+				</div>
+				<div class="col-sm-2">
+					<p>
+						$100 / hour
+					</p>
+				</div>
+				<div class="col-sm-2">
+					<div class="row orderButtonRow">
+			        <button type="button" data-toggle="modal" data-target="#orderCutfillPopup" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Cut and Fill">Order<span class="price">- $100 / hour</span></button>
+				</div>
+			</div>
 		</div>
+
+		<div class="row servicesRow white">
+			<div class="col-sm-3">
+				<h3><i class="fa fa-bolt"></i>Infrastructure Inspection</h3>
+			</div>
+			<div class="col-sm-5">
+				<p>Comprehensive infrastructure inspection</p>
+			</div>
+			<div class="col-sm-2">
+				<p>
+					$150 / hour
+				</p>
+			</div>
+			<div class="col-sm-2">
+				<div class="row orderButtonRow">
+						<button type="button" data-toggle="modal" data-target="#orderUtilityInspectionPopup" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Infrastructure Inspection">Order<span class="price">- $150 / hour</span></button>
+			</div>
+		</div>
+	</div>
+
+	<div class="row servicesRow white last">
+		<div class="col-sm-3">
+			<h3><i class="fa fa-building"></i>3D Model</h3>
+		</div>
+		<div class="col-sm-5">
+			<p>Precise 3D building model availible in GeoTiff and Point cloud</p>
+		</div>
+		<div class="col-sm-2">
+			<p>
+				$100 / hour
+			</p>
+		</div>
+		<div class="col-sm-2">
+			<div class="row orderButtonRow">
+					<button type="button" data-toggle="modal" data-target="#orderModelPopup" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Building Model">Order<span class="price">- $100 / hour</span></button>
+		</div>
+	</div>
+</div>
+
+		</div>
+
 			</section>
 
 
@@ -493,11 +642,6 @@ window.fbAsyncInit = function() {
 					    </h4>
 					  </div>
 					</div>
-
-					<!-- <a href="http://www.youtube.com/embed/W7qWa52k-nE" data-featherlight="iframe" data-featherlight-iframe-width="100%" data-featherlight-iframe-height="100%">Open example.com in an iframe</a>
-
-  <iframe src="http://www.youtube.com/embed/W7qWa52k-nE"
-   width="560" height="315" frameborder="0" allowfullscreen></iframe> -->
 
 					<div class="row">
 						<div class="col-sm-12">
@@ -530,8 +674,93 @@ window.fbAsyncInit = function() {
 
 				</div><!-- .row -->
 
+				<div class="row servicesRow grey first last">
+					<div class="col-sm-3">
+						<h3><i class="fa fa-bolt"></i>Infrastructure Inspection</h3>
+					</div>
+					<div class="col-sm-5">
+						<p>Comprehensive infrastructure inspection</p>
+					</div>
+					<div class="col-sm-2">
+						<p>
+							$150 / hour
+						</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="row orderButtonRow">
+								<button type="button" data-toggle="modal" data-target="#orderUtilityInspectionPopup" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Infrastructure Inspection">Order<span class="price">- $150 / hour</span></button>
+					</div>
+				</div>
+			</div>
+
 				</div>
 			</section>
+
+			<section class="section servicesSection" id="servicesSectionE" data-googleEventType="scroll" data-googleEventName="Services">
+				<div class="container">
+					<div class="serviceHeader">
+						<h3><i class="fa fa-video-camera"></i> Raw Media Capture </h3>
+						<div class="text">
+							<h4>
+								Prestine aerial video and images
+							</h4>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-sm-12">
+							<p class="fs20 fcDarkGrey shrinkForPhone">
+								Our energy and utility inspections are a great way to reduce cost and substantially reduce risk to workers. Our UAVs provide an up close and personal view of difficult or dangerous-to-access infrastructure and bypass many of the logistics related to manual inspections. We'll get eyes on hard-to-reach equipment so you can keep your boots on the ground and focus on more pressing matters.
+							</p>
+						</div>
+				</div>
+
+				<div class="row mt60">
+
+					<div class="col-md-4 col-sm-6 mb10Sm">
+						<a data-featherlight="iframe" class="setIframe" href="http://www.youtube.com/embed/OM_JYyEOHzQ?modestbranding=1&autoplay=1&showinfo=0" data-googleEventType="view">
+							<img src="assets/images/whiteRockVideoThumbnail.jpg">
+						</a>
+					</div>
+
+					<div class="col-md-4 col-sm-6 mb10Sm">
+						<a data-featherlight="assets/images/trees.jpg" data-googleEventType="view" id="mediaImage1">
+							<img class="asyncImage" id="mediaImage1Img" src="assets/images/spinner.gif">
+						</a>
+					</div>
+
+					<div class="col-md-4 col-sm-6 mb10Sm">
+
+						<a data-featherlight="assets/images/storm.jpg" data-googleEventType="view" id="mediaImage2">
+							<img class="asyncImage" id="mediaImage2Img" src="assets/images/spinner.gif">
+						</a>
+					</div>
+
+				</div><!-- .row -->
+
+				<div class="row servicesRow white first last">
+					<div class="col-sm-3">
+						<h3><i class="fa fa-video-camera"></i>Aerial Media</h3>
+					</div>
+					<div class="col-sm-5">
+						<p>Gorgeous aerial images and video, available as raw media or edited products. Please contact us for a quote.</p>
+					</div>
+					<div class="col-sm-2">
+						<p>
+
+						</p>
+					</div>
+					<div class="col-sm-2">
+						<div class="row orderButtonRow">
+							<div class="row orderButtonRow">
+									<button type="button" data-toggle="modal" data-target="#orderOtherPopup" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Other">Get Quote</button>
+					</div>
+				</div>
+			</div>
+
+				</div>
+			</section>
+
 			<div class="clearFix" id="orderServices"></div>
 
 
@@ -1085,8 +1314,6 @@ window.fbAsyncInit = function() {
 
 				<script src="assets/js/custom.js"></script>
 
-
-
 	<!---------------------- ORDER PHOTOS MODAL ---------------------->
 
 	<div class="modal fade" id="orderPhotosPopup" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -1135,7 +1362,7 @@ window.fbAsyncInit = function() {
 								<div class="col-sm-6">
 									<div class="form-group">
 										<label class="sr-only" for="orderPhotos_cityAddress">City of Property/Subject</label>
-										<input type="address" id="orderPhotos_cityAddress required" class="form-control autoFill cityAddressValue required" name="orderPhotos_cityAddress" placeholder="City for Property/Subject">
+										<input type="address" id="orderPhotos_cityAddress" class="form-control autoFill cityAddressValue required" name="orderPhotos_cityAddress" placeholder="City for Property/Subject">
 									</div>
 								</div>
 
@@ -1144,38 +1371,6 @@ window.fbAsyncInit = function() {
 										<label class="sr-only" for="orderPhotos_zipCode">Zip Code</label>
 										<input type="address" id="orderPhotos_zipCode" class="form-control autoFill zipCodeValue required" name="orderPhotos_zipCode" placeholder="Zip Code">
 									</div>
-								</div>
-							</div>
-
-							<div class="row mb20">
-								<div class="col-sm-6">
-									<p class="myLabel">
-										Additional Photos (+$10 /photo)
-									</p>
-									<div class="clearFix"></div>
-									<select class="selectpicker mySelect orderPhotos_modPrice" id="orderPhotos_addPhotos">
-									  <option>None</option>
-									  <option>1</option>
-									  <option>2</option>
-										<option>3</option>
-										<option>4</option>
-										<option>5</option>
-										<option>6</option>
-										<option>7</option>
-										<option>8</option>
-										<option>9</option>
-										<option>10</option>
-									</select>
-								</div>
-								<div class="col-sm-6">
-									<p class="myLabel">
-										Add a 360° Pano (+$60)
-									</p>
-									<div class="clearFix"></div>
-									<select class="selectpicker mySelect orderPhotos_modPrice" id="orderPhotos_addPano">
-									  <option>No</option>
-									  <option>Yes</option>
-									</select>
 								</div>
 							</div>
 
@@ -1942,7 +2137,7 @@ window.fbAsyncInit = function() {
 											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
-											<h3 class="modal-title" id="exampleModalLongTitle">Order Anything</h3>
+											<h3 class="modal-title" id="exampleModalLongTitle">Aerial Media</h3>
 										</div>
 										<div class="modal-body">
 											<form id="orderOtherForm" method="post" role="form">
@@ -1970,7 +2165,7 @@ window.fbAsyncInit = function() {
 													</div>
 
 													<div class="form-group">
-														<textarea class="form-control orderServerDivTextArea" id="orderOther_message" name="orderOther_message" rows="4" placeholder="Additional information"></textarea>
+														<textarea class="form-control orderServerDivTextArea" id="orderOther_message" name="orderOther_message" rows="4" placeholder="Please describe your project"></textarea>
 													</div>
 													<div class="row">
 														<div class="col-sm-6">
@@ -2019,8 +2214,9 @@ window.fbAsyncInit = function() {
 
 
 	</div>
-
+	</body>
 	<script src="//cdn.rawgit.com/noelboss/featherlight/1.7.8/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
+
 
 	<script>
 		$(document).ready(function() {
@@ -2032,21 +2228,28 @@ window.fbAsyncInit = function() {
 				ga('send', 'event', 'View', $(this).attr("id"));
 			});
 
-			// $('[data-googleEventName="Order Services"]').waypoint(function(e) {
-			// 	ga('send', 'event', 'Scroll To', 'Order Services');
-			// });
+			$('[data-googleEventName="Order Services"]').waypoint(function(e) {
+				ga('send', 'event', 'Scroll To', 'Order Services');
+			});
 			//
 			// $('[data-googleEventName="About"]').waypoint(function(e) {
 			// 	ga('send', 'event', 'Scroll To', 'About');
 			// });
 			//
-			// $('[data-googleEventName="Services"]').waypoint(function(e) {
-			// 	ga('send', 'event', 'Scroll To', 'Services');
-			// });
+			$('[data-googleEventName="Services"]').waypoint(function(e) {
+				ga('send', 'event', 'Scroll To', 'Services');
+			});
 			//
 			// $('[data-googleEventName="Contact"]').waypoint(function(e) {
 			// 	ga('send', 'event', 'Scroll To', 'Services');
 			// });
+
+			// $('#intro').YTPlayer({
+			//     fitToBackground: true,
+			//     videoId: 'n_Oxhyb0OXw'
+			// });
+
+
 		});
 
 		$(window).load(function() {
@@ -2065,7 +2268,9 @@ window.fbAsyncInit = function() {
 				"constructionImage6Img": "assets/images/cutFill.jpg",
 				"utilityImage1Img": "assets/images/turbineFront.jpg",
 				"utilityImage2Img": "assets/images/tower.jpg",
-				"utilityImage3Img": "assets/images/engineeringWeatherStation.jpg"
+				"utilityImage3Img": "assets/images/engineeringWeatherStation.jpg",
+				"mediaImage1Img": "assets/images/trees.jpg",
+				"mediaImage2Img": "assets/images/storm.jpg"
 				// "portfolioImage1Img": "assets/images/medbowStorm.jpg",
 				// "portfolioVideo1Img": "assets/images/teaserVideoThumbnail.jpg",
 				// "portfolioImage2Img": "assets/images/trailerParkSunset.jpg",
@@ -2095,6 +2300,8 @@ window.fbAsyncInit = function() {
 					// 		excludedAlbums: 'Profile Pictures'
 					// });
 
+
+
 			});
 
 	</script>
@@ -2120,5 +2327,5 @@ window.fbAsyncInit = function() {
 	    }
 	}
 </script>
-</body>
+
 </html>

@@ -1461,22 +1461,24 @@ i.fa{
 
 .socials{
   margin-top: 100px;
+  display: flex;
   position: relative;
   margin-left: 30px;
   margin-right: 30px;
 }
 
-.socialLink{
-  display: inline-block;
+.socialLinkCont{
+  /*display: inline-block;*/
   cursor: default;
+  flex-grow: 1;
 }
 
-.socialLink#instagram{
+/*.socialLink#instagram{
   position: absolute;
   display: block;
   left: 50%;
   margin-left: -22px;
-}
+}*/
 
 .socialLink i{
   width: 100%;
@@ -1543,6 +1545,7 @@ i.fa{
 .servicesRow.row div:nth-child(3) p{
   text-align: center;
   font-size: 22px;
+  line-height: 26px;
 }
 
 .servicesRow.row div:nth-child(4) .btn-lg{
@@ -1553,6 +1556,9 @@ i.fa{
   display: none;
 }
 
+a img:hover{
+  cursor: zoom-in;
+}
 
 /* ---------------------------------------------- /*
  * Promotional Overrides
@@ -1869,6 +1875,10 @@ i.fa{
 
   .letterSpace7{
     letter-spacing: 4px !important;
+  }
+
+  .socialLink i{
+    font-size: 38px;
   }
 }
 

@@ -1037,11 +1037,33 @@ var currentTallest = 0,
  });
 }
 
+
+matchHeight = function(e){
+if($(window).width() > 767){
+	source=$(".matchContainer");
+
+	for (i = 0; i < source.length; i++) {
+		target=$(source[i]).children('.matchTarget');
+		height=[0]
+		$(target).each(function(k){height[k]=$(target[k]).height()});
+		maxHeight=Math.max.apply(null, height)
+
+			for (j = 0; j < target.length; j++) {
+				heightDiff=(maxHeight-height[j])/2
+				$(target[j]).css('padding-top', heightDiff);
+			}
+		}
+		}else{
+			$(".matchTarget").css('padding-top', 0);
+		}
+};
+
 $(window).ready(function() {
 	setTimeout(function(){
   	equalheight('.priceDiv');
 		equalheight('.serviceLi');
 		equalheight('.productBlurbEqualHeight');
+		matchHeight();
 	},50);
 });
 
@@ -1050,6 +1072,7 @@ $(window).resize(function(){
   equalheight('.priceDiv');
 	equalheight('.serviceLi');
 	equalheight('.productBlurbEqualHeight');
+	matchHeight();
 });
 
 

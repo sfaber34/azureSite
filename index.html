@@ -124,7 +124,6 @@ window.fbAsyncInit = function() {
 						<li><a href="#about" data-googleEventType="click" data-googleEventName="About">About</a></li>
 						<li><a href="#services-header" data-googleEventType="click" data-googleEventName="Services">Services</a></li>
 						<!-- <li><a href="#portfolio-header">Portfolio</a></li> -->
-						<li><a href="#orderServices-header">Order Services</a></li>
 
 						<!--<li><a href="#team-header">Team</a></li> -->
 						<li><a href="#contact-header">Contact</a></li>
@@ -254,24 +253,35 @@ window.fbAsyncInit = function() {
 				</div><!-- .row -->
 
 				<div class="row socials">
-						<a class="socialLink" href="http://www.facebook.com/azureuas" target="_blank" style="float:left">
+					<div class="socialLinkCont">
+						<a class="socialLink" href="http://www.facebook.com/azureuas" target="_blank">
 							<i class="fa fa-facebook"></i>
-							<p>
-								facebook.com/azureuas
-							</p>
 						</a>
+					</div>
+					<div class="socialLinkCont">
 						<a class="socialLink" id="instagram" href="http://www.instagram.com/azureuas/" target="_blank">
 							<i class="fa fa-instagram"></i>
 							<p>
 								azureuas
 							</p>
 						</a>
-						<a class="socialLink" href="http://twitter.com/azure_uas" target="_blank" style="float:right">
+					</div>
+					<div class="socialLinkCont">
+						<a class="socialLink" href="http://twitter.com/azure_uas" target="_blank">
 							<i class="fa fa-twitter"></i>
 							<p>
 								@Azure_UAS
 							</p>
 						</a>
+					</div>
+					<div class="socialLinkCont">
+						<a class="socialLink" href="http://www.youtube.com/channel/UC1qj76U7i0KwzGBt5gtLoKQ/videos" target="_blank">
+							<i class="fa fa-youtube"></i>
+							<p>
+
+							</p>
+						</a>
+					</div>
 				</div>
 
 			</div><!-- .container -->
@@ -347,56 +357,56 @@ window.fbAsyncInit = function() {
 			    </div><!-- .row -->
 					</div>
 
-					<div class="row servicesRow white first">
-						<div class="col-sm-3">
+					<div class="row servicesRow white first matchContainer">
+						<div class="col-sm-3 matchTarget">
 
 							<h3><i class="fa fa-camera"></i>Photos</h3>
 						</div>
-						<div class="col-sm-5">
+						<div class="col-sm-5 matchTarget">
 							<p>10 professionally shot and edited photos</p>
 						</div>
-						<div class="col-sm-2">
+						<div class="col-sm-2 matchTarget">
 							<p>
 								$150
 							</p>
 						</div>
-						<div class="col-sm-2">
+						<div class="col-sm-2 matchTarget">
 							<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue center-block" data-toggle="modal" data-target="#orderPhotosPopup" data-googleEventType="click" data-googleEventName="Order Photos">Order<span class="price">- $150</span></button>
 						</div>
 					</div>
 
-					<div class="row servicesRow white">
-						<div class="col-sm-3">
+					<div class="row servicesRow white matchContainer">
+						<div class="col-sm-3 matchTarget">
 							<i class="fa fa-video-camera"></i>
 							<h3>Video</h3>
 						</div>
-						<div class="col-sm-5">
+						<div class="col-sm-5 matchTarget">
 							<p>30 second promotional video,  professionally-edited and ready to market</p>
 						</div>
-						<div class="col-sm-2">
+						<div class="col-sm-2 matchTarget">
 							<p>
 								$200
 							</p>
 						</div>
-						<div class="col-sm-2">
+						<div class="col-sm-2 matchTarget">
 							<button type="button" data-target="#orderVideoPopup" id="orderPhotos" data-toggle="modal" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Video">Order<span class="price">- $200</span></button>
 						</div>
 					</div>
 
-					<div class="row servicesRow white last">
-						<div class="col-sm-3">
+					<div class="row servicesRow white last matchContainer">
+						<div class="col-sm-3 matchTarget">
 							<i class="fa fa-video-camera"></i>
 							<h3>360° Pano</h3>
 						</div>
-						<div class="col-sm-5">
+						<div class="col-sm-5 matchTarget">
 							<p>Interactive 360° pano, perfect for showing off neighborhoods and surrounding scenery</p>
 						</div>
-						<div class="col-sm-2">
+						<div class="col-sm-2 matchTarget">
 							<p>
 								$100
 							</p>
 						</div>
-						<div class="col-sm-2">
+						<div class="col-sm-2 matchTarget">
 							<button type="button" data-target="#orderPanoPopup" id="orderPhotos" data-toggle="modal" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Pano">Order<span class="price">- $100</span></button>
 						</div>
 					</div>
@@ -437,20 +447,19 @@ window.fbAsyncInit = function() {
 						</div>
 
 					</div><!-- .row -->
-					<div class="row servicesRow grey first last">
-						<div class="col-sm-3">
-
+					<div class="row servicesRow grey first last matchContainer">
+						<div class="col-sm-3 matchTarget">
 							<h3><i class="fa fa-search"></i>Building Inspection</h3>
 						</div>
-						<div class="col-sm-5">
+						<div class="col-sm-5 matchTarget">
 							<p>Detailed structure and roof inspection, available in photo or video formats</p>
 						</div>
-						<div class="col-sm-2">
+						<div class="col-sm-2 matchTarget">
 							<p>
 								$120 / hour
 							</p>
 						</div>
-						<div class="col-sm-2">
+						<div class="col-sm-2 matchTarget">
 							<button type="button" data-target="#orderInspectionPopup" id="orderInspection" data-toggle="modal" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Building Inspection">Order<span class="price">- $120 / hour</span></button>
 						</div>
 					</div>
@@ -553,74 +562,74 @@ window.fbAsyncInit = function() {
 
 			</div>
 
-			<div class="row servicesRow white first">
-				<div class="col-sm-3">
+			<div class="row servicesRow white first matchContainer">
+				<div class="col-sm-3 matchTarget">
 					<h3><i class="fa fa-map-marker"></i>Mapping</h3>
 				</div>
-				<div class="col-sm-5">
+				<div class="col-sm-5 matchTarget">
 					<p>2D/3D map, accurate to within ±1%</p>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-2 matchTarget">
 					<p>
 						$100 / hour
 					</p>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-2 matchTarget">
 					<button type="button" data-toggle="modal" data-target="#orderSitemapPopup" id="orderPhotos" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Site Map">Order<span class="price">- $100 / hour</span></button>
 				</div>
 			</div>
 
-			<div class="row servicesRow white">
-				<div class="col-sm-3">
+			<div class="row servicesRow white matchContainer">
+				<div class="col-sm-3 matchTarget">
 					<h3><i class="fa fa-bar-chart"></i>Cut & Fill Estimate</h3>
 				</div>
-				<div class="col-sm-5">
+				<div class="col-sm-5 matchTarget">
 					<p>Speedy cut & fill estimate, accurate to within ±1%</p>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-2 matchTarget">
 					<p>
 						$100 / hour
 					</p>
 				</div>
-				<div class="col-sm-2">
+				<div class="col-sm-2 matchTarget">
 					<div class="row orderButtonRow">
 			        <button type="button" data-toggle="modal" data-target="#orderCutfillPopup" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Cut and Fill">Order<span class="price">- $100 / hour</span></button>
 				</div>
 			</div>
 		</div>
 
-		<div class="row servicesRow white">
-			<div class="col-sm-3">
-				<h3><i class="fa fa-bolt"></i>Infrastructure Inspection</h3>
+		<div class="row servicesRow white matchContainer">
+			<div class="col-sm-3 matchTarget">
+				<h3><i class="fa fa-bolt"></i>Utility Inspection</h3>
 			</div>
-			<div class="col-sm-5">
-				<p>Comprehensive infrastructure inspection</p>
+			<div class="col-sm-5 matchTarget">
+				<p>Comprehensive utility inspection</p>
 			</div>
-			<div class="col-sm-2">
+			<div class="col-sm-2 matchTarget">
 				<p>
 					$150 / hour
 				</p>
 			</div>
-			<div class="col-sm-2">
+			<div class="col-sm-2 matchTarget">
 				<div class="row orderButtonRow">
-						<button type="button" data-toggle="modal" data-target="#orderUtilityInspectionPopup" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Infrastructure Inspection">Order<span class="price">- $150 / hour</span></button>
+						<button type="button" data-toggle="modal" data-target="#orderUtilityInspectionPopup" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Utility Inspection">Order<span class="price">- $150 / hour</span></button>
 			</div>
 		</div>
 	</div>
 
-	<div class="row servicesRow white last">
-		<div class="col-sm-3">
+	<div class="row servicesRow white last matchContainer">
+		<div class="col-sm-3 matchTarget">
 			<h3><i class="fa fa-building"></i>3D Model</h3>
 		</div>
-		<div class="col-sm-5">
+		<div class="col-sm-5 matchTarget">
 			<p>Precise 3D building model availible in GeoTiff and Point cloud</p>
 		</div>
-		<div class="col-sm-2">
+		<div class="col-sm-2 matchTarget">
 			<p>
 				$100 / hour
 			</p>
 		</div>
-		<div class="col-sm-2">
+		<div class="col-sm-2 matchTarget">
 			<div class="row orderButtonRow">
 					<button type="button" data-toggle="modal" data-target="#orderModelPopup" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Building Model">Order<span class="price">- $100 / hour</span></button>
 		</div>
@@ -638,7 +647,7 @@ window.fbAsyncInit = function() {
 					  <h3><i class="fa fa-bolt"></i> Energy & Utilities </h3>
 					  <div class="text">
 					    <h4>
-					      Thorough infrastructure inspections
+					      Thorough utility inspections
 					    </h4>
 					  </div>
 					</div>
@@ -674,21 +683,21 @@ window.fbAsyncInit = function() {
 
 				</div><!-- .row -->
 
-				<div class="row servicesRow grey first last">
-					<div class="col-sm-3">
-						<h3><i class="fa fa-bolt"></i>Infrastructure Inspection</h3>
+				<div class="row servicesRow grey first last matchContainer">
+					<div class="col-sm-3 matchTarget">
+						<h3><i class="fa fa-bolt"></i>Utility Inspection</h3>
 					</div>
-					<div class="col-sm-5">
-						<p>Comprehensive infrastructure inspection</p>
+					<div class="col-sm-5 matchTarget">
+						<p>Comprehensive utility inspection</p>
 					</div>
-					<div class="col-sm-2">
+					<div class="col-sm-2 matchTarget">
 						<p>
 							$150 / hour
 						</p>
 					</div>
-					<div class="col-sm-2">
+					<div class="col-sm-2 matchTarget">
 						<div class="row orderButtonRow">
-								<button type="button" data-toggle="modal" data-target="#orderUtilityInspectionPopup" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Infrastructure Inspection">Order<span class="price">- $150 / hour</span></button>
+								<button type="button" data-toggle="modal" data-target="#orderUtilityInspectionPopup" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Utility Inspection">Order<span class="price">- $150 / hour</span></button>
 					</div>
 				</div>
 			</div>
@@ -738,19 +747,19 @@ window.fbAsyncInit = function() {
 
 				</div><!-- .row -->
 
-				<div class="row servicesRow white first last">
-					<div class="col-sm-3">
+				<div class="row servicesRow white first last matchContainer">
+					<div class="col-sm-3 matchTarget">
 						<h3><i class="fa fa-video-camera"></i>Aerial Media</h3>
 					</div>
-					<div class="col-sm-5">
+					<div class="col-sm-5 matchTarget">
 						<p>Gorgeous aerial images and video, available as raw media or edited products. Please contact us for a quote.</p>
 					</div>
-					<div class="col-sm-2">
+					<div class="col-sm-2 matchTarget">
 						<p>
 
 						</p>
 					</div>
-					<div class="col-sm-2">
+					<div class="col-sm-2 matchTarget">
 						<div class="row orderButtonRow">
 							<div class="row orderButtonRow">
 									<button type="button" data-toggle="modal" data-target="#orderOtherPopup" class="btn btn-primary btn-lg azureBlue center-block" data-googleEventType="click" data-googleEventName="Order Other">Get Quote</button>
@@ -874,236 +883,6 @@ window.fbAsyncInit = function() {
 			</div>
 
 		</section> -->
-
-		<!-- Portfolio section end
-
-
-		<!-- orderServices section start -->
-
-		<section id="orderServices-header" class="section-header">
-
-			<div class="color-overlay">
-
-				<div class="container">
-
-					<div class="row">
-
-						<div class="col-sm-12 wow fadeInDown sectionHeader">
-							<h1 class="h1ShrinkForPhone">Order Services</h1>
-						</div>
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</section>
-
-		<section id="portfolio" class="section" data-googleEventType="scroll" data-googleEventName="Order Services">
-
-			<div class="container">
-
-				<div class="row">
-
-					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
-						<div class="orderServiceDiv row1">
-							<i class="fa fa-camera"></i>
-							<h3 class="mb20">Photos</h3>
-							<p class="orderServiceDescription">10 professionally shot and edited photos</p>
-							<hr/>
-							<p class="option">
-								<i class="fa fa-check-circle-o"></i>
-								Add 1 additional photo + $10
-							</p>
-							<p class="option">
-								<i class="fa fa-check-circle-o"></i>
-								Add 360 pano + $60
-							</p>
-							<hr/>
-							<div class="price">
-								<!-- <i class="fa fa-times"></i> -->
-								<p class="promotionalPrice wow">
-									$98
-								</p>
-								<p>
-									$150
-								</p>
-							</div>
-							<div class="row orderButtonRow">
-									<button type="button" href="" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block" data-toggle="modal" data-target="#orderPhotosPopup" data-googleEventType="click" data-googleEventName="Order Photos">Order</button>
-							</div>
-							<div class="clearFix"></div>
-						</div>
-					</div>
-
-					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
-						<div class="orderServiceDiv row1">
-							<i class="fa fa-video-camera"></i>
-							<h3 class="mb20">Real Estate Promo Video</h3>
-							<p class="orderServiceDescription">30 second promotional video,  professionally-edited and ready to market</p>
-							<div class="price">
-								<p class="promotionalPrice wow">
-									$98 / hour
-								</p>
-								<p>
-									$200
-								</p>
-							</div>
-							<div class="row orderButtonRow">
-									<button type="button" data-target="#orderVideoPopup" id="orderPhotos" data-toggle="modal" class="btn btn-primary btn-lg azureBlue mt40 center-block" data-googleEventType="click" data-googleEventName="Order Video">Order</button>
-							</div>
-							<div class="clearFix"></div>
-						</div>
-					</div>
-
-					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
-						<div class="orderServiceDiv row1">
-							<i class="fa fa-rotate-right"></i>
-							<h3 class="mb20">360° Pano</h3>
-							<p class="orderServiceDescription">Interactive 360° pano, perfect for showing off neighborhoods and surrounding scenery</p>
-							<div class="price">
-								<p class="promotionalPrice wow">
-									$65
-								</p>
-								<p>
-									$100
-								</p>
-							</div>
-
-							<div class="row orderButtonRow">
-									<button type="button" data-target="#orderPanoPopup" id="orderPhotos" data-toggle="modal" class="btn btn-primary btn-lg azureBlue mt40 center-block" data-googleEventType="click" data-googleEventName="Order Pano">Order</button>
-							</div>
-							<div class="clearFix"></div>
-						</div>
-					</div>
-
-
-					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
-						<div class="orderServiceDiv row2">
-							<i class="fa fa-map-marker"></i>
-							<h3 class="mb20">Mapping</h3>
-							<p class="orderServiceDescription">2D/3D map, accurate to within ±1%</p>
-							<div class="price">
-								<p class="promotionalPrice wow">
-									$98 / hour
-								</p>
-								<p>
-									$100 / hour
-								</p>
-							</div>
-							<div class="row orderButtonRow">
-									<button type="button" data-toggle="modal" data-target="#orderSitemapPopup" id="orderPhotos" class="btn btn-primary btn-lg azureBlue mt40 center-block" data-googleEventType="click" data-googleEventName="Order Site Map">Order</button>
-							</div>
-							<div class="clearFix"></div>
-						</div>
-					</div>
-
-					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
-						<div class="orderServiceDiv row2">
-							<i class="fa fa-search"></i>
-							<h3 class="mb20">Building Inspection</h3>
-							<p class="orderServiceDescription">Detailed structure and roof inspection, available in photo or video formats</p>
-							<div class="price">
-								<p class="promotionalPrice wow">
-									$78
-								</p>
-								<p>
-									$120 / hour
-								</p>
-							</div>
-							<div class="row orderButtonRow">
-									<button type="button" data-target="#orderInspectionPopup" id="orderInspection" data-toggle="modal" class="btn btn-primary btn-lg azureBlue mt40 center-block" data-googleEventType="click" data-googleEventName="Order Building Inspection">Order</button>
-							</div>
-							<div class="clearFix"></div>
-						</div>
-					</div>
-
-					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
-						<div class="orderServiceDiv row2">
-							<i class="fa fa-building"></i>
-							<h3 class="mb20">3D model</h3>
-							<p class="orderServiceDescription">Precise 3D building model availible in GeoTiff, Point cloud, and JPG formats</p>
-							<div class="price">
-								<p class="promotionalPrice wow">
-									$91 / hour
-								</p>
-								<p>
-									$100 / hour
-								</p>
-							</div>
-							<div class="row orderButtonRow">
-									<button type="button" data-toggle="modal" data-target="#orderModelPopup" class="btn btn-primary btn-lg azureBlue mt40 center-block" data-googleEventType="click" data-googleEventName="Building Model">Order</button>
-							</div>
-							<div class="clearFix"></div>
-						</div>
-					</div>
-
-					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
-						<div class="orderServiceDiv row3">
-							<i class="fa fa-bar-chart"></i>
-							<h3 class="mb20">Cut & Fill Estimate</h3>
-							<p class="orderServiceDescription">Speedy cut & fill estimate, accurate to within ±1%</p>
-							<div class="price">
-								<p class="promotionalPrice wow">
-									$78 / hour
-								</p>
-								<p>
-									$100 / hour
-								</p>
-							</div>
-							<div class="row orderButtonRow">
-									<button type="button" data-toggle="modal" data-target="#orderCutfillPopup" class="btn btn-primary btn-lg azureBlue mt40 center-block" data-googleEventType="click" data-googleEventName="Order Cut and Fill">Order</button>
-							</div>
-							<div class="clearFix"></div>
-						</div>
-					</div>
-
-					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
-						<div class="orderServiceDiv row3">
-							<i class="fa fa-bolt"></i>
-							<h3 class="mb20">Infrastructure Inspection</h3>
-							<p class="orderServiceDescription">Comprehensive infrastructure inspection</p>
-							<div class="price">
-								<p class="promotionalPrice wow">
-									$163 / hour
-								</p>
-								<p>
-									$150 / hour
-								</p>
-							</div>
-							<div class="row orderButtonRow">
-									<button type="button" data-toggle="modal" data-target="#orderUtilityInspectionPopup" class="btn btn-primary btn-lg azureBlue mt40 center-block" data-googleEventType="click" data-googleEventName="Order Infrastructure Inspection">Order</button>
-							</div>
-							<div class="clearFix"></div>
-						</div>
-					</div>
-
-					<div class="col-md-4 col-sm-6 wow fadeInLeft priceDiv">
-						<div class="orderServiceDiv row3">
-							<i class="fa fa-rocket"></i>
-							<h3 class="mb20">Anything you need</h3>
-							<p class="orderServiceDescription">Looking for something that isn't one of our listed services? Just give us a short description of your project and we'll get to work designing a custom solution.</p>
-							<div class="price">
-								<p>
-
-								</p>
-							</div>
-							<div class="row orderButtonRow">
-									<button type="button" data-toggle="modal" data-target="#orderOtherPopup" class="btn btn-primary btn-lg azureBlue mt40 center-block" data-googleEventType="click" data-googleEventName="Order Other">Order</button>
-							</div>
-							<div class="clearFix"></div>
-						</div>
-					</div>
-
-				</div><!-- .row -->
-
-
-			</div><!-- .container -->
-			<div class="clearFix" id="portfolioLink"></div>
-		</section>
-
-		<!-- orderServices section end -->
 
 
 		<!-- Contact section start -->
@@ -2030,7 +1809,7 @@ window.fbAsyncInit = function() {
 											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
-											<h3 class="modal-title" id="exampleModalLongTitle">Order Infrastructure Inspection</h3>
+											<h3 class="modal-title" id="exampleModalLongTitle">Order Utility Inspection</h3>
 										</div>
 										<div class="modal-body">
 											<form id="orderUtilityInspectionForm" method="post" role="form">

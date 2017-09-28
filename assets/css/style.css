@@ -1560,6 +1560,23 @@ a img:hover{
   cursor: zoom-in;
 }
 
+.camera{
+  line-height: 23px;
+}
+
+.mapMarker{
+  line-height: 24px;
+}
+
+.barChart{
+  line-height: 22px;
+}
+
+.building{
+  line-height: 25px;
+}
+
+
 /* ---------------------------------------------- /*
  * Promotional Overrides
 /* ---------------------------------------------- */
@@ -1783,6 +1800,12 @@ a img:hover{
 
 }
 
+
+@media only screen and (min-width : 768px) {
+  .videoCamera{
+    line-height: 35px;
+  }
+}
 
   section.section{
     padding-top: 40px !important;

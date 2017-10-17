@@ -189,8 +189,9 @@
 			$(".servicePane .tab-pane#"+id).addClass("active").css("visibility","visible");
 		});
 
-
-
+		$('#insuranceImage4Img').click(function() {
+			$(".sketchfabIframe").height($(window).height()*.92);
+		});
 
 		/* ---------------------------------------------- /*
 		 * Autofill code

@@ -1062,6 +1062,7 @@ a,
 
 #navbarBrandSmall{
   font-size: 20px !important;
+  color: rgb(54, 177, 230);
 }
 
 
@@ -1076,7 +1077,7 @@ h1.logoFont{
 
 .uas{
   font-size: 98px;
-  /*color: rgb(237, 245, 255) !important;*/
+  color: rgb(54, 177, 230);
 }
 
 .mainLogo{
@@ -1121,7 +1122,9 @@ h1.logoFont{
   padding-bottom: 40px;
 }
 
-
+a.pointer:hover{
+  cursor: pointer !important;
+}
 
 .letterSpace7{
   letter-spacing: 7px !important;
@@ -1356,6 +1359,22 @@ section.section.servicesSection{
   margin: 20px auto;
 }
 
+#modelPopup .modal-header{
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+#modelPopup .modal-header button{
+  font-size: 27px;
+}
+
+#modelPopup .modal-body{
+  padding: 0px;
+}
+
+#modelPopup .modal-dialog{
+  width:100%;
+}
 
 .problem{
   border-color: red;
@@ -1473,6 +1492,35 @@ i.fa{
   flex-grow: 1;
 }
 
+.socialLink{
+  width: 100%;
+}
+
+.socialLinkCont.small{
+  display: none;
+}
+
+#dronersio{
+  text-align: center;
+  line-height: 53px;
+  font-size: 18px;
+  color: rgb(87, 87, 87);
+}
+
+@media only screen and (max-width : 480px) {
+  .socialLinkCont.small{
+    display: inline-flex;
+  }
+
+  .socialLinkCont.large{
+    display: none;
+  }
+
+  #dronersio{
+    font-size: 16px;
+  }
+}
+
 /*.socialLink#instagram{
   position: absolute;
   display: block;
@@ -1588,6 +1636,20 @@ a img:hover{
 
 
 
+
+/* ---------------------------------------------- /*
+ * Paypal Button
+/* ---------------------------------------------- */
+
+.paypalButton{
+  position: relative;
+  width: 180px;
+  margin-left: 50%;
+  left: -85px;
+}
+
+
+
 /* ---------------------------------------------- /*
  * Featherlight Overrides
 /* ---------------------------------------------- */
@@ -1678,6 +1740,10 @@ a img:hover{
 
 .mt100{
   margin-top: 100px !important;
+}
+
+.mb0{
+  margin-bottom: 0px !important;
 }
 
 .mb10{
@@ -1883,9 +1949,9 @@ a img:hover{
   }
 
   span.uas{
-    font-size: 70px;
+    font-size: 76px;
     position: relative;
-    top: 10px;
+    top: 12px;
   }
 
   .mainLogo{
